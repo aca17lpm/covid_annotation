@@ -1,4 +1,4 @@
-# wv_covid_annotation_scripts
+# wv_covid_annotation
 
 This is the privat repository for WeVerify EUvsVirus Hackathon Data and scripts
 
@@ -84,6 +84,14 @@ To balance the quality and number of data (merged_clean.json/tsv) following sele
   * 05:4
   * 06:5
   * 08:5
+
+## Merge strategy:
+  The merged (agreement resolve) label is stored in 'selected_label' field in the json file, and based on following rules:
+  * If single annotated --> selected the label
+  * else if all agree on the annotation --> select the label
+  * else if have majority agreement on the label --> select the majority agreed label
+  * else if have the highest summed confidence label --> select the label with highest summed confidence
+  * else select the one with the highest confidence
 
 
 
