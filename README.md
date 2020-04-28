@@ -60,3 +60,30 @@ optional arguments:
   --set_reverse         reverse the selection condition, to check what
                         discared
 ```
+  * Please check run_clean.sh for example
+
+## Data Qulity Check:
+Please check this sheet for individual quality check (2 tabs inlcuded in the sheet):
+https://docs.google.com/spreadsheets/d/1vUSIP4lAQFPNVYCtCyDY_P2Hx3_PmPNQ8Qdzga-SLIc/edit#gid=0
+
+To balance the quality and number of data (merged_clean.json/tsv) following selection strategy was used:
+* User 04 and 58 are ignored
+* Global confidence threshold set to 6 
+  * anything annotation below or equal confident 6 are ignored
+  * except the individual condifence was set in user_conf
+* Individual confidence
+  * 23:7
+  * 03:7
+  * 22:2
+  * 00:1 
+  * 12:5
+  * 13:7
+  * 07:6
+  * 25:5
+  * 16:5
+  * 05:4
+  * 06:5
+  * 08:5
+
+
+
