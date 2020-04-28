@@ -34,7 +34,7 @@ This is the privat repository for WeVerify EUvsVirus Hackathon Data and scripts
   * merged_json: file path to merged json file
   * merged_tsv: file path to merged tsv file (This is required for accurate calculate kappa)
 * Options inlcude:
-`
+
 optional arguments:
   -h, --help            show this help message and exit
   --ignoreLabel IGNORELABEL
@@ -59,4 +59,4 @@ optional arguments:
                         user1:thres1,user2:thres2
   --set_reverse         reverse the selection condition, to check what
                         discared
-`
+
