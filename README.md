@@ -1,4 +1,4 @@
-# wv_covid_annotation_scripts
+# wv_covid_annotation
 
 This is the privat repository for WeVerify EUvsVirus Hackathon Data and scripts
 
