@@ -26,7 +26,9 @@ class modelUlti:
         for epoch in range(num_epohs):
             all_loss = []
             trainIter = self.pred(trainBatchIter, train=True)
-            for pred, y in trainIter:
+            for current_prediction in trainIter:
+                pred = current_prediction['pred']
+                y = current_prediction['y']
                 loss = self.criterion(pred, y)
                 loss.backward()
                 self.optimizer.step()
@@ -87,13 +89,18 @@ class modelUlti:
                 mask.cuda()
                 y.cuda()
             pred = self.net(x, mask)
-            yield pred, y
+            output_dict = {}
+            output_dict['pred'] = pred
+            output_dict['y'] = y
+            yield output_dict
 
     def eval(self, batchGen):
         output_dict = {}
         all_prediction = []
         all_true_label = []
-        for pred, y in self.pred(batchGen):
+        for current_prediction in self.pred(batchGen):
+            pred = current_prediction['pred']
+            y = current_prediction['y']
             current_batch_out = F.softmax(pred, dim=-1)
             label_prediction = torch.max(current_batch_out, -1)[1]
             current_batch_out_list = current_batch_out.to('cpu').detach().numpy()

@@ -1,7 +1,9 @@
 import sys
 import math
-from WvMLLib import WVdataIter, ReaderPostProcessor, BatchIterBert, modelUlti
-from WvMLLib.models import BERT_Simple
+from WvMLLib import WVdataIter, BatchIterBert
+from WvMLLib import modelUltiMapping as modelUlti
+from WvMLLib import ReaderPostProcessorMapping as ReaderPostProcessor
+from WvMLLib.models import BERT_Mapping
 from configobj import ConfigObj
 import torch
 import argparse
@@ -24,8 +26,11 @@ def get_average_fmeasure_score(results_dict, field):
 def maskedBertBatchProcessor(x, y):
     word_ids = [s[0] for s in x]
     mask = [s[1] for s in x]
-    y = y
-    return torch.tensor(word_ids), torch.tensor(y), torch.tensor(mask)
+    y_class = [s[0] for s in y]
+    y_description = [s[1][0] for s in y]
+    y_description_mask = [s[1][1] for s in y]
+    #print(y_description)
+    return torch.tensor(word_ids), torch.tensor(mask), torch.tensor(y_class), torch.tensor(y_description), torch.tensor(y_description_mask)
 
 
 def reconstruct_ids(each_fold, all_ids):
@@ -56,7 +61,9 @@ if __name__ == "__main__":
     config = ConfigObj(config_file)
     postProcessor = ReaderPostProcessor(tokenizer='bert', config=config, word2id=True, return_mask=True, remove_single_list=True)
     dataIter = WVdataIter(merged_json_file, postProcessor=postProcessor, config=config, shuffle=True)
+    print(next(dataIter))
     dataIter.count_samples()
+
 
     all_ids = copy.deepcopy(dataIter.all_ids)
     random.shuffle(all_ids)
@@ -90,7 +97,7 @@ if __name__ == "__main__":
         trainBatchIter = BatchIterBert(trainDataIter, filling_last_batch=True, postProcessor=maskedBertBatchProcessor)
         testBatchIter = BatchIterBert(testDataIter, filling_last_batch=False, postProcessor=maskedBertBatchProcessor)
         valBatchIter = BatchIterBert(valDataIter, filling_last_batch=False, postProcessor=maskedBertBatchProcessor)
-        net = BERT_Simple(config)
+        net = BERT_Mapping(config)
         mUlti = modelUlti(net, gpu=True)
         fold_cache_path = os.path.join(cache_path, 'fold'+str(fold_index))
         path = Path(fold_cache_path)
@@ -105,12 +112,10 @@ if __name__ == "__main__":
             results_dict['f-measure'][f_measure_class]['precision'].append(results['f-measure'][f_measure_class][0])
             results_dict['f-measure'][f_measure_class]['recall'].append(results['f-measure'][f_measure_class][1])
             results_dict['f-measure'][f_measure_class]['f-measure'].append(results['f-measure'][f_measure_class][2])
-
-
-
         print(results)
 
         fold_index += 1
+        #break
     print(results_dict)
     overall_accuracy = sum(results_dict['accuracy'])/len(results_dict['accuracy'])
     overall_precision = get_average_fmeasure_score(results_dict, 'precision')
@@ -121,24 +126,3 @@ if __name__ == "__main__":
     print('precision: ', overall_precision)
     print('recall: ', overall_recall)
     print('f-measure: ', overall_fmeasure)
-
-
-
-
-
-    
-
-
-    #batchIter = BatchIterBert(dataIter, filling_last_batch=True, postProcessor=maskedBertBatchProcessor)
-    #net = BERT_Simple(config)
-    #mUlti = modelUlti(net, gpu=True)
-    #mUlti.train(batchIter)
-
-
-
-
-
-
-
-
-
