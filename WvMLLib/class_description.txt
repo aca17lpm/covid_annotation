@@ -1,0 +1,11 @@
+PubAuthAction	Claims about policy, action, or communication by a public authority (e.g. government department, police, fire brigade, government officials), including claims about WHO guidelines and recommendations as well as those about governments' action or advice.
+CommSpread	Claims about people, groups, or individuals with regard to how the virus is spreading (internationally, regionally, or within more specific communities); impact on people, groups (including religions and ethnic minorities), or individuals; deaths, etc.
+GenMedAdv	Claims about health remedies, self-treatments, self-diagnosis, signs and symptoms, effects of the virus, etc.
+PromActs	Claims about pharmaceutical companies, media organisations, health-care supply businesses, other companies, or famous people (including celebrities and politicians). Note that this does not include claims made by politicians or other famous people unless they are about other prominent actors.
+Consp	Claims that the virus was created as a bioweapon, that some organization supposedly created the pandemic, that it was predicted, etc.
+VirTrans	Claims about how the virus is transmitted and how to prevent transmission. This includes cleaning as well as use of specific lighting, appliances, protective equipment, etc.
+VirOrgn	Claims about the origins of the virus (e.g,. in animals) or its properties.
+PubPrep	Claims that encourage hoarding, buying supplies, practising or avoiding social distancing, compliance or non-compliance with public health measures, etc.
+Vacc	Claims about vaccines, tests, and treatments, including the development and availability of a vaccine or a treatment. (Claims about self-treatment fall under the medical advice category, however.)
+Prot	Claims about protests and civil disobedience against official measures (including government measures).
+None	Use this category if the claim does not fit into any category above, if it does not seem to contain misinformation, or if you cannot read the language or understand the text for any reason.
