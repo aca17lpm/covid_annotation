@@ -6,3 +6,5 @@ from .modelUlti import modelUlti
 from .DictionaryProcess import DictionaryProcess
 from .modelUltiNVDM import NVDMUlti
 from .modelUlti_mapping import modelUltiMapping
+from .modelUlti_vaemapping import modelUltiVaeMapping
+from .PostprocessorNVDM import ReaderPostProcessorNVDM

@@ -3,25 +3,14 @@ import torch.nn as nn
 import torch.optim as optim
 import torch.nn.functional as F
 import numpy as np
+import copy
 import os
 from pathlib import Path
 from .modelUlti import modelUlti
 
-class modelUltiMapping(modelUlti):
+class modelUltiVaeMapping(modelUlti):
     def __init__(self, net, gpu=False):
         super().__init__(net, gpu=gpu)
-
-    def set_target_desc(self, label_desc_ids, label_desc_mask):
-        label_desc_ids = torch.tensor(label_desc_ids)
-        label_desc_mask = torch.tensor(label_desc_mask)
-        if self.gpu:
-            label_desc_ids = label_desc_ids.type(torch.cuda.LongTensor)
-            label_desc_mask = label_desc_mask.type(torch.cuda.LongTensor)
-            label_desc_ids.cuda()
-            label_desc_mask.cuda()
-        self.net.set_target_desc(label_desc_ids, label_desc_mask)
-
-
 
     def train(self, trainBatchIter, num_epohs=100, valBatchIter=None, cache_path=None):
         self.cache_path = cache_path
@@ -30,32 +19,33 @@ class modelUltiMapping(modelUlti):
 
         self.evaluation_history = []
         self.optimizer_mapping = optim.Adam(self.net.bert_mapping.parameters())
-        #self.optimizer_classifier = optim.Adam(self.net.wv_classifier.parameters())
-        #self.criterion = nn.CrossEntropyLoss()
-        self.desc_criterion = nn.KLDivLoss()
-        #self.desc_criterion = torch.nn.MSELoss()
+        classifier_parameters = list(self.net.wv_classifier.parameters())+list(self.net.wv_hidden.parameters())+list(self.net.mu.parameters())+ list(self.net.log_sigma.parameters())
+        self.optimizer_classifier = optim.Adam(classifier_parameters)
+        self.criterion = nn.CrossEntropyLoss()
+        #self.desc_criterion = nn.KLDivLoss()
+        self.desc_criterion = torch.nn.MSELoss()
         if self.gpu:
-            #self.criterion.cuda()
-            self.desc_criterion.cuda()
+            self.criterion.cuda()
         for epoch in range(num_epohs):
             all_loss = []
             trainIter = self.pred(trainBatchIter, train=True)
             for current_prediction in trainIter:
                 self.optimizer_mapping.zero_grad()
-                #self.optimizer_classifier.zero_grad()
+                self.optimizer_classifier.zero_grad()
                 pred = current_prediction['pred']
                 y = current_prediction['y']
                 atted = current_prediction['atted'] 
                 y_desc_representation = current_prediction['y_desc_representation']
 
                 #class_loss = self.criterion(pred, y)
+                class_loss = pred['loss']
+                #print(class_loss)
                 desc_loss = self.desc_criterion(input=atted, target=y_desc_representation)
-                #loss = class_loss + desc_loss
-                loss = desc_loss
+                loss = class_loss + desc_loss
 
                 loss.backward()
                 self.optimizer_mapping.step()
-                #self.optimizer_classifier.step()
+                self.optimizer_classifier.step()
                 loss_value = float(loss.data.item())
                 all_loss.append(loss_value)
             print("Finish batch")
@@ -98,7 +88,11 @@ class modelUltiMapping(modelUlti):
                 y.cuda()
                 y_desc.cuda()
                 y_desc_mask.cuda()
-            pred, atted = self.net(x, mask)
+            if train:
+                tensor_one_hot_y = self.y2onehot(y)
+                pred, atted = self.net(x, mask, true_y=tensor_one_hot_y, train=True)
+            else:
+                pred, atted = self.net(x, mask)
             with torch.no_grad():
                 y_desc_representation = self.net.bert_embedding(y_desc, y_desc_mask)
             output_dict = {}
@@ -108,3 +102,19 @@ class modelUltiMapping(modelUlti):
             output_dict['y_desc_representation'] = y_desc_representation[0][:,0]
 
             yield output_dict
+
+    def y2onehot(self, y):
+        num_class = self.net.n_classes
+        one_hot_y_list = []
+        for i in range(len(y)):
+            current_one_hot = [0]*num_class
+            current_one_hot[y[i].item()] = 1
+            one_hot_y_list.append(copy.deepcopy(current_one_hot))
+        tensor_one_hot_y = torch.tensor(one_hot_y_list)
+        if self.gpu:
+            tensor_one_hot_y = tensor_one_hot_y.type(torch.cuda.LongTensor)
+            tensor_one_hot_y = tensor_one_hot_y.cuda()
+        return tensor_one_hot_y 
+
+
+

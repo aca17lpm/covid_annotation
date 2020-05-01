@@ -1,9 +1,9 @@
 import sys
 import math
-from WvMLLib import WVdataIter, BatchIterBert
-from WvMLLib import modelUltiMapping as modelUlti
-from WvMLLib import ReaderPostProcessorMapping as ReaderPostProcessor
-from WvMLLib.models import BERT_Mapping
+from WvMLLib import WVdataIter, BatchIterBert, DictionaryProcess
+from WvMLLib import NVDMUlti as modelUlti
+from WvMLLib import ReaderPostProcessorNVDM as ReaderPostProcessor
+from WvMLLib.models import NVDM
 from configobj import ConfigObj
 import torch
 import argparse
@@ -12,7 +12,11 @@ from sklearn.model_selection import KFold
 import random
 import os
 from pathlib import Path
+from gensim.corpora.dictionary import Dictionary
 
+def xonlyBatchProcessor(x, y):
+    ss = [s[1] for s in x]
+    return ss[0]
 
 
 def get_average_fmeasure_score(results_dict, field):
@@ -23,14 +27,17 @@ def get_average_fmeasure_score(results_dict, field):
         t += len(results_dict['f-measure'][class_field][field])
     return score/t
 
-def maskedBertBatchProcessor(x, y):
+def maskedBertBatchProcessor(raw_x, y):
+    x = [s[0] for s in raw_x]
+    idded_words = [s[1] for s in raw_x]
+
     word_ids = [s[0] for s in x]
     mask = [s[1] for s in x]
     y_class = [s[0] for s in y]
     y_description = [s[1][0] for s in y]
     y_description_mask = [s[1][1] for s in y]
     #print(y_description)
-    return torch.tensor(word_ids), torch.tensor(mask), torch.tensor(y_class), torch.tensor(y_description), torch.tensor(y_description_mask)
+    return torch.tensor(word_ids), torch.tensor(mask), torch.tensor(y_class), torch.tensor(y_description), torch.tensor(y_description_mask), torch.tensor(idded_words)
 
 
 def reconstruct_ids(each_fold, all_ids):
@@ -61,7 +68,20 @@ if __name__ == "__main__":
     config = ConfigObj(config_file)
     postProcessor = ReaderPostProcessor(tokenizer='bert', config=config, word2id=True, return_mask=True, remove_single_list=True)
     dataIter = WVdataIter(merged_json_file, postProcessor=postProcessor, config=config, shuffle=True)
-    print(next(dataIter))
+    batchiter = BatchIterBert(dataIter, filling_last_batch=False, postProcessor=xonlyBatchProcessor, batch_size=1)
+    #print(next(dataIter)[0][1])
+    #print(next(batchiter))
+    common_dictionary = Dictionary(batchiter)
+    dictProcess = DictionaryProcess(common_dictionary)
+    print(len(dictProcess))
+    postProcessor.dictProcess = dictProcess
+
+    #for item in dataIter:
+    #    print(item[0][1])
+    #    break
+
+
+
     dataIter.count_samples()
 
 
@@ -97,10 +117,8 @@ if __name__ == "__main__":
         trainBatchIter = BatchIterBert(trainDataIter, filling_last_batch=True, postProcessor=maskedBertBatchProcessor)
         testBatchIter = BatchIterBert(testDataIter, filling_last_batch=False, postProcessor=maskedBertBatchProcessor)
         valBatchIter = BatchIterBert(valDataIter, filling_last_batch=False, postProcessor=maskedBertBatchProcessor)
-        label_desc_ids, label_desc_mask = trainDataIter.postProcessor.get_label_desc_ids()
-        net = BERT_Mapping(config)
+        net = NVDM(len(dictProcess), config)
         mUlti = modelUlti(net, gpu=True)
-        mUlti.set_target_desc(label_desc_ids, label_desc_mask)
         fold_cache_path = os.path.join(cache_path, 'fold'+str(fold_index))
         path = Path(fold_cache_path)
         path.mkdir(parents=True, exist_ok=True)
@@ -117,7 +135,7 @@ if __name__ == "__main__":
         print(results)
 
         fold_index += 1
-        break
+        #break
     print(results_dict)
     overall_accuracy = sum(results_dict['accuracy'])/len(results_dict['accuracy'])
     overall_precision = get_average_fmeasure_score(results_dict, 'precision')

@@ -1,4 +1,5 @@
 from transformers import BertModel
+import math
 import os
 import torch.nn.functional as F
 import torch
@@ -35,6 +36,24 @@ class SingleHeadAttention(nn.Module):
         return weightedSum
 
 
+class Norm(nn.Module):
+    def __init__(self, d_model, eps = 1e-6):
+        super().__init__()
+
+        self.size = d_model
+
+        # create two learnable parameters to calibrate normalisation
+        self.alpha = nn.Parameter(torch.ones(self.size))
+        self.bias = nn.Parameter(torch.zeros(self.size))
+
+        self.eps = eps
+
+    def forward(self, x):
+        norm = self.alpha * (x - x.mean(dim=-1, keepdim=True)) \
+        / (x.std(dim=-1, keepdim=True) + self.eps) + self.bias
+        return norm
+
+
 
 def attention(q, k, v, d_k, mask=None, dropout=None):
 
@@ -51,6 +70,25 @@ def attention(q, k, v, d_k, mask=None, dropout=None):
 
     output = torch.matmul(scores, v)
     return output
+
+
+
+class EncoderLayer(nn.Module):
+    def __init__(self, d_model, heads, dropout=0.1):
+        super().__init__()
+        self.norm_1 = Norm(d_model)
+        self.norm_2 = Norm(d_model)
+        self.attn = MultiHeadAttention(heads, d_model, dropout=dropout)
+        self.ff = FeedForward(d_model, dropout=dropout)
+        self.dropout_1 = nn.Dropout(dropout)
+        self.dropout_2 = nn.Dropout(dropout)
+
+    def forward(self, x, mask):
+        x2 = self.norm_1(x)
+        x = x + self.dropout_1(self.attn(x2,x2,x2,mask))
+        x2 = self.norm_2(x)
+        x = x + self.dropout_2(self.ff(x2))
+        return x
 
 
 class MultiHeadAttention(nn.Module):
@@ -91,6 +129,7 @@ class MultiHeadAttention(nn.Module):
         concat = scores.transpose(1,2).contiguous()\
         .view(bs, -1, self.d_model)
         output = self.out(concat)
+    
         return output
 
 

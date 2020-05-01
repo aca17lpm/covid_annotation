@@ -1,9 +1,9 @@
 import sys
 import math
 from WvMLLib import WVdataIter, BatchIterBert
-from WvMLLib import modelUltiMapping as modelUlti
+from WvMLLib import modelUltiVaeMapping as modelUlti
 from WvMLLib import ReaderPostProcessorMapping as ReaderPostProcessor
-from WvMLLib.models import BERT_Mapping
+from WvMLLib.models import BERT_Mapping_VAE as BERT_Mapping
 from configobj import ConfigObj
 import torch
 import argparse
@@ -97,10 +97,8 @@ if __name__ == "__main__":
         trainBatchIter = BatchIterBert(trainDataIter, filling_last_batch=True, postProcessor=maskedBertBatchProcessor)
         testBatchIter = BatchIterBert(testDataIter, filling_last_batch=False, postProcessor=maskedBertBatchProcessor)
         valBatchIter = BatchIterBert(valDataIter, filling_last_batch=False, postProcessor=maskedBertBatchProcessor)
-        label_desc_ids, label_desc_mask = trainDataIter.postProcessor.get_label_desc_ids()
         net = BERT_Mapping(config)
         mUlti = modelUlti(net, gpu=True)
-        mUlti.set_target_desc(label_desc_ids, label_desc_mask)
         fold_cache_path = os.path.join(cache_path, 'fold'+str(fold_index))
         path = Path(fold_cache_path)
         path.mkdir(parents=True, exist_ok=True)
@@ -117,7 +115,7 @@ if __name__ == "__main__":
         print(results)
 
         fold_index += 1
-        break
+        #break
     print(results_dict)
     overall_accuracy = sum(results_dict['accuracy'])/len(results_dict['accuracy'])
     overall_precision = get_average_fmeasure_score(results_dict, 'precision')

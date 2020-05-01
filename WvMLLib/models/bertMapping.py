@@ -3,15 +3,19 @@ import os
 import torch.nn.functional as F
 import torch
 import torch.nn as nn
-from .miscLayer import BERT_Embedding, SingleHeadAttention
+from .miscLayer import BERT_Embedding, SingleHeadAttention, EncoderLayer
 
 class BERT_Mapping_mapping(nn.Module):
     def __init__(self, bert_dim):
         super().__init__()
+        self.encoder1 = EncoderLayer(768, 12)
+        self.encoder2 = EncoderLayer(768, 12)
         self.att = SingleHeadAttention(bert_dim, bert_dim)
 
-    def forward(self,x):
-        atted = self.att(x)
+    def forward(self,x, mask):
+        encoded = self.encoder1(x, None)
+        encoded = self.encoder2(encoded, None)
+        atted = self.att(encoded)
         return atted
 
 
@@ -34,6 +38,7 @@ class BERT_Mapping(nn.Module):
     def __init__(self, config):
         super().__init__()
 
+        self.target_desc = None
         self.bert_embedding = BERT_Embedding(config)
         self.n_classes = len(config['TARGET'].get('labels'))
         bert_dim = 768
@@ -51,8 +56,21 @@ class BERT_Mapping(nn.Module):
         #print(bert_rep[0].shape)
         #print(bert_rep[1].shape)
         bert_rep = bert_rep[0]
-        atted = self.bert_mapping(bert_rep)
+        atted = self.bert_mapping(bert_rep, mask)
         #print(atted.shape)
-        out = self.wv_classifier(atted)
+        #out = self.wv_classifier(atted)
+        out = atted.matmul(self.target_desc)
         return out, atted
+
+
+    def set_target_desc(self, label_desc, label_desc_mask):
+        with torch.no_grad():
+            self.target_desc = self.bert_embedding(label_desc, label_desc_mask)[0][:,0]
+        self.target_desc = self.target_desc.transpose(0,1)
+        print(self.target_desc.shape)
+        
+
+
+
+
 
