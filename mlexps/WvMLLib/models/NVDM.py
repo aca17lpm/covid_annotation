@@ -126,7 +126,7 @@ class NVDM(nn.Module):
             class_loss = class_loss / n_samples
 
 
-            minus_elbo = rec_loss + kld + class_loss
+            minus_elbo = rec_loss + kld + 2*class_loss
             minus_elbo = minus_elbo.sum()
             #minus_elbo = minus_elbo.mean()
             total_loss = minus_elbo

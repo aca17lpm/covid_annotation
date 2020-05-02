@@ -111,7 +111,7 @@ if __name__ == "__main__":
         trainDataIter.all_ids = train_ids
         valDataIter.all_ids = val_ids
         testDataIter.all_ids = test_ids
-        trainDataIter.count_samples()
+        trainDataIter.cal_sample_weights()
         valDataIter.count_samples()
         testDataIter.count_samples()
         trainBatchIter = BatchIterBert(trainDataIter, filling_last_batch=True, postProcessor=maskedBertBatchProcessor)

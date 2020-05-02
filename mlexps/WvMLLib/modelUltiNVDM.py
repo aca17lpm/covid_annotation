@@ -54,10 +54,10 @@ class NVDMUlti(modelUlti):
                 all_loss.append(loss_value)
             if epoch % 10 == 0:
                 self.getTopics(trainBatchIter.dataIter.postProcessor.dictProcess)
-            print("Finish batch")
+            print("Finish Epoch ", epoch)
             if valBatchIter:
                 output_dict = self.eval(valBatchIter)
-                stop_signal = self.earlyStop(output_dict, patience=40)
+                stop_signal = self.earlyStop(output_dict, patience=150)
                 if stop_signal:
                     print('stop signal received, stop training')
                     break
@@ -65,9 +65,9 @@ class NVDMUlti(modelUlti):
             print('epoch ', epoch, 'loss', sum(all_loss)/len(all_loss), ' val acc: ', output_dict['accuracy'])
             
         
-        cache_load_path = os.path.join(self.cache_path, 'best_net.model')
-        print('finish training, load model from ', cache_load_path)
-        self.loadWeights(cache_load_path)
+        #cache_load_path = os.path.join(self.cache_path, 'best_net.model')
+        #print('finish training, load model from ', cache_load_path)
+        #self.loadWeights(cache_load_path)
 
 
     def pred(self, batchGen, train=False):
@@ -95,7 +95,12 @@ class NVDMUlti(modelUlti):
                 y_desc_mask.cuda()
             if train:
                 one_hot_y = self.y2onehot(y)
-                pred, atted = self.net(x, mask, bow=x_bow, train=True, true_y=one_hot_y, n_samples=10)
+                if batchGen.dataIter.label_weights_list:
+                    n_samples = self.get_num_samples(y, batchGen.dataIter.label_weights_list)
+                else:
+                    n_samples = 10
+                #print(n_samples)
+                pred, atted = self.net(x, mask, bow=x_bow, train=True, true_y=one_hot_y, n_samples=n_samples)
             else:
                 pred, atted = self.net(x, mask, bow=x_bow)
             with torch.no_grad():
@@ -107,6 +112,12 @@ class NVDMUlti(modelUlti):
             output_dict['y_desc_representation'] = y_desc_representation[0][:,0]
 
             yield output_dict
+
+    def get_num_samples(self, y, weight_list):
+        n_samples = 0
+        for y_item in y:
+            n_samples += weight_list[y_item.item()]
+        return n_samples
 
     def y2onehot(self, y):
         num_class = self.net.n_classes
