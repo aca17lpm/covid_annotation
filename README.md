@@ -21,7 +21,10 @@ This is the privat repository for WeVerify EUvsVirus Hackathon Data and scripts
     * total pair compareed:  413
 
   * merged_clean_ml.json/tsv: Merged Prot class to PubPrep
-    * same statistcs as above
+    * 1293 annotated samples
+    * overall agreement:  0.7336561743341404
+    * overall kappa:  0.7040624159268227
+    * total pair compareed:  413
     * class statistics: {'PubAuthAction': 323, 'CommSpread': 262, 'PubPrep': 82, 'PromActs': 302, 'GenMedAdv': 215, 'VirTrans': 95, 'Vacc': 104, 'None': 60, 'Consp': 119, 'VirOrgn': 80} 
 
 * mergeAnnos.py: Python script for data merge and agreement calcucation
