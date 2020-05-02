@@ -117,18 +117,19 @@ class NVDM(nn.Module):
             for i in range(n_samples):
                 z = torch.zeros_like(mu).normal_() * torch.exp(log_sigma) + mu
                 z = self.h_to_z(z)
-                y_hat = self.wv_classifier(z)
+                log_y_hat = torch.log_softmax(self.wv_classifier(z), dim=-1)
                 log_prob = self.topics(z)
                 rec_loss = rec_loss - (log_prob * bow).sum(dim=-1)
-                class_loss += self.class_criterion(y_hat, true_y)
+                class_loss = class_loss - (log_y_hat * true_y).sum(dim=-1)
+                #class_loss += self.class_criterion(y_hat, true_y)
             rec_loss = rec_loss / n_samples
             class_loss = class_loss / n_samples
 
 
-            minus_elbo = rec_loss + kld
-            #minus_elbo = minus_elbo.sum()
-            minus_elbo = minus_elbo.mean()
-            total_loss = minus_elbo + class_loss
+            minus_elbo = rec_loss + kld + class_loss
+            minus_elbo = minus_elbo.sum()
+            #minus_elbo = minus_elbo.mean()
+            total_loss = minus_elbo
 
             y = {
                 'loss': total_loss,

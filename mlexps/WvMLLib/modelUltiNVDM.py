@@ -86,7 +86,7 @@ class NVDMUlti(modelUlti):
                 y = y.type(torch.cuda.LongTensor)
                 y_desc = y_desc.type(torch.cuda.LongTensor)
                 y_desc_mask = y_desc_mask.type(torch.cuda.LongTensor)
-                x_bow = x_bow.type(torch.cuda.LongTensor)
+                x_bow = x_bow.type(torch.cuda.FloatTensor)
                 x_bow.cuda()
                 x.cuda()
                 mask.cuda()
@@ -94,7 +94,8 @@ class NVDMUlti(modelUlti):
                 y_desc.cuda()
                 y_desc_mask.cuda()
             if train:
-                pred, atted = self.net(x, mask, bow=x_bow, train=True, true_y=y, n_samples=10)
+                one_hot_y = self.y2onehot(y)
+                pred, atted = self.net(x, mask, bow=x_bow, train=True, true_y=one_hot_y, n_samples=10)
             else:
                 pred, atted = self.net(x, mask, bow=x_bow)
             with torch.no_grad():
@@ -116,7 +117,7 @@ class NVDMUlti(modelUlti):
             one_hot_y_list.append(copy.deepcopy(current_one_hot))
         tensor_one_hot_y = torch.tensor(one_hot_y_list)
         if self.gpu:
-            tensor_one_hot_y = tensor_one_hot_y.type(torch.cuda.LongTensor)
+            tensor_one_hot_y = tensor_one_hot_y.type(torch.cuda.FloatTensor)
             tensor_one_hot_y = tensor_one_hot_y.cuda()
         return tensor_one_hot_y 
 
