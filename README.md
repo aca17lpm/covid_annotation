@@ -20,6 +20,10 @@ This is the privat repository for WeVerify EUvsVirus Hackathon Data and scripts
     * overall kappa:  0.7043583535108958
     * total pair compareed:  413
 
+  * merged_clean_ml.json/tsv: Merged Prot class to PubPrep
+    * same statistcs as above
+    * class statistics: {'PubAuthAction': 323, 'CommSpread': 262, 'PubPrep': 82, 'PromActs': 302, 'GenMedAdv': 215, 'VirTrans': 95, 'Vacc': 104, 'None': 60, 'Consp': 119, 'VirOrgn': 80} 
+
 * mergeAnnos.py: Python script for data merge and agreement calcucation
 * WvLibs: Folder contains WeVerify Covid data reader library
 * run.sh: The bash script generate merged_all.json/tsv
