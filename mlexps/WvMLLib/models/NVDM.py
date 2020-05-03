@@ -100,9 +100,13 @@ class NVDM(nn.Module):
         self.reset_parameters()
 
 
-    def forward(self,x, mask, n_samples=1, bow=None, train=False, true_y=None):
-        bert_rep = self.bert_embedding(x, mask)
-        bert_rep = bert_rep[0]
+    def forward(self,x, mask=None, n_samples=1, bow=None, train=False, true_y=None, pre_embd=False):
+        if pre_embd:
+            bert_rep = x
+        else:
+            bert_rep = self.bert_embedding(x, mask)
+            bert_rep = bert_rep[0]
+
         atted = self.bert_mapping(bert_rep)
         hidden = self.wv_hidden(atted)
         #out = self.wv_classifier(hidden)

@@ -35,6 +35,8 @@ class BatchIterBert:
         else:
             self._reset_iter()
             raise StopIteration
+    def __len__(self):
+        return self.num_batches
 
     def _readNextBatch(self):
         i = 0
@@ -51,7 +53,7 @@ class BatchIterBert:
             except StopIteration:
                 if self.filling_last_batch:
                     batch_list_x, batch_list_y = self._filling_last_batch(batch_list_x, batch_list_y)
-                    i = self.batch_size
+                i = self.batch_size
         return batch_list_x, batch_list_y
 
 

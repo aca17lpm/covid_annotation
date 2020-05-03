@@ -2,7 +2,7 @@ import nltk
 from nltk.corpus import stopwords
 import os
 
-class ReaderPostProcessorNVDM:
+class ReaderPostProcessorVAE:
     def __init__(self, tokenizer='nltk', 
             x_fields=['Claim', 'Explaination'], 
             x_output_mode='concat', 
@@ -35,6 +35,7 @@ class ReaderPostProcessorNVDM:
         self.labelsFields = ['PubAuthAction', 'CommSpread', 'GenMedAdv', 'PromActs', 'Consp', 'VirTrans', 'VirOrgn', 'PubPrep', 'Vacc', 'Prot', 'None']
         self.stop_words = set(stopwords.words('english'))
         self.dictProcess = None
+        self.embd_ready = False
 
     def initProcessor(self):
         if self.tokenizer == 'nltk':
@@ -83,34 +84,32 @@ class ReaderPostProcessorNVDM:
                 current_rawx = current_rawx.lower()
             split_x.append(current_rawx)
         if self.x_output_mode == 'concat':
-            split_x = [' '.join(split_x)]
+            split_x = ' '.join(split_x)
 
-        processed_x = []
-        processed_x_token_only = []
-        for current_rawx in split_x:
+        current_rawx = split_x
+        ## Bert toknise for hidden layers. add_special_tokens not added, additional attention will be applied on token level (CLS not used)
+        if self.embd_ready:
+            current_x = sample['embd']
+        else:
             current_x = self.x_pipeline(current_rawx, add_special_tokens=False)
-            current_x_nltk_tokened = self.nltkTokenizer(current_rawx)
-            current_x_nltk_tokened = self._remove_stop_words(current_x_nltk_tokened)
-            ## remove stopwords
-            if self.dictProcess:
-                current_x_nltk_tokened = self.dictProcess.doc2countHot(current_x_nltk_tokened)
-            processed_x_token_only.append(current_x_nltk_tokened)
-            processed_x.append(current_x)
 
-        x=processed_x
-        x.append(current_x_nltk_tokened)
+        ## NLTK tokenise and remove stopwords for topic modelling
+        current_x_nltk_tokened = self.nltkTokenizer(current_rawx)
+        current_x_nltk_tokened = self._remove_stop_words(current_x_nltk_tokened)
+        if self.dictProcess:
+            current_x_nltk_tokened = self.dictProcess.doc2countHot(current_x_nltk_tokened)
+        #processed_x_token_only.append(current_x_nltk_tokened)
+        #processed_x.append(current_x)
 
+        x=[current_x, current_x_nltk_tokened]
 
         current_y = sample['selected_label']
-        current_y_description = self.desctiptionDict[current_y]
-        current_y_description = self.x_pipeline(current_y_description, max_length=100)
         current_y = self.label2ids(current_y)
-        y = [current_y, current_y_description]
+        y = current_y
 
         if self.remove_single_list:
             x = self._removeSingleList(x)
             y = self._removeSingleList(y)
-        #print(x, y)
         return x, y
 
     def _removeSingleList(self, y):

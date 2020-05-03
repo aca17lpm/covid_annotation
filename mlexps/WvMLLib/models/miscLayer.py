@@ -158,7 +158,10 @@ class BERT_Embedding(nn.Module):
         for p in self.bert.parameters():
             p.requires_grad = False
 
-    def forward(self, x, mask):
+    def forward(self, x, mask=None):
+        if mask == None:
+            mask = x != 0
+            mask.type(x.type())
         bert_rep = self.bert(x, attention_mask=mask)
         return bert_rep
 

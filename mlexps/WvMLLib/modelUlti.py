@@ -98,6 +98,8 @@ class modelUlti:
         output_dict = {}
         all_prediction = []
         all_true_label = []
+        print(len(batchGen))
+        print(len(batchGen.dataIter))
         for current_prediction in self.pred(batchGen):
             pred = current_prediction['pred']
             y = current_prediction['y']
@@ -111,11 +113,13 @@ class modelUlti:
 
         all_prediction = np.concatenate(all_prediction)
         all_true_label = np.concatenate(all_true_label)
+        print(len(all_true_label))
         num_correct = (all_prediction == all_true_label).sum()
         accuracy = num_correct / len(all_prediction)
         output_dict['accuracy'] = accuracy
         output_dict['f-measure'] = {}
-        for class_id in list(range(12)):
+        num_classes = len(batchGen.dataIter.postProcessor.labelsFields)
+        for class_id in list(range(num_classes)):
             f_measure_score = self.fMeasure(all_prediction, all_true_label, class_id)
             output_dict['f-measure']['class '+str(class_id)] = f_measure_score
 
@@ -134,11 +138,15 @@ class modelUlti:
 
 
     def fMeasure(self, all_prediction, true_label, class_id, ignoreid=None):
+        #print(class_id)
         mask = [class_id] * len(all_prediction)
         mask_arrary = np.array(mask)
         pred_mask = np.argwhere(all_prediction==class_id)
         #print(pred_mask)
         true_mask = np.argwhere(true_label==class_id)
+        #print(true_mask)
+        #print(len(true_mask))
+        
 
         total_pred = 0
         total_true = 0
@@ -169,4 +177,5 @@ class modelUlti:
             f_measure = 0
         else:
             f_measure = 2*((precision*recall)/(precision+recall))
-        return precision, recall, f_measure
+        #print(total_true)
+        return precision, recall, f_measure, total_pred, total_true, pc, rc

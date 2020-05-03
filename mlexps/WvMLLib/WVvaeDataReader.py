@@ -3,7 +3,7 @@ import math
 import json
 import torch
 
-class WVdataIter:
+class WVvaeDataIter:
     def __init__(self, merged_json, postProcessor=None, shuffle=False, config=None):
         self.label_count_dict = {}
         self.label_weights_list = None
@@ -69,12 +69,15 @@ class WVdataIter:
             current_sample = self.postProcessor.postProcess(current_sample)
         return current_sample
 
-    def preCalculateEmbed(self, embd_net, embd_field, dataType=torch.cuda.LongTensor):
-        #for i in range(len(self.all_ids)):
-        for sample in self:
+    def preCalculateEmbed(self, embd_net, embd_field, dataType=torch.long, device='cuda:0'):
+        for sample, _ in self:
             x_embd = sample[embd_field]
-            embd = embd_net(x_embd)
-            self.data_dict[current_id]['embd'] = embd
+            input_tensor = torch.tensor([x_embd], dtype=torch.long, device=device)
+            with torch.no_grad():
+                embd = embd_net(input_tensor)
+            self.data_dict[self.current_sample_dict_id]['embd'] = embd[0].tolist()
+
+        self.postProcessor.embd_ready = True
 
         #pass
 
@@ -99,6 +102,7 @@ class WVdataIter:
                 self.label_count_dict[annotation] = 0
             self.label_count_dict[annotation] += 1
         print(self.label_count_dict)
+        print(self.label_count_list)
         self.goPoseprocessor = True
 
     def cal_sample_weights(self):
