@@ -40,18 +40,21 @@ class modelUlti:
                 stop_signal = self.earlyStop(output_dict)
                 if stop_signal:
                     print('stop signal received, stop training')
-                    #cache_load_path = os.path.join(self.cachePath, 'best_net.model')
-                    #print('finish training, load model from ', cache_load_path)
-                    #self.loadWeights(cache_load_path)
+                    cache_load_path = os.path.join(self.cachePath, 'best_net.model')
+                    print('finish training, load model from ', cache_load_path)
+                    self.loadWeights(cache_load_path)
                     break
 
             print('epoch ', epoch, 'loss', sum(all_loss)/len(all_loss), ' val acc: ', output_dict['accuracy'])
+            if epoch % 20 == 0:
+                cache_last_path = os.path.join(self.cache_path, 'last_net.model')
+                self.saveWeights(cache_last_path)
+
+        cache_last_path = os.path.join(self.cache_path, 'last_net.model')
+        self.saveWeights(cache_last_path)
+
             
         
-        cache_load_path = os.path.join(self.cache_path, 'best_net.model')
-        print('finish training, load model from ', cache_load_path)
-        self.loadWeights(cache_load_path)
-
 
     def earlyStop(self, output_dict, metric='accuracy', patience=40):
         result = output_dict['accuracy']
@@ -72,23 +75,28 @@ class modelUlti:
 
 
     def pred(self, batchGen, train=False):
+        pre_embd = False
         if train:
             self.net.train()
             self.optimizer.zero_grad()
         else:
             self.net.eval()
         i=0
-        for x, y, mask in batchGen:
+        for x, y in batchGen:
             i+=1
             print("processing batch", i, end='\r')
             if self.gpu:
-                x = x.type(torch.cuda.LongTensor)
-                mask = mask.type(torch.cuda.LongTensor)
                 y = y.type(torch.cuda.LongTensor)
-                x.cuda()
-                mask.cuda()
                 y.cuda()
-            pred = self.net(x, mask)
+                if batchGen.dataIter.postProcessor.embd_ready:
+                    pre_embd = True
+                    x = x.type(torch.cuda.FloatTensor).squeeze(1)
+                    x.cuda()
+                else:
+                    x = x.type(torch.cuda.LongTensor)
+                    x.cuda()
+
+            pred = self.net(x, None, pre_embd = pre_embd)
             output_dict = {}
             output_dict['pred'] = pred
             output_dict['y'] = y

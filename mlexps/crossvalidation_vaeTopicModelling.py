@@ -65,6 +65,7 @@ if __name__ == "__main__":
     parser.add_argument("--nFold", type=int, default=10, help="config files if needed")
     parser.add_argument("--randomSeed", type=int, help="randomSeed for reproduction")
     parser.add_argument("--preEmbd", default=False, action='store_true', help="calculate embedding before training")
+    parser.add_argument("--dynamicSampling", default=False, action='store_true', help="sample based on class count")
     args = parser.parse_args()
 
     merged_json_file = args.merged_json_file
@@ -116,7 +117,11 @@ if __name__ == "__main__":
         trainDataIter.all_ids = train_ids
         testDataIter.all_ids = test_ids
 
-        trainDataIter.cal_sample_weights()
+        if args.dynamicSampling:
+            print('get training data sample weights')
+            trainDataIter.cal_sample_weights()
+        else:
+            trainDataIter.count_samples()
         testDataIter.count_samples()
 
         trainBatchIter = BatchIterBert(trainDataIter, filling_last_batch=True, postProcessor=maskedBertBatchProcessor)
