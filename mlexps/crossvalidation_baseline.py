@@ -73,7 +73,7 @@ if __name__ == "__main__":
 
 
     config = ConfigObj(config_file)
-    postProcessor = ReaderPostProcessor(tokenizer='bert', config=config, word2id=True, remove_single_list=False)
+    postProcessor = ReaderPostProcessor(tokenizer='bert', config=config, word2id=True, remove_single_list=False, add_spec_tokens=True)
     trainDataIter = WVdataIter(merged_json_file, postProcessor=postProcessor, config=config, shuffle=True)
     trainDataIter.count_samples()
 

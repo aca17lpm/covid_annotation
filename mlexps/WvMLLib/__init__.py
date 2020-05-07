@@ -12,3 +12,7 @@ from .WVvaeDataReader import WVvaeDataIter
 from .PostprocessorVAE import ReaderPostProcessorVAE 
 from .modelUltiVAEtm import ModelUltiVAEtm
 from .Postprocessor import PostProcessorBaseline
+from .PostprocessorHanVAE import ReaderPostProcessorHanVAE
+from .modelUltiVAEtm_noatt import ModelUltiVAEtmNOatt
+from .modelUltiHANVAEtm import ModelUltiHANVAEtm
+from .WVvaeHanDataReader import WVvaeHANDataIter

@@ -57,7 +57,7 @@ class modelUlti:
         
 
     def earlyStop(self, output_dict, metric='accuracy', patience=40):
-        result = output_dict['accuracy']
+        result = output_dict[metric]
         stop_signal = False
         self.evaluation_history.append(result)
         num_epochs = len(self.evaluation_history)

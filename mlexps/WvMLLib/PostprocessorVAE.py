@@ -1,12 +1,13 @@
 import nltk
 from nltk.corpus import stopwords
 import os
+import re
 
 class ReaderPostProcessorVAE:
     def __init__(self, tokenizer='nltk', 
             x_fields=['Claim', 'Explaination'], 
             x_output_mode='concat', 
-            y_fields=['selected_label'], 
+            y_field='selected_label', 
             y_output_mode='high_conf', 
             keep_case=False, 
             label2id=True, 
@@ -15,12 +16,18 @@ class ReaderPostProcessorVAE:
             exteralWord2idFunction=None,
             return_mask=False,
             remove_single_list=True,
+            max_sent_len = 300,
+            add_spec_tokens = False,
+            add_CLS_token = False,
             ):
         self._init_defaults()
+        self.add_CLS_token = add_CLS_token
+        self.add_spec_tokens = add_spec_tokens
         self.tokenizer = tokenizer
+        self.max_sent_len = max_sent_len
         self.x_fields = x_fields
         self.x_output_mode = x_output_mode
-        self.y_fields = y_fields
+        self.y_field = y_field
         self.y_output_mode = y_output_mode
         self.keep_case = keep_case
         self.label2id = label2id
@@ -65,15 +72,59 @@ class ReaderPostProcessorVAE:
     def _remove_stop_words(self, tokened):
         remain_list = []
         for token in tokened:
+            contain_symbol, contain_number, contain_char, all_asii = self._check_string(token)
             keep = True
             if token in self.stop_words:
                 keep = False
             elif len(token) == 1:
                 keep = False
+            elif token.isdigit():
+                keep = False
+            elif not contain_char:
+                keep = False
+            elif not all_asii:
+                keep = False
+            elif len(token) > 18:
+                keep = False
 
             if keep == True:
                 remain_list.append(token)
+            else:
+                pass
+                #print(token)
         return remain_list
+
+    def _check_string(self, inputString):
+        contain_symbol = False
+        contain_number = False
+        contain_char = False
+        all_asii = True
+
+
+        have_symbol = re.compile('[@_!#$%^&*()<>?/\|}{~:]')
+        have_number = re.compile('\d')
+        have_char = re.compile('[a-zA-Z]')
+
+        ms = have_symbol.search(inputString)
+        if ms:
+            contain_symbol = True
+
+        mn = have_number.search(inputString)
+        if mn:
+            contain_number = True
+
+        mc = have_char.search(inputString)
+        if mc:
+            contain_char = True
+
+        if contain_char and not contain_number and not contain_symbol:
+            all_asii = all(ord(c) < 128 for c in inputString)
+
+
+        return contain_symbol, contain_number, contain_char, all_asii
+
+
+
 
 
     def postProcess(self, sample):
@@ -91,7 +142,7 @@ class ReaderPostProcessorVAE:
         if self.embd_ready:
             current_x = sample['embd']
         else:
-            current_x = self.x_pipeline(current_rawx, add_special_tokens=False)
+            current_x = self.x_pipeline(current_rawx, add_special_tokens=self.add_spec_tokens)
 
         ## NLTK tokenise and remove stopwords for topic modelling
         current_x_nltk_tokened = self.nltkTokenizer(current_rawx)
@@ -103,7 +154,7 @@ class ReaderPostProcessorVAE:
 
         x=[current_x, current_x_nltk_tokened]
 
-        current_y = sample['selected_label']
+        current_y = sample[self.y_field]
         current_y = self.label2ids(current_y)
         y = current_y
 
@@ -123,11 +174,11 @@ class ReaderPostProcessorVAE:
         return label_index
 
 
-    def x_pipeline(self, raw_x, max_length=300, add_special_tokens=True):
+    def x_pipeline(self, raw_x, add_special_tokens=True):
         if self.tokenizer:
             raw_x = self.tokenizerProcessor(raw_x)
         if self.word2id:
-            raw_x = self.word2idProcessor(raw_x, max_length=max_length, add_special_tokens=add_special_tokens)
+            raw_x = self.word2idProcessor(raw_x, add_special_tokens=add_special_tokens)
         return raw_x
 
     def nltkTokenizer(self, text):
@@ -140,8 +191,8 @@ class ReaderPostProcessorVAE:
         #print(ided)
         return tokened
 
-    def bertWord2id(self,tokened, max_length=300, add_special_tokens=True):
-        encoded = self.bert_tokenizer.encode_plus(tokened, max_length=max_length, pad_to_max_length=True, is_pretokenized=True, add_special_tokens=add_special_tokens)
+    def bertWord2id(self,tokened, add_special_tokens=True):
+        encoded = self.bert_tokenizer.encode_plus(tokened, max_length=self.max_sent_len, pad_to_max_length=True, is_pretokenized=True, add_special_tokens=add_special_tokens)
         #print(encoded)
         ided = encoded['input_ids']
         if self.return_mask:
