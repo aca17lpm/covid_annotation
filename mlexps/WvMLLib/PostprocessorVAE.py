@@ -155,7 +155,8 @@ class ReaderPostProcessorVAE:
         x=[current_x, current_x_nltk_tokened]
 
         current_y = sample[self.y_field]
-        current_y = self.label2ids(current_y)
+        if self.label2id:
+            current_y = self.label2ids(current_y)
         y = current_y
 
         if self.remove_single_list:

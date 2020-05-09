@@ -75,9 +75,9 @@ class WVClassifier(nn.Module):
         return out
 
 
-class NVDMNOATT(nn.Module):
+class ClassTopicModel(nn.Module):
     def __init__(self, vocab_dim, config, cls_lambda=10):
-        super(NVDMNOATT, self).__init__()
+        super(ClassTopicModel, self).__init__()
         default_config = {}
 
 
@@ -96,6 +96,7 @@ class NVDMNOATT(nn.Module):
         self.log_sigma = nn.Linear(hidden_dim, ntopics)
         self.h_to_z = Identity()
         self.topics = Topics(ntopics, vocab_dim) # decoder
+        self.class_topics = Topics(self.n_classes, vocab_dim)
         self.class_criterion = nn.CrossEntropyLoss()
         self.reset_parameters()
 
@@ -115,19 +116,23 @@ class NVDMNOATT(nn.Module):
             kld = kld_normal(mu, log_sigma)
             rec_loss = 0
             class_loss = 0
+            class_topic_loss = 0
             for i in range(n_samples):
                 z = torch.zeros_like(mu).normal_() * torch.exp(log_sigma) + mu
                 z = self.h_to_z(z)
                 log_y_hat = torch.log_softmax(self.wv_classifier(z), dim=-1)
                 log_prob = self.topics(z)
                 rec_loss = rec_loss - (log_prob * bow).sum(dim=-1)
+                log_prob_class_topic = self.class_topics(log_y_hat)
+                class_topic_loss  = class_topic_loss - (log_prob_class_topic * bow).sum(dim=-1)
                 class_loss = class_loss - (log_y_hat * true_y).sum(dim=-1)
                 #class_loss += self.class_criterion(y_hat, true_y)
             rec_loss = rec_loss / n_samples
             class_loss = class_loss / n_samples
+            class_topic_loss = class_topic_loss / n_samples
 
 
-            minus_elbo = rec_loss + kld + self.loss_weight_lambda*class_loss
+            minus_elbo = rec_loss + kld + self.loss_weight_lambda*class_loss + class_topic_loss
             minus_elbo = minus_elbo.sum()
             total_loss = minus_elbo
 
@@ -153,3 +158,7 @@ class NVDMNOATT(nn.Module):
 
     def get_topics(self):
         return self.topics.get_topics()
+
+    def get_class_topics(self):
+        return self.class_topics.get_topics()
+
