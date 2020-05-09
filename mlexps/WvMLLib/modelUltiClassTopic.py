@@ -77,6 +77,9 @@ class ModelUltiClass(ModelUltiVAEtmNOatt):
             print('epoch ', epoch, 'loss', avg_loss, ' val acc: ', output_dict['accuracy'])
         cache_last_path = os.path.join(self.cache_path, 'last_net.model')
         self.saveWeights(cache_last_path)
+        self.getTopics(trainBatchIter.dataIter.postProcessor.dictProcess)
+        print('===========')
+        self.getClassTopics(trainBatchIter.dataIter.postProcessor.dictProcess)
             
         
         #cache_load_path = os.path.join(self.cache_path, 'best_net.model')
