@@ -106,8 +106,8 @@ class modelUlti:
         output_dict = {}
         all_prediction = []
         all_true_label = []
-        print(len(batchGen))
-        print(len(batchGen.dataIter))
+        #print(len(batchGen))
+        #print(len(batchGen.dataIter))
         for current_prediction in self.pred(batchGen):
             pred = current_prediction['pred']
             y = current_prediction['y']

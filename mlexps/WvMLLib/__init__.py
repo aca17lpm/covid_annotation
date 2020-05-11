@@ -17,3 +17,4 @@ from .modelUltiVAEtm_noatt import ModelUltiVAEtmNOatt
 from .modelUltiHANVAEtm import ModelUltiHANVAEtm
 from .WVvaeHanDataReader import WVvaeHANDataIter
 from .modelUltiClassTopic import ModelUltiClass
+from .ReaderBase import WVreaderBase

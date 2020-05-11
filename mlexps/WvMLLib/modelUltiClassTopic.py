@@ -24,9 +24,9 @@ class ModelUltiClass(ModelUltiVAEtmNOatt):
         #self.optimizer_topic_modelling = optim.Adam(topic_model_paramters)
 
         self.optimizer = optim.Adam(self.net.parameters())
-        self.criterion = nn.CrossEntropyLoss()
-        if self.gpu:
-            self.criterion.cuda()
+        #self.criterion = nn.CrossEntropyLoss()
+        #if self.gpu:
+        #    self.criterion.cuda()
         for epoch in range(num_epohs):
             all_loss = []
             trainIter = self.pred(trainBatchIter, train=True)
@@ -60,7 +60,7 @@ class ModelUltiClass(ModelUltiVAEtmNOatt):
                 self.getClassTopics(trainBatchIter.dataIter.postProcessor.dictProcess)
                 cache_last_path = os.path.join(self.cache_path, 'last_net.model')
                 self.saveWeights(cache_last_path)
-            print("Finish Epoch ", epoch)
+            #print("Finish Epoch ", epoch)
             if valBatchIter:
                 output_dict = self.eval(valBatchIter)
 

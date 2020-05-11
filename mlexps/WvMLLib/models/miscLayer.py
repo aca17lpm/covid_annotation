@@ -153,7 +153,7 @@ class BERT_Embedding(nn.Module):
         super().__init__()
 
         bert_model_path = os.path.join(config['BERT'].get('bert_path'), 'model')
-        bert_dim = int(config['BERT'].get('bert_dim'))
+        self.bert_dim = int(config['BERT'].get('bert_dim'))
         self.bert = BertModel.from_pretrained(bert_model_path)
         for p in self.bert.parameters():
             p.requires_grad = False
@@ -164,4 +164,18 @@ class BERT_Embedding(nn.Module):
             mask.type(x.type())
         bert_rep = self.bert(x, attention_mask=mask)
         return bert_rep
+
+
+class Dense(nn.Module):
+    def __init__(self, input_dim, out_dim, non_linear=None):
+        super().__init__()
+        self.dense = nn.Linear(input_dim, out_dim)
+        self.non_linear = non_linear
+
+    def forward(self, x):
+        output = self.dense(x)
+        if self.non_linear:
+            output = self.non_linear(output)
+        return output
+
 

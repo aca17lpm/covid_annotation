@@ -113,7 +113,7 @@ class ModelUltiVAEtmNOatt(modelUlti):
                 else:
                     n_samples = 10
                 #print(n_samples)
-                pred, atted = self.net(x, bow=x_bow, train=True, true_y=one_hot_y, n_samples=n_samples, pre_embd=pre_embd)
+                pred, atted = self.net(x, bow=x_bow, train=True, true_y=one_hot_y, n_samples=n_samples, pre_embd=pre_embd, true_y_ids=y)
             else:
                 pred, atted = self.net(x, bow=x_bow, pre_embd=pre_embd)
             output_dict = {}

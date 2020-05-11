@@ -4,7 +4,7 @@ from WvMLLib import BatchIterBert, DictionaryProcess
 from WvMLLib import WVvaeDataIter as WVdataIter
 from WvMLLib import ModelUltiClass as modelUlti
 from WvMLLib import ReaderPostProcessorVAE as ReaderPostProcessor
-from WvMLLib.models import ClassTopicModel as NVDM
+from WvMLLib.models import ClassTopicModel_v2 as NVDM
 from configobj import ConfigObj
 import torch
 import argparse

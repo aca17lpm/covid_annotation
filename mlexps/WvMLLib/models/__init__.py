@@ -6,3 +6,4 @@ from .bertAtt import BERT_ATT
 from .NVDM_no_att import NVDMNOATT
 from .HANvae import HANvae
 from .Class_Topic_Model import ClassTopicModel
+from .Class_Topic_Model2 import ClassTopicModel as ClassTopicModel_v2
