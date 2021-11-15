@@ -1,7 +1,7 @@
 import json
 import matplotlib.pyplot as plt
 
-with open('c:/codeyr3/dissertation/wv_covid_annotation/mergedData/merged_clean.json', encoding="utf-8") as f:
+with open('c:/codeyr3/dissertation/covid_annotation/wv_covid_annotation/mergedData/merged_clean.json', encoding="utf-8") as f:
     data = json.load(f)
 
 
