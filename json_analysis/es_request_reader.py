@@ -9,8 +9,11 @@ def create_elastic_header():
 
 header = create_elastic_header()
 
-def get_request(header):
-  url = "http://gateservice10.dcs.shef.ac.uk:9300/_cat/indices"
+def get_request(url):
   return requests.request("GET", url, headers=header).json()
 
-print(get_request(header))
+# for i in get_request('http://gateservice10.dcs.shef.ac.uk:9300/_cat/indices?format=json&pretty'):
+#   print(i['index'])
+
+print(get_request('https://gateservice10.dcs.shef.ac.uk:9300/covid19misinfo-2020-04/_search'))
+
