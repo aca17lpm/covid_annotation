@@ -15,5 +15,5 @@ def get_request(url):
 # for i in get_request('http://gateservice10.dcs.shef.ac.uk:9300/_cat/indices?format=json&pretty'):
 #   print(i['index'])
 
-print(get_request('https://gateservice10.dcs.shef.ac.uk:9300/covid19misinfo-2020-04/_search'))
+print(get_request('http://gateservice10.dcs.shef.ac.uk:9300/_cat/indices'))
 

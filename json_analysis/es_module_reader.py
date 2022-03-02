@@ -1,4 +1,5 @@
 import os
+import json
 import pandas as pd
 
 from elasticsearch import Elasticsearch
@@ -15,5 +16,30 @@ es = Elasticsearch(
     http_auth=(user_passw[0], user_passw[1])
 )
 
-#print(es.info(index='covid19misinfo-2020-04'))
-print(es.get(index='covid19misinfo-2020-04', id=0))
+query_body = {
+  'query': {
+      'exists': {
+        'field': 'entities.Tweet.retweeted_status'
+      }
+  }
+}
+
+result = es.search(index = 'covid19all-2020-04', body = query_body)
+
+# # learn about entities in tweet
+# entry_entities = result['hits']['hits'][0]['_source']['entities']
+# for field in entry_entities:
+#   print(field, ' -> ', entry_entities[field])
+
+# learn about tweet makeup
+entry_tweet = result['hits']['hits'][0]['_source']['entities']['Tweet']
+for section in entry_tweet:
+  for field in section:
+    print(field, ' -> ', section[field])
+
+# e.g. to access tweet quote_count, use entities.Tweet.quote_count
+
+# find only the retweets 
+
+# objective: find the top ten retweeted tweets in a certain day in April
+
