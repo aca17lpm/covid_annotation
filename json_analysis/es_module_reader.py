@@ -42,4 +42,6 @@ for section in entry_tweet:
 # find only the retweets 
 
 # objective: find the top ten retweeted tweets in a certain day in April
+#           - unfortunately retweet counts are not possible to get for individual tweets in the database as it is a data stream
+#           - i need to find out 
 
