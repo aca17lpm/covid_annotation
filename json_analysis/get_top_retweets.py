@@ -23,13 +23,16 @@ def connect_to_twitter():
     return {"Authorization": "Bearer {}".format(bearer_token)}
 headers = connect_to_twitter()
 
-def make_request(headers):
-    url = "https://api.twitter.com/2/tweets/1491217291669049344"
+def make_request(headers, url):
+    #url = "https://api.twitter.com/2/tweets/1491217291669049344"
     return requests.request("GET", url, headers=headers).json()
 
 
-response = make_request(headers)
+response = make_request(headers, "https://api.twitter.com/2/tweets/1214836173480349696/retweeted_by")
+response = make_request(headers, "https://api.twitter.com/2/statuses/retweets/1214836173480349696.json")
+
 print(response)
+#num_retweets = len(response['data'])
 
 retweet_query = {
     "query": {
