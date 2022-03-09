@@ -11,12 +11,13 @@ user_passw = auth_token.split(':')[0]
 user, passw = user_passw[0], user_passw[1]
 
 
+INDEX = 'covid19misinfo-2020-04'
+TIMEOUT = 120
+
 es = Elasticsearch(
     'http://gateservice10.dcs.shef.ac.uk:9300',
-    http_auth=(user_passw[0], user_passw[1]), timeout=120
+    http_auth=(user_passw[0], user_passw[1]), timeout=TIMEOUT
 )
-
-INDEX = 'covid19misinfo-2020-04'
 
 def practice_funcs():
 
@@ -90,7 +91,7 @@ def print_tweet_body(id):
       print(field, ' -> ', section[field])
 
 # separate function to select certain day, process RTs
-def count_rts(query_size) :
+def count_rts(query_size, start_date, end_date) :
   unique_id_store = dict()
 
   query_body = { 
@@ -101,9 +102,9 @@ def count_rts(query_size) :
                 'field': 'entities.Tweet.retweeted_status'
           }
         },
-        "filter": {
-          "range": {"entities.Tweet.created_at": {"gte": "Wed Apr 15 00:00:00 +0000 2020","lte": "Wed Apr 15 23:59:59 +0000 2020"} }
-        }
+          "filter": {
+            "range": {"entities.Tweet.created_at": {"gte": start_date,"lte": end_date} }
+          }
         #"minimum_should_match" : 1,
         #"boost" : 1.0
       }
@@ -111,15 +112,17 @@ def count_rts(query_size) :
   }
 
   result = es.search(index = 'covid19misinfo-2020-04', body = query_body, size = query_size)
-  retweets = result['hits']['hits']
+  print ("total hits:", len(result["hits"]["hits"]))
 
+  retweets = result['hits']['hits']
   for tweet in retweets :
     original_id = tweet['_source']['entities']['Tweet'][0]['retweeted_status']['id_str']
     if original_id in unique_id_store:
       unique_id_store[original_id] += 1
     else:
       unique_id_store[original_id] = 0
-
+  
+  print(f'unique tweets posted and retweeted at least once: {len(unique_id_store)}')
   
   max_key = max(unique_id_store, key=unique_id_store.get)
   print(f'largest retweeted tweet: {max_key}, with {unique_id_store[max_key]} retweets')
@@ -128,6 +131,6 @@ def count_rts(query_size) :
 
   return unique_id_store
 
-count_rts(10000)
-
+#count_rts(10000, "Wed Apr 15 16:00:00 +0000 2020", "Wed Apr 15 19:00:00 +0000 2020")
+practice_funcs()
 
