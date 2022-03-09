@@ -1,3 +1,4 @@
+from logging import NullHandler
 import os
 import json
 import pandas as pd
@@ -111,7 +112,7 @@ def count_rts(query_size, start_date, end_date) :
     }
   }
 
-  result = es.search(index = 'covid19misinfo-2020-04', body = query_body, size = query_size)
+  result = es.search(index = INDEX, body = query_body, size = query_size)
   print ("total hits:", len(result["hits"]["hits"]))
 
   retweets = result['hits']['hits']
@@ -129,8 +130,38 @@ def count_rts(query_size, start_date, end_date) :
   print(f'tweet body:')
   print_tweet_body(max_key)
 
+  # what about quoted?
+  query_body = { 
+    "query": {
+      "bool" : {
+        "must" : {
+          "exists": {
+                'field': 'entities.Tweet.quoted_status'
+          }
+        },
+          "filter": {
+            "range": {"entities.Tweet.created_at": {"gte": start_date,"lte": end_date} }
+          }
+        #"minimum_should_match" : 1,
+        #"boost" : 1.0
+      }
+    }
+  }
+
+  result = es.search(index = INDEX, body = query_body, size = query_size)
+  print ("total hits:", len(result["hits"]["hits"]))
+
+  quotes = result['hits']['hits']
+  for quote in quotes:
+    if 'retweeted_status' in quote['_source']['entities']['Tweet'][0].keys():
+      continue
+    else:
+      quote_id = quote['_source']['entities']['Tweet'][0]['id_str']
+      print(f'no retweeted_status found for tweet_id :{quote_id}')
+
+
   return unique_id_store
 
 #count_rts(10000, "Wed Apr 15 16:00:00 +0000 2020", "Wed Apr 15 19:00:00 +0000 2020")
-practice_funcs()
 
+print_tweet_body(1250499093136396289)

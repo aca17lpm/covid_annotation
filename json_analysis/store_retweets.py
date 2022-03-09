@@ -1,4 +1,5 @@
 import os
+import json
 import pandas as pd
 import requests
 
@@ -11,10 +12,15 @@ user_passw = auth_token.split(':')[0]
 user, passw = user_passw[0], user_passw[1]
 
 
+INDEX = 'covid19misinfo-2020-04'
+TIMEOUT = 120
+
 es = Elasticsearch(
     'http://gateservice10.dcs.shef.ac.uk:9300',
-    http_auth=(user_passw[0], user_passw[1])
+    http_auth=(user_passw[0], user_passw[1]), timeout=TIMEOUT
 )
+
+# twitter connecting stuff if needed
 
 # need to form twitter authorization headers
 def connect_to_twitter():
@@ -27,18 +33,12 @@ def make_request(headers, url):
     #url = "https://api.twitter.com/2/tweets/1491217291669049344"
     return requests.request("GET", url, headers=headers).json()
 
+class Store_Retweets:
 
-response = make_request(headers, "https://api.twitter.com/2/tweets/1214836173480349696/retweeted_by")
-response = make_request(headers, "https://api.twitter.com/2/statuses/retweets/1214836173480349696.json")
+  def __init__(self):
+    self.tweets = ''
 
-print(response)
-#num_retweets = len(response['data'])
+  # function will get 
+  def pull_and_store_tweets(query_size, start_date, end_date):
+    x
 
-retweet_query = {
-    "query": {
-            "match_all": {}
-        }
-}
-
-# print(es.search(index="covid19all-2020-04", body=retweet_query))
-# print(es.get(index='covid19all-2020-04', id=0))
