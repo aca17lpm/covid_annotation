@@ -16,6 +16,7 @@ es = Elasticsearch(
     http_auth=(user_passw[0], user_passw[1]), timeout=120
 )
 
+INDEX = 'covid19misinfo-2020-04'
 
 def practice_funcs():
 
@@ -37,7 +38,7 @@ def practice_funcs():
     }
   }
 
-  result = es.search(index = 'covid19all-2020-04', body = query_body)
+  result = es.search(index = INDEX, body = query_body)
 
 
   # learn about entities in tweet
@@ -67,10 +68,26 @@ def practice_funcs():
   print(result['hits']['hits'][0]['_source']['entities']['Tweet'][0]['retweeted_status']['id_str'])
 
 
-  result = es.search(index = 'covid19all-2020-04', body = query_body, size = 10000)
+  result = es.search(INDEX, body = query_body, size = 10000)
   print ("total hits using 'size' param:", len(result["hits"]["hits"]))
 
 
+# function to return a tweet from its ID 
+def print_tweet_body(id):
+
+  query_body = {
+    "query": {
+      "match" : {
+        "entities.Tweet.id" : id
+      }
+    }
+  }
+
+  result = es.search(index = INDEX, body = query_body)
+  tweet = result['hits']['hits'][0]['_source']['entities']['Tweet']
+  for section in tweet:
+    for field in section:
+      print(field, ' -> ', section[field])
 
 # separate function to select certain day, process RTs
 def count_rts(query_size) :
@@ -93,7 +110,7 @@ def count_rts(query_size) :
     }
   }
 
-  result = es.search(index = 'covid19all-2020-04', body = query_body, size = query_size)
+  result = es.search(index = 'covid19misinfo-2020-04', body = query_body, size = query_size)
   retweets = result['hits']['hits']
 
   for tweet in retweets :
@@ -106,6 +123,9 @@ def count_rts(query_size) :
   
   max_key = max(unique_id_store, key=unique_id_store.get)
   print(f'largest retweeted tweet: {max_key}, with {unique_id_store[max_key]} retweets')
+  print(f'tweet body:')
+  print_tweet_body(max_key)
+
   return unique_id_store
 
 count_rts(10000)
