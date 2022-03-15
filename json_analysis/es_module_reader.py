@@ -86,10 +86,15 @@ def print_tweet_body(id):
   }
 
   result = es.search(index = INDEX, body = query_body)
-  tweet = result['hits']['hits'][0]['_source']['entities']['Tweet']
-  for section in tweet:
-    for field in section:
-      print(field, ' -> ', section[field])
+  
+  if len(result['hits']['hits']) > 0:
+    tweet = result['hits']['hits'][0]['_source']['entities']['Tweet']
+    for section in tweet:
+      for field in section:
+        print(field, ' -> ', section[field])
+  else:
+    print("No tweet found in ES db")
+    
 
 # separate function to select certain day, process RTs
 def count_rts(query_size, start_date, end_date) :
@@ -130,7 +135,10 @@ def count_rts(query_size, start_date, end_date) :
   print(f'tweet body:')
   print_tweet_body(max_key)
 
-  # what about quoted?
+  return unique_id_store
+
+def test_quotes(query_size, start_date, end_date):
+    # what about quoted?
   query_body = { 
     "query": {
       "bool" : {
@@ -152,16 +160,26 @@ def count_rts(query_size, start_date, end_date) :
   print ("total hits:", len(result["hits"]["hits"]))
 
   quotes = result['hits']['hits']
+
+  # for section in quotes[0]['_source']['entities']['Tweet']:
+  #   for field in section:
+  #     print(field, ' -> ', section[field])
+
+
   for quote in quotes:
-    if 'retweeted_status' in quote['_source']['entities']['Tweet'][0].keys():
-      continue
-    else:
-      quote_id = quote['_source']['entities']['Tweet'][0]['id_str']
-      print(f'no retweeted_status found for tweet_id :{quote_id}')
+    # if 'retweeted_status' in quote['_source']['entities']['Tweet'][0].keys():
+    #   continue
+    # else:
+    #   quote_id = quote['_source']['entities']['Tweet'][0]['id_str']
+    #   print(f'no retweeted_status found for tweet_id :{quote_id}')
 
-
-  return unique_id_store
+    if quote['_source']['entities']['Tweet'][0]['quoted_status']['is_quote_status']:
+      print('found double quoted:')
+      for section in quote['_source']['entities']['Tweet'][0]['quoted_status']:
+        print(section, ' -> ', quote['_source']['entities']['Tweet'][0]['quoted_status'][section])
+      break
 
 #count_rts(10000, "Wed Apr 15 16:00:00 +0000 2020", "Wed Apr 15 19:00:00 +0000 2020")
-
-print_tweet_body(1250499093136396289)
+#test_quotes(10000, "Wed Apr 15 16:00:00 +0000 2020", "Wed Apr 15 19:00:00 +0000 2020")
+#print_tweet_body(1250499093136396289)
+print_tweet_body(1250452003051929603)

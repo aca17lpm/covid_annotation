@@ -1,7 +1,6 @@
 import os
-import json
-import pandas as pd
 import requests
+import networkx as nx
 
 from elasticsearch import Elasticsearch
 
@@ -33,12 +32,85 @@ def make_request(headers, url):
     #url = "https://api.twitter.com/2/tweets/1491217291669049344"
     return requests.request("GET", url, headers=headers).json()
 
-class Store_Retweets:
+class StoreRetweets:
 
-  def __init__(self):
+  def __init__(self, start_date, end_date):
     self.tweets = ''
+    self.quoteG = nx.Graph()
+    self.start_date = start_date
+    self.end_date = end_date
 
-  # function will get 
-  def pull_and_store_tweets(query_size, start_date, end_date):
-    x
+  # function to check if tweet ID is present in the ES database
+  def is_tweet_present(self, tweet_id):
+    query_body = { 
+      "query": {
+        "bool" : {
+          "must" : {
+            "term": {"entities.Tweet.id" : tweet_id }
+          },
+          "filter": {
+            "range": {"entities.Tweet.created_at": {"gte": self.start_date,"lte": self.end_date} }
+          }
+        }
+      }
+    }
+
+    result = es.search(index= INDEX, body = query_body, size = 1)
+
+    if len(result['hits']['hits']) > 0:
+      return True
+    else:
+      return False
+
+  # function will get quote tweets from the elasticsearch dataset and link them back to their top original tweet, building network along way
+  def pull_and_store_quotes(self, query_size):
+    
+    #query body to find quote tweets within dataset
+    query_body = { 
+      "query": {
+        "bool" : {
+          "must" : {
+            "exists": {
+                  'field': 'entities.Tweet.quoted_status'
+            }
+          },
+            "filter": {
+              "range": {"entities.Tweet.created_at": {"gte": self.start_date,"lte": self.end_date} }
+            }
+        }
+      }
+    }
+
+    result = es.search(index= INDEX, body = query_body, size = query_size)
+    quotes = result['hits']['hits']
+    for quote in quotes:
+      tweet_body = quote['_source']['entities']['Tweet'][0]
+      quote_id = tweet_body['id_str']
+
+      #add quote tweet as node into graph - networkx ignores double entry
+
+      #checking to see whether to add the edge between original and quoted tweet : 
+      #     1- check whether original ID is in the elasticsearch database to start with
+      #     2- then can add an edge between the original and quoted tweet
+      #     3- check whether original tweet itself is in the elasticsearch database
+      #     4- return to step 1, until step 3 not satisfied
+      
+      original_body = tweet_body['quoted_status']
+      original_id = original_body['id_str']
+      
+      if self.is_tweet_present(original_id):
+        self.quoteG.add_node(quote_id)
+        self.quoteG.add_node(original_id)
+        self.quoteG.add_edge(quote_id, original_id)
+        #print('original id present in DB')
+
+      #if original_body['is_quote_status']:
+
+      
+
+
+    
+
+
+
 
