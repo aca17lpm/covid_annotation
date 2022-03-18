@@ -173,13 +173,18 @@ def test_quotes(query_size, start_date, end_date):
     #   quote_id = quote['_source']['entities']['Tweet'][0]['id_str']
     #   print(f'no retweeted_status found for tweet_id :{quote_id}')
 
-    if quote['_source']['entities']['Tweet'][0]['quoted_status']['is_quote_status']:
+    # if quote['_source']['entities']['Tweet'][0]['quoted_status']['is_quote_status']:
+    #   print('found double quoted:')
+    #   for section in quote['_source']['entities']['Tweet'][0]['quoted_status']:
+    #     print(section, ' -> ', quote['_source']['entities']['Tweet'][0]['quoted_status'][section])
+    #   break
+    print(quote['_source']['entities']['Tweet'][0]['quoted_status'])
+    if 'quoted_status' in quote['_source']['entities']['Tweet'][0]['quoted_status']:
       print('found double quoted:')
       for section in quote['_source']['entities']['Tweet'][0]['quoted_status']:
         print(section, ' -> ', quote['_source']['entities']['Tweet'][0]['quoted_status'][section])
-      break
 
 #count_rts(10000, "Wed Apr 15 16:00:00 +0000 2020", "Wed Apr 15 19:00:00 +0000 2020")
-#test_quotes(10000, "Wed Apr 15 16:00:00 +0000 2020", "Wed Apr 15 19:00:00 +0000 2020")
+#test_quotes(10000, "Thu Apr 16 00:00:00 +0000 2020", "Thu Apr 16 19:00:00 +0000 2020")
 #print_tweet_body(1250499093136396289)
-print_tweet_body(1250452003051929603)
+#print_tweet_body(1250452003051929603)

@@ -34,8 +34,9 @@ def make_request(headers, url):
 
 class StoreRetweets:
 
-  def __init__(self, start_date, end_date):
+  def __init__(self, start_date, end_date, index):
     self.tweets = ''
+    self.index = index
     self.quoteG = nx.Graph()
     self.start_date = start_date
     self.end_date = end_date
@@ -55,7 +56,7 @@ class StoreRetweets:
       }
     }
 
-    result = es.search(index= INDEX, body = query_body, size = 1)
+    result = es.search(index= self.index, body = query_body, size = 1)
 
     if len(result['hits']['hits']) > 0:
       return True
@@ -81,7 +82,7 @@ class StoreRetweets:
       }
     }
 
-    result = es.search(index= INDEX, body = query_body, size = query_size)
+    result = es.search(index= self.index, body = query_body, size = query_size)
     quotes = result['hits']['hits']
     for quote in quotes:
       tweet_body = quote['_source']['entities']['Tweet'][0]
