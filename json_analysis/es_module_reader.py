@@ -186,5 +186,5 @@ def test_quotes(query_size, start_date, end_date):
 
 #count_rts(10000, "Wed Apr 15 16:00:00 +0000 2020", "Wed Apr 15 19:00:00 +0000 2020")
 #test_quotes(10000, "Thu Apr 16 00:00:00 +0000 2020", "Thu Apr 16 19:00:00 +0000 2020")
-#print_tweet_body(1250499093136396289)
+print_tweet_body(1249893008633364480)
 #print_tweet_body(1250452003051929603)
