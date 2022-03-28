@@ -116,6 +116,7 @@ class StoreRetweets:
 
     for quote in quotes:
       quote_body = quote['_source']['entities']['Tweet'][0]
+      quote_text= quote['_source']['entities']['Tweet'][0]
       quote_id = quote_body['id_str']
 
       original_body = quote_body['quoted_status']
