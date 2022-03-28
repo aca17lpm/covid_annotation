@@ -90,8 +90,9 @@ def print_tweet_body(id):
   if len(result['hits']['hits']) > 0:
     tweet = result['hits']['hits'][0]['_source']['entities']['Tweet']
     for section in tweet:
+      print('Section: ', section)
       for field in section:
-        print(field, ' -> ', section[field])
+        print('   ', field, ' -> ', section[field])
   else:
     print("No tweet found in ES db")
     

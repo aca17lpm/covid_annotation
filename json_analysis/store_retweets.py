@@ -35,10 +35,12 @@ def make_request(headers, url):
 
 class StoreRetweets:
 
-  def __init__(self, start_date, end_date, index):
+  def __init__(self, start_date, end_date, index, query_size):
     self.tweets = ''
     self.index = index
+    self.query_size = query_size
     self.quoteG = nx.DiGraph()
+    self.unique_id_store = dict()
     self.start_date = start_date
     self.end_date = end_date
 
@@ -80,10 +82,27 @@ class StoreRetweets:
     else:
       return False
 
-  # function will get quote tweets from the elasticsearch dataset and link them back to their top original tweet, building network along way
-  def pull_quotes(self, query_size):
+  def pull_tweet_body(self, tweet_id):
+    query_body = { 
+      "query": {
+        "bool" : {
+          "must" : {
+            "term": {"entities.Tweet.id" : tweet_id }
+          },
+          "filter": {
+            "range": {"entities.Tweet.created_at": {"gte": self.start_date,"lte": self.end_date} }
+          }
+        }
+      }
+    }
 
-    result = es.search(index= self.index, body = self.quoted_only, size = query_size)
+    result = es.search(index= self.index, body = query_body, size = 1)
+    return result['hits']['hits'][0]
+
+  # function will get quote tweets from the elasticsearch dataset and link them back to their top original tweet, building network along way
+  def pull_quotes(self):
+
+    result = es.search(index= self.index, body = self.quoted_only, size = self.query_size)
     quotes = result['hits']['hits']
     for quote in quotes:
       quote_body = quote['_source']['entities']['Tweet'][0]
@@ -109,14 +128,16 @@ class StoreRetweets:
       #if original_body['is_quote_status']:
 
   # improved function to query quote tweet orginal id's further
-  def pull_quote_chain(self, query_size):
+  def pull_quote_chain(self):
 
-    result = es.search(index= self.index, body = self.quoted_only, size = query_size)
+    result = es.search(index= self.index, body = self.quoted_only, size = self.query_size)
     quotes = result['hits']['hits']
 
     for quote in quotes:
+
+      # first get quote body and id for tracking quotes through db
       quote_body = quote['_source']['entities']['Tweet'][0]
-      quote_text= quote['_source']['entities']['Tweet'][0]
+      #quote_text = quote['_source']['entities']['Tweet'][0]
       quote_id = quote_body['id_str']
 
       original_body = quote_body['quoted_status']
@@ -137,6 +158,41 @@ class StoreRetweets:
 
   def pull_quote_period():
     x
+
+  def calculate_retweets(self):
+
+    unique_id_store = self.unique_id_store
+    start_date = self.start_date
+    end_date = self.end_date
+
+    query_body = { 
+      "query": {
+        "bool" : {
+          "must" : {
+            "exists": {
+                  'field': 'entities.Tweet.retweeted_status'
+            }
+          },
+            "filter": {
+              "range": {"entities.Tweet.created_at": {"gte": start_date,"lte": end_date} }
+            }
+        }
+      }
+    }
+
+    result = es.search(index = INDEX, body = query_body, size = self.query_size)
+
+    retweets = result['hits']['hits']
+    for tweet in retweets :
+      original_id = tweet['_source']['entities']['Tweet'][0]['retweeted_status']['id_str']
+      if original_id in unique_id_store:
+        unique_id_store[original_id] += 1
+      else:
+        unique_id_store[original_id] = 0
+    
+    nx.set_node_attributes(self.quoteG, unique_id_store, name = 'calculated_retweets')
+
+    
 
 
 
