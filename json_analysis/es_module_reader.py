@@ -87,14 +87,17 @@ def print_tweet_body(id):
 
   result = es.search(index = INDEX, body = query_body)
   
-  if len(result['hits']['hits']) > 0:
-    tweet = result['hits']['hits'][0]['_source']['entities']['Tweet']
-    for section in tweet:
-      print('Section: ', section)
-      for field in section:
-        print('   ', field, ' -> ', section[field])
-  else:
-    print("No tweet found in ES db")
+  # if len(result['hits']['hits']) > 0:
+  #   tweet = result['hits']['hits'][0]['_source']['entities']['Tweet'][0]['quoted_status']
+  #   for section in tweet:
+  #     print('Section: ', section)
+  #     for field in section:
+  #       print('   ', field, ' -> ', section[field])
+  # else:
+  #   print("No tweet found in ES db")
+  print(result['hits']['hits'][0]['_source']['entities']['Tweet'][0]['quoted_status']['entities'])
+
+  
     
 
 # separate function to select certain day, process RTs

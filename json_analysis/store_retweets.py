@@ -137,20 +137,29 @@ class StoreRetweets:
 
       # first get quote body and id for tracking quotes through db
       quote_body = quote['_source']['entities']['Tweet'][0]
-      #quote_text = quote['_source']['entities']['Tweet'][0]
       quote_id = quote_body['id_str']
+
+      # gexf can't take non string/integer attributes : for now, just get first hashtag
+      quote_hashtag = quote['_source']['entities']['Hashtag'][0]['text']
 
       original_body = quote_body['quoted_status']
       original_id = original_body['id_str']
 
-      # entities.Tweet.quoted_status.quoted_status_id_str
+      if 'entities' in original_body:
+        if ('hashtags' in original_body['entities']) and (original_body['entities']['hashtags'] != []):
+          original_hashtag = original_body['entities']['hashtags'][0]['text']
+          print(original_hashtag)
+          if isinstance(original_hashtag, list):
+            original_hashtag = original_hashtag[0]
+        else:
+          original_hashtag = ''
 
       if self.is_tweet_present(original_id):
-        self.quoteG.add_node(quote_id)
-        self.quoteG.add_node(original_id)
+        self.quoteG.add_node(quote_id, hashtag = quote_hashtag)
+        self.quoteG.add_node(original_id, hashtag = original_hashtag)
         self.quoteG.add_edge(original_id, quote_id)
 
-      # if a further quote object found, continue linking
+      # if a further quote object found, continue linking (represented through quoted_status_id_str)
       if 'quoted_status_id_str' in original_body.keys():
         further_id = original_body['quoted_status_id_str']
         self.quoteG.add_node(further_id)
