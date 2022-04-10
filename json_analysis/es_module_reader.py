@@ -95,7 +95,8 @@ def print_tweet_body(id):
   #       print('   ', field, ' -> ', section[field])
   # else:
   #   print("No tweet found in ES db")
-  print(result['hits']['hits'][0]['_source']['entities']['Tweet'][0]['quoted_status']['entities'])
+  
+  print(result['hits']['hits'][0]['_source']['entities']['Tweet'][0]['quoted_status']['text'])
 
   
     
@@ -189,6 +190,6 @@ def test_quotes(query_size, start_date, end_date):
         print(section, ' -> ', quote['_source']['entities']['Tweet'][0]['quoted_status'][section])
 
 #count_rts(10000, "Wed Apr 15 16:00:00 +0000 2020", "Wed Apr 15 19:00:00 +0000 2020")
-#test_quotes(10000, "Thu Apr 16 00:00:00 +0000 2020", "Thu Apr 16 19:00:00 +0000 2020")
-print_tweet_body(1249893008633364480)
+test_quotes(10000, "Thu Apr 16 00:00:00 +0000 2020", "Thu Apr 16 19:00:00 +0000 2020")
+#print_tweet_body(1249893008633364480)
 #print_tweet_body(1250452003051929603)

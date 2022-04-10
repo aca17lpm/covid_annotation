@@ -60,7 +60,7 @@ class StoreRetweets:
       }
     }
 
-  # function to check if tweet ID is present in the ES database
+  # function to check if tweet ID is present in the ES database (within time range)
   def is_tweet_present(self, tweet_id):
     query_body = { 
       "query": {
@@ -82,6 +82,7 @@ class StoreRetweets:
     else:
       return False
 
+  # function to collect tweet body from db (within time range)
   def pull_tweet_body(self, tweet_id):
     query_body = { 
       "query": {
@@ -139,24 +140,33 @@ class StoreRetweets:
       quote_body = quote['_source']['entities']['Tweet'][0]
       quote_id = quote_body['id_str']
 
-      # gexf can't take non string/integer attributes : for now, just get first hashtag
-      quote_hashtag = quote['_source']['entities']['Hashtag'][0]['text']
-
+      # then get original body and id
       original_body = quote_body['quoted_status']
       original_id = original_body['id_str']
 
-      if 'entities' in original_body:
-        if ('hashtags' in original_body['entities']) and (original_body['entities']['hashtags'] != []):
-          original_hashtag = original_body['entities']['hashtags'][0]['text']
-          print(original_hashtag)
-          if isinstance(original_hashtag, list):
-            original_hashtag = original_hashtag[0]
-        else:
-          original_hashtag = ''
+      # checking original tweet is in the time range of the search before adding connection
+      # (limiting range of network)
 
       if self.is_tweet_present(original_id):
-        self.quoteG.add_node(quote_id, hashtag = quote_hashtag)
-        self.quoteG.add_node(original_id, hashtag = original_hashtag)
+        # getting top hashtag for original tweets
+        if 'entities' in original_body:
+          if ('hashtags' in original_body['entities']) and (original_body['entities']['hashtags'] != []):
+            original_hashtag = original_body['entities']['hashtags'][0]['text']
+            if isinstance(original_hashtag, list):
+              original_hashtag = original_hashtag[0]
+          else:
+            original_hashtag = ''
+
+        # gexf can't take non string/integer attributes : for now, just get first hashtag
+        quote_hashtag = quote['_source']['entities']['Hashtag'][0]['text']
+
+        # get text for use by classifier
+        quote_text = quote_body['text']
+        original_text = original_body['text']
+
+        # adding nodes into the networkx graph, with hashtags as attributes
+        self.quoteG.add_node(quote_id, hashtag = quote_hashtag, text = quote_text)
+        self.quoteG.add_node(original_id, hashtag = original_hashtag, text = original_text)
         self.quoteG.add_edge(original_id, quote_id)
 
       # if a further quote object found, continue linking (represented through quoted_status_id_str)
@@ -165,8 +175,6 @@ class StoreRetweets:
         self.quoteG.add_node(further_id)
         self.quoteG.add_edge(further_id, original_id)
 
-  def pull_quote_period():
-    x
 
   def calculate_retweets(self):
 
