@@ -4,12 +4,13 @@ import requests
 import networkx as nx
 
 from elasticsearch import Elasticsearch
+from classifier import Classifier
 
 auth_token = os.environ.get('ELASTIC_TOKEN')
 
 # split auth token from form user:pass into list
-user_passw = auth_token.split(':')[0]
-user, passw = user_passw[0], user_passw[1]
+esuser_passw = auth_token.split(':')[0]
+esuser, espassw = esuser_passw[0], esuser_passw[1]
 
 
 INDEX = 'covid19misinfo-2020-04'
@@ -17,7 +18,7 @@ TIMEOUT = 360
 
 es = Elasticsearch(
     'http://gateservice10.dcs.shef.ac.uk:9300',
-    http_auth=(user_passw[0], user_passw[1]), timeout=TIMEOUT
+    http_auth=(esuser, espassw), timeout=TIMEOUT
 )
 
 # twitter connecting stuff if needed
@@ -131,6 +132,22 @@ class StoreRetweets:
   # improved function to query quote tweet orginal id's further
   def pull_quote_chain(self):
 
+    def get_text(body):
+      if 'text' in body:
+        text = body['text']
+        print('!usedtext')
+      elif 'string' in body:
+        text = body['string']
+        print('!usedstring')
+      else:
+        if 'entities' in body:
+          text = body['entities']['text']
+          print('!usedentities')
+        else:
+          text = 'no_text'
+      return text
+
+
     result = es.search(index= self.index, body = self.quoted_only, size = self.query_size)
     quotes = result['hits']['hits']
 
@@ -160,9 +177,29 @@ class StoreRetweets:
         # gexf can't take non string/integer attributes : for now, just get first hashtag
         quote_hashtag = quote['_source']['entities']['Hashtag'][0]['text']
 
-        # get text for use by classifier
-        quote_text = quote_body['text']
-        original_text = original_body['text']
+        # get text for use by classifier from quote
+        if 'text' in quote_body:
+          quote_text = quote_body['text']
+        elif 'string' in quote_body:
+          quote_text = quote_body['string']
+        else:
+          if 'entities' in quote_body:
+            quote_text = quote_body['entities']['text']
+          else:
+            quote_text = 'no_text'
+
+        # get text for use by classifier from original
+        if 'text' in original_body:
+          original_text = original_body['text']
+        elif 'string' in original_body:
+          original_text = original_body['string']
+        else:
+          if 'entities' in original_body:
+            original_text = original_body['entities']['text']
+          else:
+            original_text = 'no_text'
+
+        
 
         # adding nodes into the networkx graph, with hashtags as attributes
         self.quoteG.add_node(quote_id, hashtag = quote_hashtag, text = quote_text)

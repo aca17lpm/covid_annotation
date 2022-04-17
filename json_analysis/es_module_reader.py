@@ -87,16 +87,37 @@ def print_tweet_body(id):
 
   result = es.search(index = INDEX, body = query_body)
   
-  # if len(result['hits']['hits']) > 0:
-  #   tweet = result['hits']['hits'][0]['_source']['entities']['Tweet'][0]['quoted_status']
-  #   for section in tweet:
-  #     print('Section: ', section)
-  #     for field in section:
-  #       print('   ', field, ' -> ', section[field])
-  # else:
-  #   print("No tweet found in ES db")
+  if len(result['hits']['hits']) > 0:
+    tweet = result['hits']['hits'][0]['_source']['entities']['Tweet']
+    for section in tweet:
+      print('Section: ')
+      for field in section:
+        print('   ', field, ' -> ', section[field])
+  else:
+    print("No tweet found in ES db")
   
-  print(result['hits']['hits'][0]['_source']['entities']['Tweet'][0]['quoted_status']['text'])
+  #print(result['hits']['hits'][0]['_source']['entities']['Tweet'][0]['quoted_status']['text'])
+
+def print_quoted_status_body(id):
+
+  query_body = {
+    "query": {
+      "match" : {
+        "entities.Tweet.id" : id
+      }
+    }
+  }
+
+  result = es.search(index = INDEX, body = query_body)
+  
+  if len(result['hits']['hits']) > 0:
+    quoted_status = result['hits']['hits'][0]['_source']['entities']['Tweet'][0]['quoted_status']
+    for field in quoted_status:
+      print('   ', field, ' -> ', quoted_status[field])
+  else:
+    print("No tweet found in ES db")
+  
+  #print(result['hits']['hits'][0]['_source']['entities']['Tweet'][0]['quoted_status']['text'])
 
   
     
@@ -191,5 +212,5 @@ def test_quotes(query_size, start_date, end_date):
 
 #count_rts(10000, "Wed Apr 15 16:00:00 +0000 2020", "Wed Apr 15 19:00:00 +0000 2020")
 test_quotes(10000, "Thu Apr 16 00:00:00 +0000 2020", "Thu Apr 16 19:00:00 +0000 2020")
-#print_tweet_body(1249893008633364480)
-#print_tweet_body(1250452003051929603)
+#print_quoted_status_body(1250466585682292736)
+#print_tweet_body(1250420481166995457)
