@@ -135,14 +135,11 @@ class StoreRetweets:
     def get_text(body):
       if 'text' in body:
         text = body['text']
-        print('!usedtext')
       elif 'string' in body:
         text = body['string']
-        print('!usedstring')
       else:
         if 'entities' in body:
           text = body['entities']['text']
-          print('!usedentities')
         else:
           text = 'no_text'
       return text
@@ -177,33 +174,25 @@ class StoreRetweets:
         # gexf can't take non string/integer attributes : for now, just get first hashtag
         quote_hashtag = quote['_source']['entities']['Hashtag'][0]['text']
 
-        # get text for use by classifier from quote
-        if 'text' in quote_body:
-          quote_text = quote_body['text']
-        elif 'string' in quote_body:
-          quote_text = quote_body['string']
+        # get text for use by classifier from quote and classify
+        quote_text = get_text(quote_body)
+        if quote_text == 'no_text':
+          quote_class = 'None'
         else:
-          if 'entities' in quote_body:
-            quote_text = quote_body['entities']['text']
-          else:
-            quote_text = 'no_text'
+          quote_class = Classifier.get_classification_category(quote_text)
 
-        # get text for use by classifier from original
-        if 'text' in original_body:
-          original_text = original_body['text']
-        elif 'string' in original_body:
-          original_text = original_body['string']
+        # get text for use by classifier from original and classify
+        original_text = get_text(original_body)
+        if original_text == 'no_text':
+          original_class = 'None'
         else:
-          if 'entities' in original_body:
-            original_text = original_body['entities']['text']
-          else:
-            original_text = 'no_text'
+          original_class = Classifier.get_classification_category(original_text)
 
         
 
         # adding nodes into the networkx graph, with hashtags as attributes
-        self.quoteG.add_node(quote_id, hashtag = quote_hashtag, text = quote_text)
-        self.quoteG.add_node(original_id, hashtag = original_hashtag, text = original_text)
+        self.quoteG.add_node(quote_id, hashtag = quote_hashtag, text = quote_text, misinfo_class = quote_class)
+        self.quoteG.add_node(original_id, hashtag = original_hashtag, text = original_text, misinfo_class = original_class)
         self.quoteG.add_edge(original_id, quote_id)
 
       # if a further quote object found, continue linking (represented through quoted_status_id_str)
