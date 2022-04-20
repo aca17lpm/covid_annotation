@@ -143,18 +143,21 @@ class StoreRetweets:
       quote_hashtag = quote['_source']['entities']['Hashtag'][0]['text']
 
       original_body = quote_body['quoted_status']
-      original_id = original_body['id_str']
-
-      if 'entities' in original_body:
-        if ('hashtags' in original_body['entities']) and (original_body['entities']['hashtags'] != []):
-          original_hashtag = original_body['entities']['hashtags'][0]['text']
-          print(original_hashtag)
-          if isinstance(original_hashtag, list):
-            original_hashtag = original_hashtag[0]
-        else:
-          original_hashtag = ''
+      original_id = original_body['id_str']    
 
       if self.is_tweet_present(original_id):
+        #print(original_body)
+        # and (original_body['hashtags'] != [])
+        
+        if 'hashtags' in original_body['extended_tweet']:
+          if original_body['extended_tweet']['hashtags'] != []:
+            print(original_body['extended_tweet']['hashtags'][0]['text'])
+            #original_hashtag = original_body['entities']['hashtags'][0]['text']['keyword']
+            original_hashtag = ''
+          else:
+            original_hashtag = ''
+        else:
+          original_hashtag = ''
         self.quoteG.add_node(quote_id, hashtag = quote_hashtag)
         self.quoteG.add_node(original_id, hashtag = original_hashtag)
         self.quoteG.add_edge(original_id, quote_id)
