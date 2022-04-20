@@ -1,0 +1,2654 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2022-04-10">
+    <creator>NetworkX 2.7.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="calculated_retweets" type="long" />
+      <attribute id="1" title="hashtag" type="string" />
+      <attribute id="2" title="text" type="string" />
+    </attributes>
+    <nodes>
+      <node id="1250292126643941376" label="1250292126643941376" />
+      <node id="1250452003051929603" label="1250452003051929603" />
+      <node id="1250057509135671297" label="1250057509135671297" />
+      <node id="1250060182484389889" label="1250060182484389889">
+        <attvalues>
+          <attvalue for="0" value="44" />
+        </attvalues>
+      </node>
+      <node id="1250179208262717440" label="1250179208262717440" />
+      <node id="1250221834903027712" label="1250221834903027712">
+        <attvalues>
+          <attvalue for="0" value="31" />
+        </attvalues>
+      </node>
+      <node id="1250242482765352960" label="1250242482765352960" />
+      <node id="1250248713814945793" label="1250248713814945793">
+        <attvalues>
+          <attvalue for="0" value="95" />
+        </attvalues>
+      </node>
+      <node id="1249852400531386371" label="1249852400531386371" />
+      <node id="1249853630196432899" label="1249853630196432899" />
+      <node id="1217043229427761152" label="1217043229427761152" />
+      <node id="1250190535115116548" label="1250190535115116548" />
+      <node id="1250438521866739712" label="1250438521866739712" />
+      <node id="1250445855527583744" label="1250445855527583744" />
+      <node id="1250420481166995457" label="1250420481166995457" />
+      <node id="1250443375024771073" label="1250443375024771073" />
+      <node id="1250454441938960384" label="1250454441938960384" />
+      <node id="1250458019625926656" label="1250458019625926656">
+        <attvalues>
+          <attvalue for="1" value="ChinaLiedPeopleDied" />
+          <attvalue for="2" value="WHO is getting comments they would not like to read @WHO @DrTedros Change the name Its not WHO It should be CHO (China Health Organisation) #ChinaLiedPeopleDied #WhoCanSave_The_World #Whoareyou #whofunding" />
+        </attvalues>
+      </node>
+      <node id="1250455392674447360" label="1250455392674447360">
+        <attvalues>
+          <attvalue for="1" value="ChinaLiedPeopleDied" />
+          <attvalue for="2" value="@WHO @DrTedros Change the name &#10;&#10;Its not WHO&#10;&#10;It should be CHO (China Health Organisation)&#10;&#10;#ChinaLiedPeopleDied… https://t.co/zD8TbLTULJ" />
+          <attvalue for="0" value="0" />
+        </attvalues>
+      </node>
+      <node id="1250458194830295048" label="1250458194830295048">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="How many were killed because Dems banned the use of the medications needed to treat it.... Religion doesn't kill...… https://t.co/fg100F7EWE" />
+        </attvalues>
+      </node>
+      <node id="1250456354826813440" label="1250456354826813440">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="When it is all over, we will need to find out why some of the states were not prepared. Why some of the governors d… https://t.co/yojYM4NoN7" />
+        </attvalues>
+      </node>
+      <node id="1250448014742712321" label="1250448014742712321" />
+      <node id="1250451158293975040" label="1250451158293975040" />
+      <node id="1250452297819267072" label="1250452297819267072" />
+      <node id="1250145955501854720" label="1250145955501854720" />
+      <node id="1250201292850343936" label="1250201292850343936" />
+      <node id="1250449589305520128" label="1250449589305520128" />
+      <node id="1250449943074144261" label="1250449943074144261" />
+      <node id="1250434216736641032" label="1250434216736641032" />
+      <node id="1250457398218637312" label="1250457398218637312" />
+      <node id="1250435211994624000" label="1250435211994624000" />
+      <node id="1250432223641128962" label="1250432223641128962" />
+      <node id="1250434273686908935" label="1250434273686908935" />
+      <node id="1250461524423933952" label="1250461524423933952">
+        <attvalues>
+          <attvalue for="1" value="Hydroxychloroquine" />
+          <attvalue for="2" value="We can't stop denying all this. &#10;We can't have a fear of being called a conspiracy theorist. That's their game. The… https://t.co/T6JxMGhlRI" />
+        </attvalues>
+      </node>
+      <node id="1250459763629932545" label="1250459763629932545">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="@BrianHassine @realDonaldTrump Another Red Flag went up when Tom Hanks wife (Rita Wilson) suddenly went public that… https://t.co/OB45trLqPB" />
+        </attvalues>
+      </node>
+      <node id="1240802365021831170" label="1240802365021831170" />
+      <node id="1250423440709844993" label="1250423440709844993" />
+      <node id="1250461732071301128" label="1250461732071301128">
+        <attvalues>
+          <attvalue for="1" value="Japan" />
+          <attvalue for="2" value="I love #Japan. Japanese people cheering on the US Secretary of State Mike Pompeo for his comment of holding China accountable. See the number of retweets/likes, translation of replies etc. #StandTogether #COVID19 #WuhanVirus #ChineseVirus #Japan" />
+        </attvalues>
+      </node>
+      <node id="1250459656494788609" label="1250459656494788609">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="Japanese people cheering on the US Secretary of State Mike Pompeo for his comment of holding China accountable. &#10;Se… https://t.co/gV6kWUeIbe" />
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </node>
+      <node id="1250258049945739265" label="1250258049945739265" />
+      <node id="1250461855543365633" label="1250461855543365633">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="#ChineseVirus was an biological attack! Weak up! There are all sort of evidence available cig look through! #COVID19 #China didn't warn public of likely #pandemic for 6 key days #Coronavirus #CCPVirus #LockdownExtended https://t.co/MxzSaenqle" />
+        </attvalues>
+      </node>
+      <node id="1250456828166787074" label="1250456828166787074">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="no_text" />
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </node>
+      <node id="1250229681263128576" label="1250229681263128576" />
+      <node id="1250441485083787268" label="1250441485083787268" />
+      <node id="1250463216779567106" label="1250463216779567106">
+        <attvalues>
+          <attvalue for="1" value="WarRoomPandemic" />
+          <attvalue for="2" value="Let’s hope something happens! The Chinese people deserve a better government! #WarRoomPandemic 🔴PREMIERE 8pm ET: https://t.co/h8njgClZKH &quot;If there's any silver lining in this horrible pandemic...it's that it's waking up the world to the true nature of the Communist Party of China.&quot; @WashTimes's @BillGertz to discuss #CCPvirus origins &amp; a &quot;new Cold War&quot; with the #CCP. https://t.co/Q5LM6uYOFg" />
+        </attvalues>
+      </node>
+      <node id="1250461730624491522" label="1250461730624491522">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="🔴PREMIERE 8pm ET: https://t.co/h8njgClZKH&#10;&#10;&quot;If there's any silver lining in this horrible pandemic...it's that it's… https://t.co/fg8mDucu8h" />
+          <attvalue for="0" value="99" />
+        </attvalues>
+      </node>
+      <node id="1250463272907624448" label="1250463272907624448">
+        <attvalues>
+          <attvalue for="1" value="covid19" />
+          <attvalue for="2" value="Spare sometime to read this👇🏿 The World Post Covid-19 - Being Informed A Must Read! https://t.co/O32P3d4a6u #covid19 #ChineseVirus #ChineseBioterrorism #WuhanCoronaVirus ❄ Spare Sometime To Read This...🌍🌎🌏 https://t.co/E79DrQM3nE" />
+        </attvalues>
+      </node>
+      <node id="1250459147163693059" label="1250459147163693059">
+        <attvalues>
+          <attvalue for="1" value="covid19" />
+          <attvalue for="2" value="The World Post Covid-19 - Being  Informed&#10;A Must Read! https://t.co/O32P3d4a6u&#10;#covid19 #ChineseVirus… https://t.co/c9QSA3yePk" />
+          <attvalue for="0" value="8" />
+        </attvalues>
+      </node>
+      <node id="1250463383306067968" label="1250463383306067968">
+        <attvalues>
+          <attvalue for="1" value="ChinaLiedPeopleDied" />
+          <attvalue for="2" value="Here’s your Wednesday reminder that Donald Trump said on January 30th that COVID-19 was “under control” AND went to… https://t.co/DkBUuRo2CN" />
+        </attvalues>
+      </node>
+      <node id="1250461381469417472" label="1250461381469417472">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="no_text" />
+          <attvalue for="0" value="16" />
+        </attvalues>
+      </node>
+      <node id="1249978269446950912" label="1249978269446950912" />
+      <node id="1250031008461860865" label="1250031008461860865" />
+      <node id="1249840522186948615" label="1249840522186948615" />
+      <node id="1250151218829070336" label="1250151218829070336" />
+      <node id="1250465497222692875" label="1250465497222692875">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="WAKING UP PERIOD, IS SILVER LINING. Not just CCP we have to take care of, how bout our own Woodchucks, in the Woodp… https://t.co/G09BnYCKid" />
+        </attvalues>
+      </node>
+      <node id="1250465978732945408" label="1250465978732945408">
+        <attvalues>
+          <attvalue for="1" value="HydroxyChloroQuine" />
+          <attvalue for="2" value="Like RahulEshwar so many r there I guess ..😂😂😂 #HydroxyChloroQuine Why should India send HCQ medicines to Malaysia? After all, they side with Pakistan and Turkey on Kashmir, not with India And, in addition, they have that fugitive terrorist called Zakir Naik" />
+        </attvalues>
+      </node>
+      <node id="1250464428652285952" label="1250464428652285952">
+        <attvalues>
+          <attvalue for="1" value="HydroxyChloroQuine" />
+          <attvalue for="2" value="#HydroxyChloroQuine&#10;&#10;Why should India send HCQ medicines to Malaysia?&#10;&#10;After all, they side with Pakistan and Turke… https://t.co/xIOvy9RJNn" />
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </node>
+      <node id="1250466126447820801" label="1250466126447820801">
+        <attvalues>
+          <attvalue for="1" value="Thread" />
+          <attvalue for="2" value="#Thread #WuhanVirus #COVIDー19 &#10;How do we calculate real fatality rate and judge #StatePerformance better during an… https://t.co/xVGF2Dwpdv" />
+        </attvalues>
+      </node>
+      <node id="1250465466901884929" label="1250465466901884929">
+        <attvalues>
+          <attvalue for="1" value="Thread" />
+          <attvalue for="2" value="#Thread #WuhanVirus #COVIDー19 #StatePerformance&#10;How do you calculate the real fatality during the course of an ongo… https://t.co/DiWCALqcyE" />
+          <attvalue for="0" value="0" />
+        </attvalues>
+      </node>
+      <node id="1250439032317739013" label="1250439032317739013" />
+      <node id="1250447003189940225" label="1250447003189940225" />
+      <node id="1250466243024306177" label="1250466243024306177">
+        <attvalues>
+          <attvalue for="1" value="WHOLiedPeopleDied" />
+          <attvalue for="2" value="I rather doubt @TheWho would agree with you. This is the only WHO that we should fund, and you know it. #WHOLiedPeopleDied #WHO https://t.co/wzt5JuppmG" />
+        </attvalues>
+      </node>
+      <node id="1250465616621903881" label="1250465616621903881">
+        <attvalues>
+          <attvalue for="1" value="Thread" />
+          <attvalue for="2" value="no_text" />
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </node>
+      <node id="1250466312842665984" label="1250466312842665984">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="In addition the nature of the US media and the Democrat party 🔴PREMIERE 8pm ET: https://t.co/h8njgClZKH &quot;If there's any silver lining in this horrible pandemic...it's that it's waking up the world to the true nature of the Communist Party of China.&quot; @WashTimes's @BillGertz to discuss #CCPvirus origins &amp; a &quot;new Cold War&quot; with the #CCP. https://t.co/Q5LM6uYOFg" />
+        </attvalues>
+      </node>
+      <node id="1250186417134809090" label="1250186417134809090" />
+      <node id="1250463459126411265" label="1250463459126411265" />
+      <node id="1250466510398722058" label="1250466510398722058">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="My in-depth interview on the CCP’s virus cover up 🔴PREMIERE 8pm ET: https://t.co/h8njgClZKH &quot;If there's any silver lining in this horrible pandemic...it's that it's waking up the world to the true nature of the Communist Party of China.&quot; @WashTimes's @BillGertz to discuss #CCPvirus origins &amp; a &quot;new Cold War&quot; with the #CCP. https://t.co/Q5LM6uYOFg" />
+          <attvalue for="0" value="47" />
+        </attvalues>
+      </node>
+      <node id="1250466585682292736" label="1250466585682292736">
+        <attvalues>
+          <attvalue for="1" value="OPENAMERICANOW" />
+          <attvalue for="2" value="See we are not alone #OPENAMERICANOW #opentheworldnow Coronavirus latest: German easing of lockdown to start with schools on May 4. Lets get our lives going again too! This panic is over the top now. #ChinaLiedPeopleDied #ChinaMustPay #WHO needs to be investigated and we need to #OpenAmericaNow https://t.co/8MpgLoetvd" />
+        </attvalues>
+      </node>
+      <node id="1250464122065408000" label="1250464122065408000">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="Coronavirus latest: German easing of lockdown to start with schools on May 4. Lets get our lives going again too! T… https://t.co/eZKEOOAVYF" />
+        </attvalues>
+      </node>
+      <node id="1250466911239974914" label="1250466911239974914">
+        <attvalues>
+          <attvalue for="1" value="ChinaLiedPeopleDied" />
+          <attvalue for="2" value="Why doesn’t China agree to pay what The United States pays usually pays and we can pay what they pay - NOTHING China Tells U.S. to ‘Fulfill Its Obligations‘ and Reverse WHO Defunding. Why doesn’t China fulfill its obligations to the world and come clean? #ChinaLiedPeopleDied https://t.co/FoVPKCAwtm via @BreitbartNews" />
+        </attvalues>
+      </node>
+      <node id="1250463864078163970" label="1250463864078163970">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="China Tells U.S. to ‘Fulfill Its Obligations‘ and Reverse WHO Defunding. Why doesn’t China fulfill its obligations… https://t.co/YzcegB7Y68" />
+          <attvalue for="0" value="224" />
+        </attvalues>
+      </node>
+      <node id="1250467381064990727" label="1250467381064990727">
+        <attvalues>
+          <attvalue for="1" value="ChinaLiedPeopleDied" />
+          <attvalue for="2" value="China can pay our part for the next 10 years. China Tells U.S. to ‘Fulfill Its Obligations‘ and Reverse WHO Defunding. Why doesn’t China fulfill its obligations to the world and come clean? #ChinaLiedPeopleDied https://t.co/FoVPKCAwtm via @BreitbartNews" />
+        </attvalues>
+      </node>
+      <node id="1250467507938435073" label="1250467507938435073">
+        <attvalues>
+          <attvalue for="1" value="ChinaLiedPeopleDied" />
+          <attvalue for="2" value="Don’t cave @POTUS! &#10;WHO has done America wrong! &#10;@SenTedCruz @LindseyGrahamSC @RandPaul &#10;@RepRatcliffe… https://t.co/c8GKf1UNzC" />
+        </attvalues>
+      </node>
+      <node id="1250467518520520707" label="1250467518520520707">
+        <attvalues>
+          <attvalue for="1" value="HYDROXYCHLOROQUINE" />
+          <attvalue for="2" value="Great question. In my humble opinion, COVID-19 is being used to push the globalists' agenda for power and control o… https://t.co/iBHJp1X4p7" />
+        </attvalues>
+      </node>
+      <node id="1250465492692881411" label="1250465492692881411">
+        <attvalues>
+          <attvalue for="1" value="HYDROXYCHLOROQUINE" />
+          <attvalue for="2" value="@scruten_eyes @AndrewScheer @HaveWeAllGoneM1 CANADA #HYDROXYCHLOROQUINE - &#10;Question … if we have a cure why do we n… https://t.co/WEBoMlVKzC" />
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </node>
+      <node id="1250467602159276032" label="1250467602159276032">
+        <attvalues>
+          <attvalue for="1" value="CDC" />
+          <attvalue for="2" value="@tmajorjames @TheAlphaBull @LaurelCoons @OurWorldInData Yep, this was my thought to start the day... https://t.co/MCYunM1SlS Flashback...the #CDC has not been perfect either. Lots of blame to go around. CDC and #WHO have both dropped the ball. Partisan politics (both ways) has🧠's fried. USA #Gridlock could be our demise🙁. #SARSCoV2 #COVID19 #WHOLiedPeopleDied #WednesdayWisdom #bailouthumans #iPhone" />
+        </attvalues>
+      </node>
+      <node id="1250457657586089987" label="1250457657586089987">
+        <attvalues>
+          <attvalue for="1" value="CDC" />
+          <attvalue for="2" value="Flashback...the #CDC has not been perfect either. Lots of blame to go around. CDC and #WHO have both dropped the ba… https://t.co/QpMn16PyUv" />
+        </attvalues>
+      </node>
+      <node id="1239358108415254529" label="1239358108415254529" />
+      <node id="1250468136039546880" label="1250468136039546880">
+        <attvalues>
+          <attvalue for="1" value="TrudeauMustGo" />
+          <attvalue for="2" value="Ya that's what happens when you are a lying 2 face traitorous fuck Listen to this bastard! He lets it slip ALL the time, as to where his true loyalties lie! @JustinTrudeau your were elected to be PM of Canada, not King of the World! “... as a WORLD, er as a country...” #TrudeauMustGo #TrudeauDictatorship #NoUN #WHOLiedPeopleDied #COVID19 https://t.co/dBFkn1Bdut" />
+        </attvalues>
+      </node>
+      <node id="1250456373629943809" label="1250456373629943809">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="Listen to this bastard!&#10;He lets it slip ALL the time, as to where his true loyalties lie! &#10;@JustinTrudeau your were… https://t.co/26OnBmVvUg" />
+          <attvalue for="0" value="0" />
+        </attvalues>
+      </node>
+      <node id="1250468315597684737" label="1250468315597684737">
+        <attvalues>
+          <attvalue for="1" value="ChinaLiedPeopleDied" />
+          <attvalue for="2" value="They did? OMG! Didn’t realize that Josh Hammer is THIS stupid. https://t.co/voJNZMF9AI Here is your Wednesday reminder that the Chinese Communist Party did this. #ChinaLiedPeopleDied" />
+        </attvalues>
+      </node>
+      <node id="1250468440705466369" label="1250468440705466369">
+        <attvalues>
+          <attvalue for="1" value="Lies" />
+          <attvalue for="2" value="Feel free to get it. I swear to God that once you get it your gums won’t be so brave or you’ll be too dead to tell… https://t.co/FDMEJNp1LP" />
+        </attvalues>
+      </node>
+      <node id="1250458646116470786" label="1250458646116470786">
+        <attvalues>
+          <attvalue for="1" value="Lies" />
+          <attvalue for="2" value="@trulyexhausted What NC city is the picture from???  Raleigh?  Charlotte?  Sooooooo scary😱😱😱😱!!! #Lies… https://t.co/Bbygd9XdTW" />
+        </attvalues>
+      </node>
+      <node id="1250468745362862081" label="1250468745362862081">
+        <attvalues>
+          <attvalue for="1" value="WednesdayWisdom" />
+          <attvalue for="2" value="Worth a watch #WednesdayWisdom #QuarantineLife Guess who used the term &quot;Wuhan pneumonia&quot;? #coronavirus #COVID19 #Trump #China #WorldHealthOrganization #WHO #WuhanVirus #WuhanCoronaVirus #StandwithHK #nnevvy #香港 Tedros, did China stigmatized China? | World Health Organization #1 https://t.co/9nHLlgayU3 https://t.co/MEmS4LVzBt" />
+        </attvalues>
+      </node>
+      <node id="1250464036514344963" label="1250464036514344963">
+        <attvalues>
+          <attvalue for="1" value="coronavirus" />
+          <attvalue for="2" value="Guess who used the term &quot;Wuhan pneumonia&quot;?&#10;#coronavirus #COVID19 &#10;#Trump #China #WorldHealthOrganization #WHO… https://t.co/bZjLypeABe" />
+        </attvalues>
+      </node>
+      <node id="1250469261140791297" label="1250469261140791297">
+        <attvalues>
+          <attvalue for="1" value="ChinaLiedPeopleDied" />
+          <attvalue for="2" value="Why don’t we lock this bunch out of here, every damn part of them. China Tells U.S. to ‘Fulfill Its Obligations‘ and Reverse WHO Defunding. Why doesn’t China fulfill its obligations to the world and come clean? #ChinaLiedPeopleDied https://t.co/FoVPKCAwtm via @BreitbartNews" />
+        </attvalues>
+      </node>
+      <node id="1250469347757150208" label="1250469347757150208">
+        <attvalues>
+          <attvalue for="1" value="COVID19" />
+          <attvalue for="2" value="Really smart people can easily develop expertise in new areas.  Gates has been working on global health initiatives… https://t.co/S7MEYlducQ" />
+        </attvalues>
+      </node>
+      <node id="1250463203521331206" label="1250463203521331206">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="Must have missed @BillGates career switch from Microsoft salesman to medical epidemiologist? Reminds me of other ce… https://t.co/ypu21vGfFR" />
+        </attvalues>
+      </node>
+      <node id="1250166768112410625" label="1250166768112410625" />
+      <node id="1250183148081561602" label="1250183148081561602" />
+      <node id="1250469539273474048" label="1250469539273474048">
+        <attvalues>
+          <attvalue for="1" value="FeelTheBern" />
+          <attvalue for="2" value="Sanders sold out quicker than toilet paper. As this endless lockdown enters its 127th year, it’s good to know that good things are still happening, like the humiliation of people dumb enough to back Bernie Sanders... https://t.co/5LbBjukrUH #FeelTheBern, Vern? #GrandpaBadfinger #Biden2020 #CCPVirus #KungFlu" />
+        </attvalues>
+      </node>
+      <node id="1250468863923216385" label="1250468863923216385">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="As this endless lockdown enters its 127th year, it’s good to know that good things are still happening, like the hu… https://t.co/JGRlnlbYwh" />
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </node>
+      <node id="1250469840470585344" label="1250469840470585344">
+        <attvalues>
+          <attvalue for="1" value="HealthcareWorkers" />
+          <attvalue for="2" value="THAT'S A MORTALITY RATE (AMONG KNOWN INFECTIONS) OF .003%&#10;&#10;Wonder how many died of natural (or other) causes?&#10;&#10;For… https://t.co/NsPAIzbufH" />
+          <attvalue for="0" value="0" />
+        </attvalues>
+      </node>
+      <node id="1250467674217480192" label="1250467674217480192">
+        <attvalues>
+          <attvalue for="1" value="HealthcareWorkers" />
+          <attvalue for="2" value="Over 9,000 US #HealthcareWorkers have tested positive for the #CCPVirus in the space of 2 months, and 27 have died,… https://t.co/i0BEPrqCgk" />
+          <attvalue for="0" value="40" />
+        </attvalues>
+      </node>
+      <node id="1250470211351982081" label="1250470211351982081">
+        <attvalues>
+          <attvalue for="1" value="Hydroxychloroquine" />
+          <attvalue for="2" value="Is it fake news? Italy denied taking #Hydroxychloroquine from India stating drinking water of daughter's in-law house is prohibited. 😂😂😂 @narendramodi @RahulGandhi @INCIndia" />
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </node>
+      <node id="1250469795407048706" label="1250469795407048706">
+        <attvalues>
+          <attvalue for="1" value="Hydroxychloroquine" />
+          <attvalue for="2" value="Italy denied taking #Hydroxychloroquine from India stating drinking water of daughter's in-law house is prohibited.… https://t.co/YNAlMEIqp0" />
+        </attvalues>
+      </node>
+      <node id="1250393362227699713" label="1250393362227699713" />
+      <node id="1250415990636195840" label="1250415990636195840" />
+      <node id="1250188133490180096" label="1250188133490180096" />
+      <node id="1250202690568818689" label="1250202690568818689" />
+      <node id="1250471001604812801" label="1250471001604812801">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="Oh Delhi just reports 17 new cases. Very nice. Hopefully it will come under control soon. Delhi reports its lowest daily #ChineseVirus cases since Mar 28. Just 17 cases since yday, total cases 1578. India might be turner a corner." />
+        </attvalues>
+      </node>
+      <node id="1250469894140747778" label="1250469894140747778">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="Delhi reports its lowest daily #ChineseVirus cases since Mar 28.&#10;&#10;Just 17 cases since yday, total cases 1578.&#10;&#10;Indi… https://t.co/dMWLBvZ6ME" />
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </node>
+      <node id="1250194523487186950" label="1250194523487186950" />
+      <node id="1250416512898342914" label="1250416512898342914" />
+      <node id="1250471128537030657" label="1250471128537030657">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="He is a underrated stalwart, many hijdas call him corrupt, but he was framed in it Most underrated performer of #ChineseVirus season 🤞 https://t.co/0GpjMe7AJb" />
+          <attvalue for="0" value="0" />
+        </attvalues>
+      </node>
+      <node id="1250467303705083904" label="1250467303705083904">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="Most underrated performer of #ChineseVirus season 🤞" />
+          <attvalue for="0" value="199" />
+        </attvalues>
+      </node>
+      <node id="1250466900183666690" label="1250466900183666690" />
+      <node id="1250471354119438336" label="1250471354119438336">
+        <attvalues>
+          <attvalue for="1" value="ChinaLiedPeopleDied" />
+          <attvalue for="2" value="When you cut off a feed source the pigs start to squeal. China Tells U.S. to ‘Fulfill Its Obligations‘ and Reverse WHO Defunding. Why doesn’t China fulfill its obligations to the world and come clean? #ChinaLiedPeopleDied https://t.co/FoVPKCAwtm via @BreitbartNews" />
+        </attvalues>
+      </node>
+      <node id="1250464699088592896" label="1250464699088592896" />
+      <node id="1250466334661476352" label="1250466334661476352" />
+      <node id="1250472201993752579" label="1250472201993752579">
+        <attvalues>
+          <attvalue for="1" value="ChinaLiedPeopleDied" />
+          <attvalue for="2" value="🖕 THE @WHO AND 🖕 CHINA!!!!! China Tells U.S. to ‘Fulfill Its Obligations‘ and Reverse WHO Defunding. Why doesn’t China fulfill its obligations to the world and come clean? #ChinaLiedPeopleDied https://t.co/FoVPKCAwtm via @BreitbartNews" />
+        </attvalues>
+      </node>
+      <node id="1250472237292900352" label="1250472237292900352">
+        <attvalues>
+          <attvalue for="1" value="MilkTeaAlliance" />
+          <attvalue for="2" value="He bring pictures from the leader? Hhahaha It's show something about United nations vs one China?  Fricking Xi jin… https://t.co/Zq1XnWH6n6" />
+        </attvalues>
+      </node>
+      <node id="1250470567964106752" label="1250470567964106752">
+        <attvalues>
+          <attvalue for="1" value="China" />
+          <attvalue for="2" value="All most Chinese people stupid because being brainwashed from Xi Jin pooh ~ #China #CCPVirus #MilkTeaAlliance… https://t.co/32cCdvpSuT" />
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </node>
+      <node id="1250466488416419840" label="1250466488416419840" />
+      <node id="1250472363075997697" label="1250472363075997697">
+        <attvalues>
+          <attvalue for="1" value="BestPresidentEver45" />
+          <attvalue for="2" value="Thank you President Trump 🇺🇸 #BestPresidentEver45 🇺🇸 THANK YOU .@realDonaldTrump Watch the compassion President Trump has for this #COVID19 Survivor. She took #hydroxychloroquine &amp; with a secondary complication of Lyme disease she was high risk! The medication #HYDROXYCHLOROQUINE saved her life! Thank God For Trump! 🙏 https://t.co/jBBJIy7PdB" />
+        </attvalues>
+      </node>
+      <node id="1250465886063878145" label="1250465886063878145">
+        <attvalues>
+          <attvalue for="1" value="COVID19" />
+          <attvalue for="2" value="THANK YOU .@realDonaldTrump &#10;&#10;Watch the compassion President Trump has for this #COVID19 Survivor.  &#10;&#10;She took… https://t.co/C3a1XBPxIX" />
+          <attvalue for="0" value="233" />
+        </attvalues>
+      </node>
+      <node id="1250472472874569728" label="1250472472874569728">
+        <attvalues>
+          <attvalue for="1" value="HealthcareWorkers" />
+          <attvalue for="2" value="Great time to examine WHO funding! Over 9,000 US #HealthcareWorkers have tested positive for the #CCPVirus in the space of 2 months, and 27 have died, according to a report released April 14 by @CDCgov. https://t.co/Z1W0zgpf3o" />
+        </attvalues>
+      </node>
+      <node id="1250472570853392384" label="1250472570853392384">
+        <attvalues>
+          <attvalue for="1" value="COVID19" />
+          <attvalue for="2" value="He Truly Is One In A Billion.. (: 🇺🇸 Thank You President Trump!! 🇺🇸 @realDonaldTrump THANK YOU .@realDonaldTrump Watch the compassion President Trump has for this #COVID19 Survivor. She took #hydroxychloroquine &amp; with a secondary complication of Lyme disease she was high risk! The medication #HYDROXYCHLOROQUINE saved her life! Thank God For Trump! 🙏 https://t.co/jBBJIy7PdB" />
+        </attvalues>
+      </node>
+      <node id="1250472694669168640" label="1250472694669168640">
+        <attvalues>
+          <attvalue for="1" value="ChinaLiedPeopleDied" />
+          <attvalue for="2" value="China you get out of our business and out of our country! China Tells U.S. to ‘Fulfill Its Obligations‘ and Reverse WHO Defunding. Why doesn’t China fulfill its obligations to the world and come clean? #ChinaLiedPeopleDied https://t.co/FoVPKCAwtm via @BreitbartNews" />
+        </attvalues>
+      </node>
+      <node id="1250472825854533632" label="1250472825854533632">
+        <attvalues>
+          <attvalue for="1" value="Trump2020" />
+          <attvalue for="2" value="I'm so proud to call @realDonaldTrump my President! #Trump2020 THANK YOU .@realDonaldTrump Watch the compassion President Trump has for this #COVID19 Survivor. She took #hydroxychloroquine &amp; with a secondary complication of Lyme disease she was high risk! The medication #HYDROXYCHLOROQUINE saved her life! Thank God For Trump! 🙏 https://t.co/jBBJIy7PdB" />
+        </attvalues>
+      </node>
+      <node id="1250473441624330240" label="1250473441624330240">
+        <attvalues>
+          <attvalue for="1" value="ChinaLiedPeopleDied" />
+          <attvalue for="2" value="STAND FIRM, PRESIDENT TRUMP. China Tells U.S. to ‘Fulfill Its Obligations‘ and Reverse WHO Defunding. Why doesn’t China fulfill its obligations to the world and come clean? #ChinaLiedPeopleDied https://t.co/FoVPKCAwtm via @BreitbartNews" />
+        </attvalues>
+      </node>
+      <node id="1250473734189637632" label="1250473734189637632">
+        <attvalues>
+          <attvalue for="1" value="COVID19" />
+          <attvalue for="2" value="We as country society are fools... Even while it is pushing 1) its #COVID19 infected into our territory that it occupies, and 2) its #jihadis into the UT of J&amp;K #Pakistan is begging for #hydroxychloroquine from #IndiaFightsCorona What makes them even think about such a possibility when we're ourselves short of it" />
+        </attvalues>
+      </node>
+      <node id="1250473419633618945" label="1250473419633618945">
+        <attvalues>
+          <attvalue for="1" value="COVID19" />
+          <attvalue for="2" value="Even while it is pushing&#10;1) its #COVID19 infected into our territory that it occupies, and&#10;2) its #jihadis into the… https://t.co/7OymaHiOkN" />
+          <attvalue for="0" value="12" />
+        </attvalues>
+      </node>
+      <node id="1249705248618352640" label="1249705248618352640" />
+      <node id="1249715571400355843" label="1249715571400355843" />
+      <node id="1250473890981261312" label="1250473890981261312">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="Oh, for military tribunals to sweep these subversives away! You know the Chinese owns the Democrats when the Dems blame the President for the #ChineseVirus and not China and W.H.O., The Dems need investigated for treason Dem Sen. Murphy: We‘re in Crisis We‘re In Because of Trump, Not China and W.H.O. https://t.co/5x0wij6TrM" />
+          <attvalue for="0" value="0" />
+        </attvalues>
+      </node>
+      <node id="1250472611793928195" label="1250472611793928195">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="You know the Chinese owns the Democrats when the Dems blame the President for the #ChineseVirus and not China and W… https://t.co/B5kXKwPvQl" />
+          <attvalue for="0" value="0" />
+        </attvalues>
+      </node>
+      <node id="1250474121588166656" label="1250474121588166656">
+        <attvalues>
+          <attvalue for="1" value="COVID19" />
+          <attvalue for="2" value="we should give it! on humanitarian grounds &#10;&#10;one thing I learnt off lately is &#10;&#10;there are two types of people in th… https://t.co/yIQCiPtQkT" />
+        </attvalues>
+      </node>
+      <node id="1250447215669239808" label="1250447215669239808" />
+      <node id="1250464103900098563" label="1250464103900098563" />
+      <node id="1250474270230056961" label="1250474270230056961">
+        <attvalues>
+          <attvalue for="1" value="COVID19" />
+          <attvalue for="2" value="I would say. First stop cross border terrorism, ceasefire violations, then let us talk. Even while it is pushing 1) its #COVID19 infected into our territory that it occupies, and 2) its #jihadis into the UT of J&amp;K #Pakistan is begging for #hydroxychloroquine from #IndiaFightsCorona What makes them even think about such a possibility when we're ourselves short of it" />
+        </attvalues>
+      </node>
+      <node id="1250456592140701704" label="1250456592140701704" />
+      <node id="1250461102430916610" label="1250461102430916610" />
+      <node id="859028464636235776" label="859028464636235776" />
+      <node id="859114690374512640" label="859114690374512640" />
+      <node id="792066007120556033" label="792066007120556033" />
+      <node id="792068262494285825" label="792068262494285825" />
+      <node id="859030135202295808" label="859030135202295808" />
+      <node id="859032100053409792" label="859032100053409792" />
+      <node id="1250474937774510080" label="1250474937774510080">
+        <attvalues>
+          <attvalue for="1" value="Thread" />
+          <attvalue for="2" value="Some early insights from part of our work to develop scientific models and dashboards for administrators and policy… https://t.co/ZQCqUKnFqB" />
+        </attvalues>
+      </node>
+      <node id="1250475114560278533" label="1250475114560278533">
+        <attvalues>
+          <attvalue for="1" value="HealthcareWorkers" />
+          <attvalue for="2" value="This would put the case fatality rate at 0.3% for the highest risk workers. This is in line with the study out of G… https://t.co/xomwvp7igw" />
+          <attvalue for="0" value="0" />
+        </attvalues>
+      </node>
+      <node id="1250475218197454849" label="1250475218197454849">
+        <attvalues>
+          <attvalue for="1" value="CoronavirusOutbreak" />
+          <attvalue for="2" value="Why the major censoring? If it is so untrue then why hide it like its a threat? #CoronavirusOutbreak IS A COVERUP F… https://t.co/ZlrXaE7vzz" />
+        </attvalues>
+      </node>
+      <node id="1250461835393929216" label="1250461835393929216">
+        <attvalues>
+          <attvalue for="1" value="5G" />
+          <attvalue for="2" value="The world’s most popular search engine Google has announced it will ban ads related to the #5G - #coronavirus consp… https://t.co/EB3xhBQ2PT" />
+        </attvalues>
+      </node>
+      <node id="1250454401921269761" label="1250454401921269761" />
+      <node id="1250432496317034497" label="1250432496317034497" />
+      <node id="1250475882952744960" label="1250475882952744960">
+        <attvalues>
+          <attvalue for="1" value="COVID19" />
+          <attvalue for="2" value="The worst part is to appease others our govt will provide hydroxychloroquine free of cost to Pakistan Even while it is pushing 1) its #COVID19 infected into our territory that it occupies, and 2) its #jihadis into the UT of J&amp;K #Pakistan is begging for #hydroxychloroquine from #IndiaFightsCorona What makes them even think about such a possibility when we're ourselves short of it" />
+        </attvalues>
+      </node>
+      <node id="1250476465361244162" label="1250476465361244162">
+        <attvalues>
+          <attvalue for="1" value="HealthcareWorkers" />
+          <attvalue for="2" value="Yes, but during average year how many of them also test positive for whatever flu season it is.  And yes,many work… https://t.co/fxeDK8TLva" />
+        </attvalues>
+      </node>
+      <node id="1250476753446776832" label="1250476753446776832">
+        <attvalues>
+          <attvalue for="1" value="COVID19" />
+          <attvalue for="2" value="What a great man @realDonaldTrump is. No wonder democrats and rinos hate him it’s because he’d rather save lives th… https://t.co/VIhMUkzIT9" />
+        </attvalues>
+      </node>
+      <node id="1250477066937458688" label="1250477066937458688">
+        <attvalues>
+          <attvalue for="1" value="ChinaLiedPeopleDied" />
+          <attvalue for="2" value="China is so guilty! China Tells U.S. to ‘Fulfill Its Obligations‘ and Reverse WHO Defunding. Why doesn’t China fulfill its obligations to the world and come clean? #ChinaLiedPeopleDied https://t.co/FoVPKCAwtm via @BreitbartNews" />
+        </attvalues>
+      </node>
+      <node id="1250477912937115649" label="1250477912937115649">
+        <attvalues>
+          <attvalue for="1" value="ChinaLiedPeopleDied" />
+          <attvalue for="2" value="Coincidence? I don't think so... @chuckwoolery @4REDD4 Thank you @realDonaldTrump #ChinaLiedPeopleDied https://t.co/HX1NZ4b8YF" />
+        </attvalues>
+      </node>
+      <node id="1250463584666243074" label="1250463584666243074">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="no_text" />
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </node>
+      <node id="1250453557574336513" label="1250453557574336513">
+        <attvalues>
+          <attvalue for="0" value="26" />
+        </attvalues>
+      </node>
+      <node id="1250478022613962753" label="1250478022613962753">
+        <attvalues>
+          <attvalue for="1" value="WuhanVirus" />
+          <attvalue for="2" value="And computers are his primary area of &quot;expertise&quot; Anybody have troubles with their pc's getting hacked, crashed and… https://t.co/qVQdVfRwOB" />
+        </attvalues>
+      </node>
+      <node id="1250471971420278786" label="1250471971420278786">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="Microsoft Word still hasn’t been fully debugged and it has been 36 years since its initial release. So I really don… https://t.co/TyhHQYKnyd" />
+          <attvalue for="0" value="13" />
+        </attvalues>
+      </node>
+      <node id="1250478462822952960" label="1250478462822952960">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="I agree we also deserve answers from WHO they have not been transparent especially in relation to this virus @davidmakali1 @realDonaldTrump @WHO Thanks narrative will not change ! Can't change even with Biden. China &amp; @WHO messed handling of #ChineseVirus !Trump is giving USA &amp; European position ! New world order will see China &amp; her allies get pressure from Europe &amp; USA ! This will be detrimental to China economically !" />
+        </attvalues>
+      </node>
+      <node id="1250454321889775619" label="1250454321889775619">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="@davidmakali1 @realDonaldTrump @WHO Thanks narrative will not change ! Can't change even with Biden. China &amp;amp; @WHO m… https://t.co/XD0IjdRo7J" />
+        </attvalues>
+      </node>
+      <node id="1250159339781922816" label="1250159339781922816" />
+      <node id="1250476603009892354" label="1250476603009892354" />
+      <node id="1250479308092649477" label="1250479308092649477">
+        <attvalues>
+          <attvalue for="1" value="Hydroxychloroquine" />
+          <attvalue for="2" value="You got that right! Hydrooxychloroquine is the cure! Anti-American globalist media assets are calling #Hydroxychloroquine &quot;false hope&quot;. That means it is REAL hope. https://t.co/FhW34OcNn1 #StormIsUponUs #GabPost 1/ https://t.co/p3oINrD7FO" />
+        </attvalues>
+      </node>
+      <node id="1250478897914884096" label="1250478897914884096">
+        <attvalues>
+          <attvalue for="1" value="Hydroxychloroquine" />
+          <attvalue for="2" value="Anti-American globalist media assets are calling #Hydroxychloroquine &quot;false hope&quot;. That means it is REAL hope.… https://t.co/8QfbEWmF2U" />
+          <attvalue for="0" value="67" />
+        </attvalues>
+      </node>
+      <node id="1250479554310758400" label="1250479554310758400">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="agree. . Most underrated performer of #ChineseVirus season 🤞" />
+        </attvalues>
+      </node>
+      <node id="1250479623080685568" label="1250479623080685568">
+        <attvalues>
+          <attvalue for="1" value="Florida" />
+          <attvalue for="2" value="No one saw THAT coming 🙄 A #Florida man has been arrested on suspicion of committing a 2nd-degree murder, just one day after he was released from jail over fears the #CCPVirus could spread in correctional facilities, authorities said. https://t.co/GMAxGHIk5d" />
+        </attvalues>
+      </node>
+      <node id="1250479018467524609" label="1250479018467524609">
+        <attvalues>
+          <attvalue for="1" value="Florida" />
+          <attvalue for="2" value="A #Florida man has been arrested on suspicion of committing a 2nd-degree murder, just one day after he was released… https://t.co/7ELknRoEe8" />
+          <attvalue for="0" value="96" />
+        </attvalues>
+      </node>
+      <node id="1250438578565337096" label="1250438578565337096" />
+      <node id="1250478369935781888" label="1250478369935781888" />
+      <node id="1250479708229324801" label="1250479708229324801">
+        <attvalues>
+          <attvalue for="1" value="ChinaLiedPeopleDied" />
+          <attvalue for="2" value="Please please please shut Pelosi off. She is killing Americans Nancy Pelosi would rather oppose President Trump than acknowledge he is working for the American people. #ChinaLiedPeopleDied https://t.co/Nb6pV0dAFB" />
+        </attvalues>
+      </node>
+      <node id="1250479329882112000" label="1250479329882112000">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="Nancy Pelosi would rather oppose President Trump than acknowledge he is working for the American people.… https://t.co/fjBLQXxhdk" />
+          <attvalue for="0" value="10" />
+        </attvalues>
+      </node>
+      <node id="1250448715082534913" label="1250448715082534913" />
+      <node id="1250480018800758786" label="1250480018800758786">
+        <attvalues>
+          <attvalue for="1" value="Florida" />
+          <attvalue for="2" value="REMOVE THE SHERIFF🙏 A #Florida man has been arrested on suspicion of committing a 2nd-degree murder, just one day after he was released from jail over fears the #CCPVirus could spread in correctional facilities, authorities said. https://t.co/GMAxGHIk5d" />
+        </attvalues>
+      </node>
+      <node id="1250480187424325636" label="1250480187424325636">
+        <attvalues>
+          <attvalue for="1" value="ChinaLiedPeopleDied" />
+          <attvalue for="2" value="Fuck China!  They owe every country for each dead person and all lost revenues created due to their China Flu Pande… https://t.co/LUFrZFaLLF" />
+        </attvalues>
+      </node>
+      <node id="1250480280885956608" label="1250480280885956608">
+        <attvalues>
+          <attvalue for="1" value="COVID19" />
+          <attvalue for="2" value="Only reason why the rest of the world doesn’t like decision is because it no longer means they get to benefit from… https://t.co/rqDgCmVu9u" />
+        </attvalues>
+      </node>
+      <node id="1250468561702748162" label="1250468561702748162">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="@spectatorindex I Support President Trump's @realDonaldTrump decision to halt funds 2 the WHO pending an investigat… https://t.co/BLcm64zocx" />
+          <attvalue for="0" value="28" />
+        </attvalues>
+      </node>
+      <node id="1250480396527173634" label="1250480396527173634">
+        <attvalues>
+          <attvalue for="1" value="NoBrezzNoMassage" />
+          <attvalue for="2" value="Crying. Oti try 😭 Went to agege market today....see ehn body dey pain me #NoBrezzNoMassage #ChineseVirus #WuhanVirus #ChineseWuhanVirus" />
+        </attvalues>
+      </node>
+      <node id="1250480069639839749" label="1250480069639839749">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="no_text" />
+        </attvalues>
+      </node>
+      <node id="1250105297366024193" label="1250105297366024193" />
+      <node id="1250243270866882560" label="1250243270866882560" />
+      <node id="1247589759444279296" label="1247589759444279296" />
+      <node id="1250331142437232641" label="1250331142437232641" />
+      <node id="1250480718867726337" label="1250480718867726337">
+        <attvalues>
+          <attvalue for="1" value="CDC" />
+          <attvalue for="2" value="@GlickmanJD @RealMattCouch My thoughts from this morning...our biggest enemy is America's blind partisanship. https://t.co/MCYunM1SlS Flashback...the #CDC has not been perfect either. Lots of blame to go around. CDC and #WHO have both dropped the ball. Partisan politics (both ways) has🧠's fried. USA #Gridlock could be our demise🙁. #SARSCoV2 #COVID19 #WHOLiedPeopleDied #WednesdayWisdom #bailouthumans #iPhone" />
+        </attvalues>
+      </node>
+      <node id="1249308917558960131" label="1249308917558960131" />
+      <node id="1249319050557050880" label="1249319050557050880" />
+      <node id="1250478528539299845" label="1250478528539299845" />
+      <node id="1250481096443248641" label="1250481096443248641">
+        <attvalues>
+          <attvalue for="1" value="COVID19" />
+          <attvalue for="2" value="Good stories like this should come out more! POTUS always wants to help people.🙏🙏🙏 THANK YOU .@realDonaldTrump Watch the compassion President Trump has for this #COVID19 Survivor. She took #hydroxychloroquine &amp; with a secondary complication of Lyme disease she was high risk! The medication #HYDROXYCHLOROQUINE saved her life! Thank God For Trump! 🙏 https://t.co/jBBJIy7PdB" />
+        </attvalues>
+      </node>
+      <node id="1250481305516638208" label="1250481305516638208">
+        <attvalues>
+          <attvalue for="1" value="StopMekongDam" />
+          <attvalue for="2" value="#StopMekongDam Why #Chinazi propaganda is so shameless that telling every part of the world is going to &quot;return&quot; to… https://t.co/otqJT48k57" />
+        </attvalues>
+      </node>
+      <node id="1250477534740746240" label="1250477534740746240">
+        <attvalues>
+          <attvalue for="1" value="nmslese" />
+          <attvalue for="2" value="#nmslese and #wumaos are giving their FF towards places and countries which want to “reunited with #nmsland so desp… https://t.co/kBJkOm6MZG" />
+          <attvalue for="0" value="0" />
+        </attvalues>
+      </node>
+      <node id="1250481365092458498" label="1250481365092458498">
+        <attvalues>
+          <attvalue for="1" value="Ashoke" />
+          <attvalue for="2" value="True Said #Ashoke Ji...It's high time now #Pellet Guns is the only remedy for them...Shameless Creatures... This is how stones are pelted on police at Moradabad. @myogiadityanath Please permit the @Uppolice to use pellet guns. Only you have the guts to do it. Sab theek ho jayega. #coronavirus #CoronaVillains https://t.co/VlIniqsLkG" />
+        </attvalues>
+      </node>
+      <node id="1250479329277952000" label="1250479329277952000">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="This is how stones are pelted on police at Moradabad. &#10;@myogiadityanath Please permit the @Uppolice to use pellet g… https://t.co/VPDvgjm8jr" />
+          <attvalue for="0" value="372" />
+        </attvalues>
+      </node>
+      <node id="1250481379424395265" label="1250481379424395265">
+        <attvalues>
+          <attvalue for="1" value="coronavirus" />
+          <attvalue for="2" value="Totally agreed This is how stones are pelted on police at Moradabad. @myogiadityanath Please permit the @Uppolice to use pellet guns. Only you have the guts to do it. Sab theek ho jayega. #coronavirus #CoronaVillains https://t.co/VlIniqsLkG" />
+        </attvalues>
+      </node>
+      <node id="1250481488375672832" label="1250481488375672832">
+        <attvalues>
+          <attvalue for="1" value="ChinaLiedPeopleDied" />
+          <attvalue for="2" value="Maybe China could pick up the cost??? China Tells U.S. to ‘Fulfill Its Obligations‘ and Reverse WHO Defunding. Why doesn’t China fulfill its obligations to the world and come clean? #ChinaLiedPeopleDied https://t.co/FoVPKCAwtm via @BreitbartNews" />
+        </attvalues>
+      </node>
+      <node id="1250481627530059777" label="1250481627530059777">
+        <attvalues>
+          <attvalue for="1" value="ChinaLiedPeopleDied" />
+          <attvalue for="2" value="We have no obligation to WHO! China Tells U.S. to ‘Fulfill Its Obligations‘ and Reverse WHO Defunding. Why doesn’t China fulfill its obligations to the world and come clean? #ChinaLiedPeopleDied https://t.co/FoVPKCAwtm via @BreitbartNews" />
+        </attvalues>
+      </node>
+      <node id="1246457232792768512" label="1246457232792768512" />
+      <node id="1246483186504421382" label="1246483186504421382" />
+      <node id="1250481737169166341" label="1250481737169166341">
+        <attvalues>
+          <attvalue for="1" value="coronavirus" />
+          <attvalue for="2" value="Looks like these people are waging war against the state. This is how stones are pelted on police at Moradabad. @myogiadityanath Please permit the @Uppolice to use pellet guns. Only you have the guts to do it. Sab theek ho jayega. #coronavirus #CoronaVillains https://t.co/VlIniqsLkG" />
+        </attvalues>
+      </node>
+      <node id="1250481782765449216" label="1250481782765449216">
+        <attvalues>
+          <attvalue for="1" value="WHOLiedPeopleDied" />
+          <attvalue for="2" value="This is how you know holding funds to this Chinese PR firm was the right decision for America.&#10;&#10;I mean Mr. Gates an… https://t.co/ZhG1CGYSd7" />
+        </attvalues>
+      </node>
+      <node id="1250458997855072256" label="1250458997855072256">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="no_text" />
+        </attvalues>
+      </node>
+      <node id="1250482210773168130" label="1250482210773168130">
+        <attvalues>
+          <attvalue for="1" value="coronavirus" />
+          <attvalue for="2" value="You said it right. IF Yogi ji doesn't do no one else can do and we will be doomed This is how stones are pelted on police at Moradabad. @myogiadityanath Please permit the @Uppolice to use pellet guns. Only you have the guts to do it. Sab theek ho jayega. #coronavirus #CoronaVillains https://t.co/VlIniqsLkG" />
+        </attvalues>
+      </node>
+      <node id="1250482298157281280" label="1250482298157281280">
+        <attvalues>
+          <attvalue for="1" value="Florida" />
+          <attvalue for="2" value="Don't think serious offenders should be released from jail @realDonaldTrump A #Florida man has been arrested on suspicion of committing a 2nd-degree murder, just one day after he was released from jail over fears the #CCPVirus could spread in correctional facilities, authorities said. https://t.co/GMAxGHIk5d" />
+        </attvalues>
+      </node>
+      <node id="1250482804212760577" label="1250482804212760577">
+        <attvalues>
+          <attvalue for="1" value="coronavirus" />
+          <attvalue for="2" value="Are these M humans . wht is this love for stone ? This is how stones are pelted on police at Moradabad. @myogiadityanath Please permit the @Uppolice to use pellet guns. Only you have the guts to do it. Sab theek ho jayega. #coronavirus #CoronaVillains https://t.co/VlIniqsLkG" />
+        </attvalues>
+      </node>
+      <node id="1245371791209619457" label="1245371791209619457">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </node>
+      <node id="1250398904165826560" label="1250398904165826560">
+        <attvalues>
+          <attvalue for="0" value="15" />
+        </attvalues>
+      </node>
+      <node id="1250483092860686337" label="1250483092860686337">
+        <attvalues>
+          <attvalue for="1" value="SouthDakota" />
+          <attvalue for="2" value="Holy shit a competent governor! “We are flattening our curve in South Dakota,” Noem said. #SouthDakota's @GovKristiNoem said she will not be issuing a #StayAtHome order amid the #CCPVirus #Pandemic after over 100 more cases were confirmed in the state. https://t.co/JedDWUNgAh" />
+        </attvalues>
+      </node>
+      <node id="1250482776933109761" label="1250482776933109761">
+        <attvalues>
+          <attvalue for="1" value="SouthDakota" />
+          <attvalue for="2" value="“We are flattening our curve in South Dakota,” Noem said.&#10;&#10;#SouthDakota's @GovKristiNoem said she will not be issui… https://t.co/kXNvx855cU" />
+          <attvalue for="0" value="66" />
+        </attvalues>
+      </node>
+      <node id="1250483184023695360" label="1250483184023695360">
+        <attvalues>
+          <attvalue for="1" value="SouthDakota" />
+          <attvalue for="2" value="I was flattening my curve until they sent me home...now all I do is eat. “We are flattening our curve in South Dakota,” Noem said. #SouthDakota's @GovKristiNoem said she will not be issuing a #StayAtHome order amid the #CCPVirus #Pandemic after over 100 more cases were confirmed in the state. https://t.co/JedDWUNgAh" />
+        </attvalues>
+      </node>
+      <node id="1228044500334993411" label="1228044500334993411" />
+      <node id="1236499579912089601" label="1236499579912089601" />
+      <node id="1250483279217651712" label="1250483279217651712">
+        <attvalues>
+          <attvalue for="1" value="Hydroxychloroquine" />
+          <attvalue for="2" value="Attention @jkenney &quot;Malaria pill doesn't help clear virus in study&quot; https://t.co/DSnwsi142W #Hydroxychloroquine #scicomm #COVID19 &quot;...so it is probably unlikely that it will be of clinical benefit.” Remember: most promising drugs do NOT make it to clinical application. Good science always needed." />
+        </attvalues>
+      </node>
+      <node id="1250480817685454849" label="1250480817685454849">
+        <attvalues>
+          <attvalue for="1" value="Hydroxychloroquine" />
+          <attvalue for="2" value="&quot;Malaria pill doesn't help clear virus in study&quot; https://t.co/DSnwsi142W #Hydroxychloroquine #scicomm #COVID19&#10;&#10;&quot;..… https://t.co/DW7uw3IMKX" />
+          <attvalue for="0" value="48" />
+        </attvalues>
+      </node>
+      <node id="1250483306975682562" label="1250483306975682562">
+        <attvalues>
+          <attvalue for="1" value="outnumberedot" />
+          <attvalue for="2" value="Or Both. #outnumberedot Anyone who blames President Trump instead of China for the #WuhanVirus is intellectually dishonest or dumb as a rock. #FoxNews #OutNumberedOT 😷" />
+        </attvalues>
+      </node>
+      <node id="1250478422398304262" label="1250478422398304262">
+        <attvalues>
+          <attvalue for="1" value="WuhanVirus" />
+          <attvalue for="2" value="Anyone who blames President Trump instead of China for the #WuhanVirus is intellectually dishonest or dumb as a roc… https://t.co/lYPn87MPJa" />
+        </attvalues>
+      </node>
+      <node id="1250483318157717510" label="1250483318157717510">
+        <attvalues>
+          <attvalue for="1" value="COVID19" />
+          <attvalue for="2" value="President @realDonaldTrump also made the offer for her to see his White House Doctor before she left to see if they… https://t.co/gTVjvnax4p" />
+        </attvalues>
+      </node>
+      <node id="1250483391822213120" label="1250483391822213120">
+        <attvalues>
+          <attvalue for="1" value="Florida" />
+          <attvalue for="2" value="Imagine my shock A #Florida man has been arrested on suspicion of committing a 2nd-degree murder, just one day after he was released from jail over fears the #CCPVirus could spread in correctional facilities, authorities said. https://t.co/GMAxGHIk5d" />
+        </attvalues>
+      </node>
+      <node id="1250306344462114819" label="1250306344462114819" />
+      <node id="1250438760489091079" label="1250438760489091079">
+        <attvalues>
+          <attvalue for="0" value="90" />
+        </attvalues>
+      </node>
+      <node id="1250411167996162056" label="1250411167996162056" />
+      <node id="1250432682233716736" label="1250432682233716736">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </node>
+      <node id="1250483754910416896" label="1250483754910416896">
+        <attvalues>
+          <attvalue for="1" value="Hydroxychloroquine" />
+          <attvalue for="2" value="It is a red line when they start killing Americans with their propaganda. Anti-American globalist media assets are calling #Hydroxychloroquine &quot;false hope&quot;. That means it is REAL hope. https://t.co/FhW34OcNn1 #StormIsUponUs #GabPost 1/ https://t.co/p3oINrD7FO" />
+          <attvalue for="0" value="0" />
+        </attvalues>
+      </node>
+      <node id="1250483864147054595" label="1250483864147054595">
+        <attvalues>
+          <attvalue for="1" value="SouthDakota" />
+          <attvalue for="2" value="good for her “We are flattening our curve in South Dakota,” Noem said. #SouthDakota's @GovKristiNoem said she will not be issuing a #StayAtHome order amid the #CCPVirus #Pandemic after over 100 more cases were confirmed in the state. https://t.co/JedDWUNgAh" />
+        </attvalues>
+      </node>
+      <node id="1250187496350236673" label="1250187496350236673" />
+      <node id="1250264910937739270" label="1250264910937739270" />
+      <node id="1250200054402433024" label="1250200054402433024" />
+      <node id="1250370231215652865" label="1250370231215652865" />
+      <node id="1250484397947539456" label="1250484397947539456">
+        <attvalues>
+          <attvalue for="1" value="Hydroxychloroquine" />
+          <attvalue for="2" value="Reader: OMG! Did you see new ___ tech breakthrough?&#10;Me: Hang on, I'll talk to an expert about it.&#10;Expert: Interesti… https://t.co/GxwHiylPmR" />
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </node>
+      <node id="1250484462632091648" label="1250484462632091648">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="@TheOliveKnife sir this is BSY. Yes he might have issued that statement to not use TJ name but he is working far be… https://t.co/tdl3wv6MZj" />
+        </attvalues>
+      </node>
+      <node id="1250484482097856512" label="1250484482097856512">
+        <attvalues>
+          <attvalue for="1" value="Hydroxychloroquine" />
+          <attvalue for="2" value="There is nothing wrong with taking a little extra time and ensuring drug testing standards remain rigorous. Health… https://t.co/dMlfILmu9u" />
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </node>
+      <node id="1250484682287955969" label="1250484682287955969">
+        <attvalues>
+          <attvalue for="1" value="COVID19" />
+          <attvalue for="2" value="@DrKarlynB @SpeakerPelosi She beats up on Trump while this was happening.  Of course no word from her on any of it.… https://t.co/1jE7Eisa8v" />
+        </attvalues>
+      </node>
+      <node id="1250482438041669633" label="1250482438041669633">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="CHINA knew on JAN 14 they were facing a PANDEMIC.  @WHO posted NO H2H on JAN 14! W.H.O published a report in FEB on… https://t.co/AVCZ3v4QeH" />
+          <attvalue for="0" value="0" />
+        </attvalues>
+      </node>
+      <node id="1250485021573410816" label="1250485021573410816">
+        <attvalues>
+          <attvalue for="1" value="chloriquine" />
+          <attvalue for="2" value="Stop pushing #chloriquine. &quot;Malaria pill doesn't help clear virus in study&quot; https://t.co/DSnwsi142W #Hydroxychloroquine #scicomm #COVID19 &quot;...so it is probably unlikely that it will be of clinical benefit.” Remember: most promising drugs do NOT make it to clinical application. Good science always needed." />
+        </attvalues>
+      </node>
+      <node id="1250485283327377408" label="1250485283327377408">
+        <attvalues>
+          <attvalue for="1" value="coronavirus" />
+          <attvalue for="2" value="@myogiadityanath si please allow policeman to shoot when there is stone atack on police with stone This is how stones are pelted on police at Moradabad. @myogiadityanath Please permit the @Uppolice to use pellet guns. Only you have the guts to do it. Sab theek ho jayega. #coronavirus #CoronaVillains https://t.co/VlIniqsLkG" />
+        </attvalues>
+      </node>
+      <node id="1250485317255049222" label="1250485317255049222">
+        <attvalues>
+          <attvalue for="1" value="ChinaLiedPeopleDied" />
+          <attvalue for="2" value="Right on China Tells U.S. to ‘Fulfill Its Obligations‘ and Reverse WHO Defunding. Why doesn’t China fulfill its obligations to the world and come clean? #ChinaLiedPeopleDied https://t.co/FoVPKCAwtm via @BreitbartNews" />
+          <attvalue for="0" value="0" />
+        </attvalues>
+      </node>
+      <node id="1250485320975626240" label="1250485320975626240">
+        <attvalues>
+          <attvalue for="1" value="ChinaLiedPeopleDied" />
+          <attvalue for="2" value="Look who is calling the kettle black?  China, why don't you fulfill your obligations, before you start pointing fin… https://t.co/6xFtAtWFVi" />
+        </attvalues>
+      </node>
+      <node id="1250485467264331776" label="1250485467264331776">
+        <attvalues>
+          <attvalue for="1" value="coronavirus" />
+          <attvalue for="2" value="Where are dalla jounos @sardesairajdeep @BDUTT @_sabanaqvi ? If you have guts, tell who are these people pelting st… https://t.co/UyqFlVVCy5" />
+        </attvalues>
+      </node>
+      <node id="1250485911088857088" label="1250485911088857088">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="@SpeakerPelosi SHOW AMERICA the statute that commands the USA to pay tribute to @WHO . To hell with WHO. To hell wi… https://t.co/TA6G6RBhNd" />
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </node>
+      <node id="1250483625335889920" label="1250483625335889920">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="Pelosi vows to challenge Trump's 'dangerous, illegal' move to freeze WHO funding - @SpeakerPelosi it is not illegal… https://t.co/1AAyXPQrP0" />
+          <attvalue for="0" value="20" />
+        </attvalues>
+      </node>
+      <node id="1250486125182976006" label="1250486125182976006">
+        <attvalues>
+          <attvalue for="1" value="ChinaLiedPeopleDied" />
+          <attvalue for="2" value="The silent war ain't so silent. Not to the awake Patriot it isn't. China Tells U.S. to ‘Fulfill Its Obligations‘ and Reverse WHO Defunding. Why doesn’t China fulfill its obligations to the world and come clean? #ChinaLiedPeopleDied https://t.co/FoVPKCAwtm via @BreitbartNews" />
+        </attvalues>
+      </node>
+      <node id="1250486187883671552" label="1250486187883671552">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="Anything and everything to go against President Trump. If it is good for Americans, if it is bad for Americans. Any… https://t.co/c4fEWJ9Ncd" />
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </node>
+      <node id="1250484654643326976" label="1250484654643326976" />
+      <node id="1250486240404598784" label="1250486240404598784">
+        <attvalues>
+          <attvalue for="1" value="IndiaFightsCorona" />
+          <attvalue for="2" value="Use HCQ only on doctor's prescription. PLEASE RETWEET - #IndiaFightsCorona #Hydroxychloroquine to be strictly used ONLY on Doctor's prescription. #StayAtHomeSaveLives #StayHomeStaySafe #StayHome #CoronaVirus #COVID2019 #coronavirusindia #CoronavirusOutbreak https://t.co/FAFNdmLZAx" />
+        </attvalues>
+      </node>
+      <node id="1250485288440397824" label="1250485288440397824">
+        <attvalues>
+          <attvalue for="1" value="IndiaFightsCorona" />
+          <attvalue for="2" value="PLEASE RETWEET -&#10;#IndiaFightsCorona &#10;&#10;#Hydroxychloroquine to be strictly used ONLY on Doctor's prescription.… https://t.co/1iGLd7DtY8" />
+          <attvalue for="0" value="75" />
+        </attvalues>
+      </node>
+      <node id="1250486254845612033" label="1250486254845612033">
+        <attvalues>
+          <attvalue for="1" value="COVID19" />
+          <attvalue for="2" value="I love our president. He took Karen to the WH doctors to see if they could help her with her Lyme disease. THANK YOU .@realDonaldTrump Watch the compassion President Trump has for this #COVID19 Survivor. She took #hydroxychloroquine &amp; with a secondary complication of Lyme disease she was high risk! The medication #HYDROXYCHLOROQUINE saved her life! Thank God For Trump! 🙏 https://t.co/jBBJIy7PdB" />
+          <attvalue for="0" value="0" />
+        </attvalues>
+      </node>
+      <node id="1250486279067717632" label="1250486279067717632">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="Amen!! Who is orchestrating the #ChineseVirus? Why is #HunterBiden still on the board 6mos later? The #DeepStateCabal if anyone wants to take the time to look. #ChinaLiedPeopleDied: This is true, but I think we all can say #China had help. His Father is the presumptive #DNC nominee #SMH https://t.co/Dzt2xyiIHj https://t.co/yElMexmH8i" />
+        </attvalues>
+      </node>
+      <node id="1250478612593217536" label="1250478612593217536">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="Who is orchestrating the #ChineseVirus? Why is #HunterBiden still on the board 6mos later? The #DeepStateCabal if a… https://t.co/TsiVbvcw4k" />
+          <attvalue for="0" value="29" />
+        </attvalues>
+      </node>
+      <node id="1250469610673049603" label="1250469610673049603" />
+      <node id="1250486361590763522" label="1250486361590763522">
+        <attvalues>
+          <attvalue for="1" value="hydroxychloroquine" />
+          <attvalue for="2" value="he is in the vipers den ....give him chance @EyesOnQ Boris Johnson is evil for not telling the world about #hydroxychloroquine, and singing its praises. #TrumpLandslide2020" />
+        </attvalues>
+      </node>
+      <node id="1250484118586089477" label="1250484118586089477">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="no_text" />
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </node>
+      <node id="1250486669180121090" label="1250486669180121090">
+        <attvalues>
+          <attvalue for="1" value="IMUN" />
+          <attvalue for="2" value="Lodonal Corona Virus Emergency approval around June -July 2020. Ldn has demonstrated improvement outcome in individ… https://t.co/fI8fANIG9z" />
+        </attvalues>
+      </node>
+      <node id="1250482028316934144" label="1250482028316934144">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="no_text" />
+        </attvalues>
+      </node>
+      <node id="1250358174059655168" label="1250358174059655168" />
+      <node id="1250364881661911044" label="1250364881661911044" />
+      <node id="1250486717439553536" label="1250486717439553536">
+        <attvalues>
+          <attvalue for="1" value="ChinaLiedPeopleDied" />
+          <attvalue for="2" value="The United States of America isn't OBLIGATED to do anything whatsoever for the WHO as @realDonaldTrump so clearly d… https://t.co/4aKPTPQ7mR" />
+        </attvalues>
+      </node>
+      <node id="1250486751942053889" label="1250486751942053889">
+        <attvalues>
+          <attvalue for="1" value="coronavirus" />
+          <attvalue for="2" value="@DeShobhaa @_sabanaqvi  Are those throwing stone also like @iamsrk @Javedakhtarjadu ...??  Pls compare with right p… https://t.co/NkC8thNTZT" />
+        </attvalues>
+      </node>
+      <node id="1250486764881547265" label="1250486764881547265">
+        <attvalues>
+          <attvalue for="1" value="Americans" />
+          <attvalue for="2" value="Soooo China is relying on #Americans to help them out? Is that how it works? #WeThePeopleStandWithTrump China Tells U.S. to ‘Fulfill Its Obligations‘ and Reverse WHO Defunding. Why doesn’t China fulfill its obligations to the world and come clean? #ChinaLiedPeopleDied https://t.co/FoVPKCAwtm via @BreitbartNews" />
+        </attvalues>
+      </node>
+      <node id="1250486797311721472" label="1250486797311721472">
+        <attvalues>
+          <attvalue for="1" value="IndiaFightsCorona" />
+          <attvalue for="2" value="#IndiaFightsCorona &#10;&#10;#Hydroxychloroquine to be strictly used ONLY on Doctor's prescription.  &#10;&#10;#StayAtHomeSaveLives… https://t.co/2cBZdb9lU5" />
+        </attvalues>
+      </node>
+      <node id="1250486816375005184" label="1250486816375005184">
+        <attvalues>
+          <attvalue for="1" value="SouthDakota" />
+          <attvalue for="2" value="More states to follow I hope. #SouthDakota has announced a statewide clinical trial of #Hydroxychloroquine in #CCPVirus patients, the first in the nation.https://t.co/Zu8vJbEG04" />
+        </attvalues>
+      </node>
+      <node id="1250486578474074112" label="1250486578474074112">
+        <attvalues>
+          <attvalue for="1" value="SouthDakota" />
+          <attvalue for="2" value="#SouthDakota has announced a statewide clinical trial of #Hydroxychloroquine in #CCPVirus patients, the first in th… https://t.co/7vCJ80oeWu" />
+          <attvalue for="0" value="138" />
+        </attvalues>
+      </node>
+      <node id="1250486848666963968" label="1250486848666963968">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirusCorona" />
+          <attvalue for="2" value="#ChineseVirusCorona While the world is battling against ChineseVirus which has caused more than 90000 death and nea… https://t.co/gAVoeAE6vV" />
+        </attvalues>
+      </node>
+      <node id="1250485267674390529" label="1250485267674390529">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="@nytimes #ChineseVirus CoronaVirus is 100% Chinese laboratory breed deadly virus, mass produced as biological weapo… https://t.co/GaHAzuIN39" />
+        </attvalues>
+      </node>
+      <node id="1250486924235673601" label="1250486924235673601">
+        <attvalues>
+          <attvalue for="1" value="SouthDakota" />
+          <attvalue for="2" value="We rock here in SD! Woo hoo #SouthDakota has announced a statewide clinical trial of #Hydroxychloroquine in #CCPVirus patients, the first in the nation.https://t.co/Zu8vJbEG04" />
+        </attvalues>
+      </node>
+      <node id="1250487094020943872" label="1250487094020943872">
+        <attvalues>
+          <attvalue for="1" value="Hydroxychloroquine" />
+          <attvalue for="2" value="Nothing Trump does works, including Jr., Ivanka and Eric. #Hydroxychloroquine Tip: It doesn't work on #COVID19 #TrumpIsKillingAmericans #TrumpLiesPeopleDie #PandemicProfiteering #DonTheCon #InsiderTrading" />
+        </attvalues>
+      </node>
+      <node id="1250486227096055808" label="1250486227096055808">
+        <attvalues>
+          <attvalue for="1" value="Hydroxychloroquine" />
+          <attvalue for="2" value="#Hydroxychloroquine Tip: It doesn't work on #COVID19 &#10;&#10;#TrumpIsKillingAmericans #TrumpLiesPeopleDie… https://t.co/6NU8lDjtUA" />
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </node>
+      <node id="1250415546023047169" label="1250415546023047169" />
+      <node id="1250487124266229766" label="1250487124266229766">
+        <attvalues>
+          <attvalue for="1" value="Whitmer" />
+          <attvalue for="2" value="Michigan deserves a better Governor! Ms. #Whitmer is auditioning for #ChinaJoe's VP slot at the expense of American citizens using #WuhanVirus as ammunition for a personal power grab. 🇺🇸#Michigan 🇺🇸#MichiganPatriotsDoingPatriotStuff!🇺🇸 🇺🇸God bless #MichiganPatriots🇺🇸" />
+          <attvalue for="0" value="0" />
+        </attvalues>
+      </node>
+      <node id="1250482989420683270" label="1250482989420683270">
+        <attvalues>
+          <attvalue for="1" value="Whitmer" />
+          <attvalue for="2" value="Ms. #Whitmer is auditioning for #ChinaJoe's VP slot at the expense of American citizens using #WuhanVirus as ammuni… https://t.co/Q2cnbNTyMf" />
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </node>
+      <node id="1250461513799745536" label="1250461513799745536" />
+      <node id="1250487139046998019" label="1250487139046998019">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="Now THAT's delusions of grandeur. Pelosi vows to challenge Trump's 'dangerous, illegal' move to freeze WHO funding - @SpeakerPelosi it is not illegal when the Actions by WHO are hurting the United States and hindering the U.S.'s ability to properly prepare and fight the #ChineseVirus. https://t.co/0cLt1JWbEX" />
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </node>
+      <node id="1085559977597636609" label="1085559977597636609" />
+      <node id="1250430450310328320" label="1250430450310328320">
+        <attvalues>
+          <attvalue for="0" value="87" />
+        </attvalues>
+      </node>
+      <node id="1250487276972371968" label="1250487276972371968">
+        <attvalues>
+          <attvalue for="1" value="Q" />
+          <attvalue for="2" value="&quot;Boris&quot; is Boris Johnson of the UK. His nurse is credited with saving his life. “To quote my son,(Nurse) he said he… https://t.co/8nDaQn6LU5" />
+        </attvalues>
+      </node>
+      <node id="1250485075562639361" label="1250485075562639361">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="no_text" />
+          <attvalue for="0" value="61" />
+        </attvalues>
+      </node>
+      <node id="1250487280608870401" label="1250487280608870401">
+        <attvalues>
+          <attvalue for="1" value="SouthDakota" />
+          <attvalue for="2" value="@GovAbbott This is how you do it! 👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻 https://t.co/dZrCXjGqr9 “We are flattening our curve in South Dakota,” Noem said. #SouthDakota's @GovKristiNoem said she will not be issuing a #StayAtHome order amid the #CCPVirus #Pandemic after over 100 more cases were confirmed in the state. https://t.co/JedDWUNgAh" />
+        </attvalues>
+      </node>
+      <node id="1250487318307385347" label="1250487318307385347">
+        <attvalues>
+          <attvalue for="1" value="SouthDakota" />
+          <attvalue for="2" value="Lets get this going and open up America! #SouthDakota has announced a statewide clinical trial of #Hydroxychloroquine in #CCPVirus patients, the first in the nation.https://t.co/Zu8vJbEG04" />
+        </attvalues>
+      </node>
+      <node id="1250196021612875776" label="1250196021612875776" />
+      <node id="1250318463047856129" label="1250318463047856129" />
+      <node id="1250487426763706368" label="1250487426763706368">
+        <attvalues>
+          <attvalue for="1" value="ChinaLiedPeopleDied" />
+          <attvalue for="2" value="Bill Gates can fund the WHO with all the billions he has if he thought they were important . China Tells U.S. to ‘Fulfill Its Obligations‘ and Reverse WHO Defunding. Why doesn’t China fulfill its obligations to the world and come clean? #ChinaLiedPeopleDied https://t.co/FoVPKCAwtm via @BreitbartNews" />
+        </attvalues>
+      </node>
+      <node id="1250487577792196608" label="1250487577792196608">
+        <attvalues>
+          <attvalue for="1" value="SouthDakota" />
+          <attvalue for="2" value="This is good news and will help support the data for science. #SouthDakota has announced a statewide clinical trial of #Hydroxychloroquine in #CCPVirus patients, the first in the nation.https://t.co/Zu8vJbEG04" />
+        </attvalues>
+      </node>
+      <node id="1250487694318276608" label="1250487694318276608">
+        <attvalues>
+          <attvalue for="1" value="China" />
+          <attvalue for="2" value="Communist #China is in no position to tell any nation what to do regarding @UN's @WHO. @realDonaldTrump's decision… https://t.co/uzyq4NJ6o2" />
+        </attvalues>
+      </node>
+      <node id="1250487904675041280" label="1250487904675041280">
+        <attvalues>
+          <attvalue for="1" value="coronavirus" />
+          <attvalue for="2" value="Very sorry to say &#10;Government won't allow pellet guns &#10;Abhi vishwas jeetna hai&#10;Phir vikas karna hai &#10;Phir saath len… https://t.co/ma6IuRLp9c" />
+        </attvalues>
+      </node>
+      <node id="1250487975336689665" label="1250487975336689665">
+        <attvalues>
+          <attvalue for="1" value="SouthDakota" />
+          <attvalue for="2" value="This is good news. Let’s watch it and see the miracle play out. #SouthDakota has announced a statewide clinical trial of #Hydroxychloroquine in #CCPVirus patients, the first in the nation.https://t.co/Zu8vJbEG04" />
+          <attvalue for="0" value="0" />
+        </attvalues>
+      </node>
+      <node id="1250430817009983490" label="1250430817009983490">
+        <attvalues>
+          <attvalue for="0" value="66" />
+        </attvalues>
+      </node>
+      <node id="1250279006345154561" label="1250279006345154561" />
+      <node id="1250293538908024838" label="1250293538908024838" />
+      <node id="1250488217595285505" label="1250488217595285505">
+        <attvalues>
+          <attvalue for="1" value="ChinaLiedPeopleDied" />
+          <attvalue for="2" value="China,what happen to your OBLIGATION to advise the world of the pandemic you had released into the world On PURPOSE… https://t.co/U0xovlJjwr" />
+        </attvalues>
+      </node>
+      <node id="1250488370817613824" label="1250488370817613824">
+        <attvalues>
+          <attvalue for="1" value="Worldunity" />
+          <attvalue for="2" value="#Worldunity At the time of China made coronavirus led global crisis, world must unite,and reduce dependence on all… https://t.co/T0jRDponwr" />
+        </attvalues>
+      </node>
+      <node id="1250488395551383555" label="1250488395551383555">
+        <attvalues>
+          <attvalue for="1" value="ChinaLiedPeopleDied" />
+          <attvalue for="2" value="If Comcast, NYT's, WAPO, AT&amp;amp;T were not getting money from China they would be telling Americans the truth about tha… https://t.co/SpBkOCUfQx" />
+          <attvalue for="0" value="0" />
+        </attvalues>
+      </node>
+      <node id="1250489140937756679" label="1250489140937756679">
+        <attvalues>
+          <attvalue for="1" value="COVID19" />
+          <attvalue for="2" value="@narendramodi Sir. You need to heed to the requests of Indians.&#10;We cannot always be so soft when we know 🇵🇰 to be b… https://t.co/YVGW9kgzRA" />
+        </attvalues>
+      </node>
+      <node id="1250489302817091591" label="1250489302817091591">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="That’s another dirty money haven for the Demz they have a strong holds in lots of dark places Pelosi vows to challenge Trump's 'dangerous, illegal' move to freeze WHO funding - @SpeakerPelosi it is not illegal when the Actions by WHO are hurting the United States and hindering the U.S.'s ability to properly prepare and fight the #ChineseVirus. https://t.co/0cLt1JWbEX" />
+          <attvalue for="0" value="0" />
+        </attvalues>
+      </node>
+      <node id="1250489319703351296" label="1250489319703351296">
+        <attvalues>
+          <attvalue for="1" value="RightToTry" />
+          <attvalue for="2" value="As with any drug therapy, there is no such thing as a free lunch.  But for patients near death's door, do the poten… https://t.co/dNNw5s0L3c" />
+        </attvalues>
+      </node>
+      <node id="1250489385209872384" label="1250489385209872384">
+        <attvalues>
+          <attvalue for="1" value="COVID19" />
+          <attvalue for="2" value="Does this mean Dr. Trump needs to rescind his research paper on the subject? A controlled, randomized clinical study (the way it's supposed to be done) of 150 #COVID19 patients in China finds ZERO benefit from #Hydroxychloroquine -- the drug touted by @POTUS #Trump. Paper is pre-review. https://t.co/NmYa7NqHS4" />
+        </attvalues>
+      </node>
+      <node id="1250488899207659520" label="1250488899207659520">
+        <attvalues>
+          <attvalue for="1" value="COVID19" />
+          <attvalue for="2" value="A controlled, randomized clinical study (the way it's supposed to be done) of 150 #COVID19 patients in China finds… https://t.co/595gXBPVrw" />
+          <attvalue for="0" value="111" />
+        </attvalues>
+      </node>
+      <node id="1250489956759461891" label="1250489956759461891">
+        <attvalues>
+          <attvalue for="1" value="COVID19" />
+          <attvalue for="2" value="@SimpsonMisti @SoCalValleyGal @KickEmOut3 I don't want to pay for an organization that covered for China on the sam… https://t.co/asptQvxt9y" />
+        </attvalues>
+      </node>
+      <node id="1250490007879471104" label="1250490007879471104">
+        <attvalues>
+          <attvalue for="1" value="ChinaLiedPeopleDied" />
+          <attvalue for="2" value="US will do that as soon as WHO fulfills its obligation! Oh! Too late they screwed up big time! China Tells U.S. to ‘Fulfill Its Obligations‘ and Reverse WHO Defunding. Why doesn’t China fulfill its obligations to the world and come clean? #ChinaLiedPeopleDied https://t.co/FoVPKCAwtm via @BreitbartNews" />
+        </attvalues>
+      </node>
+      <node id="1250490022198943744" label="1250490022198943744">
+        <attvalues>
+          <attvalue for="1" value="COVID19" />
+          <attvalue for="2" value="My last post for now. She's right!!!!!!!!!!!!!!!!!!!!!! A controlled, randomized clinical study (the way it's supposed to be done) of 150 #COVID19 patients in China finds ZERO benefit from #Hydroxychloroquine -- the drug touted by @POTUS #Trump. Paper is pre-review. https://t.co/NmYa7NqHS4" />
+        </attvalues>
+      </node>
+      <node id="1250490067589705729" label="1250490067589705729">
+        <attvalues>
+          <attvalue for="1" value="COVID19" />
+          <attvalue for="2" value="China. So there’s that. A controlled, randomized clinical study (the way it's supposed to be done) of 150 #COVID19 patients in China finds ZERO benefit from #Hydroxychloroquine -- the drug touted by @POTUS #Trump. Paper is pre-review. https://t.co/NmYa7NqHS4" />
+        </attvalues>
+      </node>
+      <node id="1250490264734613505" label="1250490264734613505">
+        <attvalues>
+          <attvalue for="1" value="CCP" />
+          <attvalue for="2" value="Brilliant I love this idea.....free the Chinese people from the the CCP....... Dr. @StevenWMosher: We should take away China's sovereign immunity, allow Americans affected by coronavirus to sue the #CCP &amp; enforce by seizing China-owned assets in US #WarRoomPandemic #CCPVirus 👉https://t.co/HuZDFNTwiv https://t.co/IKR1KmCYb1" />
+        </attvalues>
+      </node>
+      <node id="1250481624984227840" label="1250481624984227840">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="Dr. @StevenWMosher: We should take away China's sovereign immunity, allow Americans affected by coronavirus to sue… https://t.co/SHwfhgASfj" />
+          <attvalue for="0" value="22" />
+        </attvalues>
+      </node>
+      <node id="1250490361736073216" label="1250490361736073216">
+        <attvalues>
+          <attvalue for="1" value="VoteRedToSaveAmerica2020" />
+          <attvalue for="2" value="Ding Ding Ding! Bingo! Why don’t Democrats create mass hysteria every year &amp; shut down the economy over the tens of thousands who die from the flu virus? Because this is election year. #VoteRedToSaveAmerica2020 #CoronaHoax #ChineseVirus #COVID19 #CoronaVirus" />
+          <attvalue for="0" value="0" />
+        </attvalues>
+      </node>
+      <node id="1250484738072207361" label="1250484738072207361">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="Why don’t Democrats create mass hysteria every year &amp;amp; shut down the economy over the tens of thousands who die from… https://t.co/unKoJyn5Np" />
+          <attvalue for="0" value="0" />
+        </attvalues>
+      </node>
+      <node id="1250467251767181312" label="1250467251767181312" />
+      <node id="1250490449409671168" label="1250490449409671168">
+        <attvalues>
+          <attvalue for="1" value="Hydroxychloroquine" />
+          <attvalue for="2" value="Ventilator is the last thing you need when your blood is desaturated of o2. COVID is a blood issue, not lung mechan… https://t.co/xq2tLKklJT" />
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </node>
+      <node id="1250486636581773313" label="1250486636581773313">
+        <attvalues>
+          <attvalue for="1" value="Hydroxychloroquine" />
+          <attvalue for="2" value="Every patient attached to a ventilator, medicare will pay the hospital $30K.  (ka-ching$$$)  #Hydroxychloroquine on… https://t.co/Fk8eV62B4w" />
+        </attvalues>
+      </node>
+      <node id="1243725717356990464" label="1243725717356990464" />
+      <node id="1250490475443826689" label="1250490475443826689">
+        <attvalues>
+          <attvalue for="1" value="SouthDakota" />
+          <attvalue for="2" value="When a patient is knocking on death’s door, and this treatment is available with a high probability of a cure witho… https://t.co/f4bf4Qj5Su" />
+        </attvalues>
+      </node>
+      <node id="1250490548714119168" label="1250490548714119168">
+        <attvalues>
+          <attvalue for="1" value="COVID19" />
+          <attvalue for="2" value="&quot;Interventions HCQ was administrated with a loading dose of 1, 200 mg daily for three days followed by a maintained… https://t.co/5rhxwZudIa" />
+        </attvalues>
+      </node>
+      <node id="1250442782075912192" label="1250442782075912192" />
+      <node id="1250490868877815811" label="1250490868877815811">
+        <attvalues>
+          <attvalue for="1" value="ChinaLiedPeopleDied" />
+          <attvalue for="2" value="China needs to STFU China Tells U.S. to ‘Fulfill Its Obligations‘ and Reverse WHO Defunding. Why doesn’t China fulfill its obligations to the world and come clean? #ChinaLiedPeopleDied https://t.co/FoVPKCAwtm via @BreitbartNews" />
+        </attvalues>
+      </node>
+      <node id="1250491220536758273" label="1250491220536758273">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="As soon as she get done with the ice cream in the freezer. Pelosi vows to challenge Trump's 'dangerous, illegal' move to freeze WHO funding - @SpeakerPelosi it is not illegal when the Actions by WHO are hurting the United States and hindering the U.S.'s ability to properly prepare and fight the #ChineseVirus. https://t.co/0cLt1JWbEX" />
+          <attvalue for="0" value="0" />
+        </attvalues>
+      </node>
+      <node id="1250491322949083143" label="1250491322949083143">
+        <attvalues>
+          <attvalue for="1" value="HealthcareWorkers" />
+          <attvalue for="2" value=".3% of healthcare workers that tested positive have died from the coronavirus. Over 9,000 US #HealthcareWorkers have tested positive for the #CCPVirus in the space of 2 months, and 27 have died, according to a report released April 14 by @CDCgov. https://t.co/Z1W0zgpf3o" />
+        </attvalues>
+      </node>
+      <node id="1250491343371153415" label="1250491343371153415">
+        <attvalues>
+          <attvalue for="1" value="CCPLiedPeopleDied" />
+          <attvalue for="2" value="The very thought of this is soul crushing.&#10;&#10;Please let do our part. &#10;&#10;Also let’s try to make Twitter like a social… https://t.co/o4OOE0CM5u" />
+        </attvalues>
+      </node>
+      <node id="1250485880604614656" label="1250485880604614656">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="A new study forecasted the social distancing may remain in place until 2022. Do you think the situation might be di… https://t.co/AmhEW3I8Xo" />
+        </attvalues>
+      </node>
+      <node id="1250491402615570433" label="1250491402615570433">
+        <attvalues>
+          <attvalue for="1" value="China" />
+          <attvalue for="2" value="Hopefully we are all learning from this. Their own officials admit they blew it. I feel particularly sorry for all… https://t.co/n21TtUJAFL" />
+        </attvalues>
+      </node>
+      <node id="1250490258749304838" label="1250490258749304838">
+        <attvalues>
+          <attvalue for="1" value="ChinaLiedPeopleDied" />
+          <attvalue for="2" value="China should be held accountable. #ChinaLiedPeopleDied. WHO Official Says She Suspected Human-To-Human COVID-19 Tra… https://t.co/Ap9DJq9SzR" />
+        </attvalues>
+      </node>
+      <node id="1250491479165812743" label="1250491479165812743">
+        <attvalues>
+          <attvalue for="1" value="Florida" />
+          <attvalue for="2" value="If COVID-19 had a son A #Florida man has been arrested on suspicion of committing a 2nd-degree murder, just one day after he was released from jail over fears the #CCPVirus could spread in correctional facilities, authorities said. https://t.co/GMAxGHIk5d" />
+        </attvalues>
+      </node>
+      <node id="1250491572967309314" label="1250491572967309314">
+        <attvalues>
+          <attvalue for="1" value="Trump2020NowMoreThanEver" />
+          <attvalue for="2" value="I thought American could cut off funding to any country that puts USA in danger cas i think Pelosi needs accountabl… https://t.co/69j8uHDr6b" />
+        </attvalues>
+      </node>
+      <node id="1250491694811951105" label="1250491694811951105">
+        <attvalues>
+          <attvalue for="1" value="ChinaLiedPeopleDied" />
+          <attvalue for="2" value="How do you translate kiss our ass into Chinese? China Tells U.S. to ‘Fulfill Its Obligations‘ and Reverse WHO Defunding. Why doesn’t China fulfill its obligations to the world and come clean? #ChinaLiedPeopleDied https://t.co/FoVPKCAwtm via @BreitbartNews" />
+        </attvalues>
+      </node>
+      <node id="1250458884260671499" label="1250458884260671499" />
+      <node id="1250483764179996672" label="1250483764179996672" />
+      <node id="1250491990007058433" label="1250491990007058433">
+        <attvalues>
+          <attvalue for="1" value="coronavirus" />
+          <attvalue for="2" value="@SanjayAzadSln @_sayema @priyankagandhi shanti, nafrat, kisan, dharm, target, ration migrants etc. All kinds of wor… https://t.co/41ncos11RG" />
+        </attvalues>
+      </node>
+      <node id="1250492196358443011" label="1250492196358443011">
+        <attvalues>
+          <attvalue for="1" value="Hydroxychloroquine" />
+          <attvalue for="2" value="We will never know how many may have been saved if they had been given Hydroxychloroquine before they were so sick… https://t.co/TlcOQhZoBQ" />
+        </attvalues>
+      </node>
+      <node id="1250489105085091842" label="1250489105085091842">
+        <attvalues>
+          <attvalue for="1" value="Hydroxychloroquine" />
+          <attvalue for="2" value="Gov Andrew Cuomo banned treatment of Covid-19 w #Hydroxychloroquine &amp;amp; hoarded PPE for weeks to have a 3 hour photo… https://t.co/eP5V41G9rr" />
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </node>
+      <node id="1250492198694473729" label="1250492198694473729">
+        <attvalues>
+          <attvalue for="1" value="NotUncertain" />
+          <attvalue for="2" value="@BrownCalpers Why are Ben Meng + Dan Bienvenue not fired after so many awful choices CalPERS? Their incompetence wa… https://t.co/zmk8mBOfL2" />
+        </attvalues>
+      </node>
+      <node id="1250489874290900992" label="1250489874290900992">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="CIO Ben Meng + Dan Bienvenue must be fired @CalPERS @AnneSimpsonUSA. Ben &amp;amp; Dan are killing CalPERS CalSTRS members… https://t.co/gmKchpPzxn" />
+        </attvalues>
+      </node>
+      <node id="1250487499434217472" label="1250487499434217472" />
+      <node id="1250492331909877761" label="1250492331909877761">
+        <attvalues>
+          <attvalue for="1" value="Florida" />
+          <attvalue for="2" value="Who is surprised? A #Florida man has been arrested on suspicion of committing a 2nd-degree murder, just one day after he was released from jail over fears the #CCPVirus could spread in correctional facilities, authorities said. https://t.co/GMAxGHIk5d" />
+        </attvalues>
+      </node>
+      <node id="1250430997306331143" label="1250430997306331143" />
+      <node id="1250484963423764480" label="1250484963423764480" />
+      <node id="1250492715168485376" label="1250492715168485376">
+        <attvalues>
+          <attvalue for="1" value="ccpvirus" />
+          <attvalue for="2" value="Omg Tiananmen Square so much worse than I ever thought China needs to be put down 🤮😭 @danharris @DanRDimicco @MFA_China @AmbLiuXiaoMing Something none of us can forget! @robert_spalding @SolomonYue @ScottMorrisonMP @govuk @TomTugendhat @UKOfficial_MI6 @gchq @BWallaceMP 🇨🇳has’t changed, they just kill us in a different way #ccpvirus @Jkylebass @realDonaldTrump" />
+        </attvalues>
+      </node>
+      <node id="1250488552963670016" label="1250488552963670016">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="@danharris @DanRDimicco @MFA_China @AmbLiuXiaoMing Something none of us can forget! @robert_spalding @SolomonYue… https://t.co/IG0Oea8896" />
+          <attvalue for="0" value="12" />
+        </attvalues>
+      </node>
+      <node id="1238305053397504000" label="1238305053397504000" />
+      <node id="1250493038771744768" label="1250493038771744768">
+        <attvalues>
+          <attvalue for="1" value="Covid19" />
+          <attvalue for="2" value="We have to talk. We have to get real. Data, and reality collide this week on @HighWireTalk Tomorrow on The HighWire! #Covid19 #OpenAmerica #Hydroxychloroquine #VitaminC #Sweden #FakeNews #BeBrave #DelBigtree https://t.co/kGAULc9gxz" />
+          <attvalue for="0" value="0" />
+        </attvalues>
+      </node>
+      <node id="1250489150194831362" label="1250489150194831362">
+        <attvalues>
+          <attvalue for="1" value="Covid19" />
+          <attvalue for="2" value="Tomorrow on The HighWire!&#10;&#10;#Covid19 #OpenAmerica #Hydroxychloroquine #VitaminC #Sweden #FakeNews #BeBrave… https://t.co/9m9REEDZms" />
+          <attvalue for="0" value="30" />
+        </attvalues>
+      </node>
+      <node id="1250490791258177541" label="1250490791258177541" />
+      <node id="1250493862465937408" label="1250493862465937408">
+        <attvalues>
+          <attvalue for="1" value="COVID19" />
+          <attvalue for="2" value="All the effin resources being diverted to shut down this BS. And sadly, the BS will continue, requiring further and… https://t.co/OATDwEISn8" />
+        </attvalues>
+      </node>
+      <node id="1250493971807309826" label="1250493971807309826">
+        <attvalues>
+          <attvalue for="1" value="arpx" />
+          <attvalue for="2" value="Low-grade showboating. You give those demagogic remarks to Rapert and he'd bring tears. I ran an amendment to put Arkansas first and to hold China accountable for releasing the Wuhan COVID-19 virus. My amendment would have stopped your tax dollars from going to China and worked to bring jobs back to Arkansas. #arpx #arleg #ARNews #WuhanVirus https://t.co/7HRgVUm4AJ" />
+        </attvalues>
+      </node>
+      <node id="1250484922105634820" label="1250484922105634820">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="I ran an amendment to put Arkansas first and to hold China accountable for releasing the Wuhan COVID-19 virus. My a… https://t.co/HOYsyLvAF4" />
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </node>
+      <node id="1250296257840467969" label="1250296257840467969" />
+      <node id="1250492213940965378" label="1250492213940965378" />
+      <node id="1250494405326200833" label="1250494405326200833">
+        <attvalues>
+          <attvalue for="1" value="coronavirus" />
+          <attvalue for="2" value="Horrible . What we are seeing is unbelievable from a community which has been claiming that they want peace ? This is how stones are pelted on police at Moradabad. @myogiadityanath Please permit the @Uppolice to use pellet guns. Only you have the guts to do it. Sab theek ho jayega. #coronavirus #CoronaVillains https://t.co/VlIniqsLkG" />
+        </attvalues>
+      </node>
+      <node id="1250485348603506694" label="1250485348603506694" />
+      <node id="1250486707406897152" label="1250486707406897152" />
+      <node id="1250491242191994880" label="1250491242191994880" />
+      <node id="1250494377056710656" label="1250494377056710656" />
+      <node id="1250431810330193920" label="1250431810330193920" />
+      <node id="1250482879353638912" label="1250482879353638912" />
+      <node id="1250494955258331144" label="1250494955258331144">
+        <attvalues>
+          <attvalue for="1" value="arpx" />
+          <attvalue for="2" value="Not an economic development expert. Not an expert on China. Not an expert on anything, really, except embarrassing… https://t.co/UigbO6T3XS" />
+        </attvalues>
+      </node>
+      <node id="1250495291913994240" label="1250495291913994240">
+        <attvalues>
+          <attvalue for="1" value="Brazil" />
+          <attvalue for="2" value="@iamjpevans @asleepingdragon @realDonaldTrump so 74 year old medicine used by Millions of ppl every year kills? hmm… https://t.co/XIGBQIBLem" />
+        </attvalues>
+      </node>
+      <node id="1250494207841538048" label="1250494207841538048">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="no_text" />
+        </attvalues>
+      </node>
+      <node id="1250491647760228357" label="1250491647760228357" />
+      <node id="1250494173356097537" label="1250494173356097537" />
+      <node id="1250024201911762945" label="1250024201911762945" />
+      <node id="1250358526347804673" label="1250358526347804673" />
+      <node id="1250496162290900992" label="1250496162290900992">
+        <attvalues>
+          <attvalue for="1" value="SouthDakotaTrial" />
+          <attvalue for="2" value="#SouthDakotaTrial 100,000 doses #GovNoem 👏👏👏 ⚠️ #QANON 👁‍🗨 DROPS THREAD Apr 15 1. ➡ https://t.co/RBqbGs3LjC Dr. Oz: the importance of South Dakota's plan for statewide clinical &gt; #hydroxychloroquine trials: https://t.co/vYn6NBBAz7 Be informed. Boris. Think for yourself. Trust yourself. Q -&gt; #BorisJohnson Cont. &gt;" />
+        </attvalues>
+      </node>
+      <node id="1250493879541026817" label="1250493879541026817">
+        <attvalues>
+          <attvalue for="1" value="QANON" />
+          <attvalue for="2" value="⚠️ #QANON 👁‍🗨 DROPS THREAD&#10;&#10;Apr 15&#10;&#10;1.&#10;➡ https://t.co/RBqbGs3LjC&#10;Dr. Oz: the importance of South Dakota's plan for… https://t.co/r8p856ArA3" />
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </node>
+      <node id="1250467113376104450" label="1250467113376104450" />
+      <node id="1250496390951821316" label="1250496390951821316">
+        <attvalues>
+          <attvalue for="1" value="QANON" />
+          <attvalue for="2" value="Oz Wizard of OZ? Connected to Oprah, I don't trust him!! Thoughts? ⚠️ #QANON 👁‍🗨 DROPS THREAD Apr 15 1. ➡ https://t.co/RBqbGs3LjC Dr. Oz: the importance of South Dakota's plan for statewide clinical &gt; #hydroxychloroquine trials: https://t.co/vYn6NBBAz7 Be informed. Boris. Think for yourself. Trust yourself. Q -&gt; #BorisJohnson Cont. &gt;" />
+        </attvalues>
+      </node>
+      <node id="1250468425308217344" label="1250468425308217344" />
+      <node id="1250473649452109825" label="1250473649452109825" />
+      <node id="1250496703607734276" label="1250496703607734276">
+        <attvalues>
+          <attvalue for="1" value="Hydroxychloroquine" />
+          <attvalue for="2" value="If Your Governor Says, No! &#10;The Question Is Why Not?&#10;@91Psalms123 @IIIDeaton @Cathyrkay @DebKates @racheljill66… https://t.co/zBlpU3CKV7" />
+          <attvalue for="0" value="0" />
+        </attvalues>
+      </node>
+      <node id="1250494626491965440" label="1250494626491965440">
+        <attvalues>
+          <attvalue for="1" value="Hydroxychloroquine" />
+          <attvalue for="2" value="#Hydroxychloroquine +&#10;Above Is Trending!&#10;Sick #COVID19 ?&#10;As @realDonaldTrump &#10;Says, What Do You Have To Loose, Life… https://t.co/viausxoK28" />
+        </attvalues>
+      </node>
+      <node id="1250496900102410240" label="1250496900102410240">
+        <attvalues>
+          <attvalue for="1" value="coronavirus" />
+          <attvalue for="2" value="Just shoot them ! This is how stones are pelted on police at Moradabad. @myogiadityanath Please permit the @Uppolice to use pellet guns. Only you have the guts to do it. Sab theek ho jayega. #coronavirus #CoronaVillains https://t.co/VlIniqsLkG" />
+        </attvalues>
+      </node>
+      <node id="1250497290000896000" label="1250497290000896000">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="Trump is right, as usual. The World Health Organisation (WHO) sat on the info about the #ChineseVirus for 6 days before informing the world! https://t.co/cuXgyADZIW" />
+        </attvalues>
+      </node>
+      <node id="1250496426569805825" label="1250496426569805825">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="no_text" />
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </node>
+      <node id="1250261447856099328" label="1250261447856099328" />
+      <node id="1250265916316643328" label="1250265916316643328">
+        <attvalues>
+          <attvalue for="0" value="0" />
+        </attvalues>
+      </node>
+      <node id="1250497684378546176" label="1250497684378546176">
+        <attvalues>
+          <attvalue for="1" value="coronavirus" />
+          <attvalue for="2" value="Action already taken sir All under arrest NSA. Yogi Sarkaar hai ... This is how stones are pelted on police at Moradabad. @myogiadityanath Please permit the @Uppolice to use pellet guns. Only you have the guts to do it. Sab theek ho jayega. #coronavirus #CoronaVillains https://t.co/VlIniqsLkG" />
+        </attvalues>
+      </node>
+      <node id="1250497704012034051" label="1250497704012034051">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="Pelosi you think you have more power than you actually do! Watch Michigan Pelosi vows to challenge Trump's 'dangerous, illegal' move to freeze WHO funding - @SpeakerPelosi it is not illegal when the Actions by WHO are hurting the United States and hindering the U.S.'s ability to properly prepare and fight the #ChineseVirus. https://t.co/0cLt1JWbEX" />
+        </attvalues>
+      </node>
+      <node id="1250457253309812736" label="1250457253309812736" />
+      <node id="1250498001971425283" label="1250498001971425283">
+        <attvalues>
+          <attvalue for="1" value="COVID19" />
+          <attvalue for="2" value="Hum  don't mix all. Give you thanks to God in  first and  it's the hidden part of  the iceberg. Soon elentions😉 hum… https://t.co/zLIKLReEgt" />
+        </attvalues>
+      </node>
+      <node id="1250498052781211650" label="1250498052781211650">
+        <attvalues>
+          <attvalue for="1" value="TrudeauMustGo" />
+          <attvalue for="2" value="@JustinTrudeau Youre the biggest LIAR and FRAUD perpetrated on Canada and you think Canadians are going to tolerate… https://t.co/AXQKxhQSbT" />
+        </attvalues>
+      </node>
+      <node id="1250496493343002626" label="1250496493343002626">
+        <attvalues>
+          <attvalue for="1" value="TrudeauMustGo" />
+          <attvalue for="2" value="Justin Trudeau Considering PROHIBITION On “Alternate Covid-19” Media Reporting&#10;&#10;#TrudeauMustGo #ChinaLiedPeopleDied… https://t.co/s2KMH2biTT" />
+          <attvalue for="0" value="0" />
+        </attvalues>
+      </node>
+      <node id="1250498076420083712" label="1250498076420083712">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="It’s a habit here, since long time. We are used to beat the doctors black and blue. Govt is used to neglect also .… https://t.co/a4YZV7X1Pr" />
+        </attvalues>
+      </node>
+      <node id="1250495174620311555" label="1250495174620311555">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="In how many countries- Doctors/ Health Workers  have been Attacked with Stones &amp;amp; Sticks - in the World while  Tryin… https://t.co/sHpKIjdZGN" />
+          <attvalue for="0" value="12" />
+        </attvalues>
+      </node>
+      <node id="1250498277583265792" label="1250498277583265792">
+        <attvalues>
+          <attvalue for="1" value="RCT" />
+          <attvalue for="2" value="Very cool - https://t.co/dUYPGbWmsB ⚠️Want a live update on #RCT on #COVID19 treatment (including this too much famous #Hydroxychloroquine )? ⚠️ Thanks to @cochranecollab @Inserm @APHP @CNRS &amp; @WHO you can find it here: https://t.co/T6QnjksHmB https://t.co/iTVEerIls4" />
+        </attvalues>
+      </node>
+      <node id="1250495756554899459" label="1250495756554899459">
+        <attvalues>
+          <attvalue for="1" value="RCT" />
+          <attvalue for="2" value="⚠️Want a live update on #RCT on #COVID19 treatment (including this too much famous #Hydroxychloroquine )? ⚠️ Thanks… https://t.co/buh2d55n5E" />
+          <attvalue for="0" value="0" />
+        </attvalues>
+      </node>
+      <node id="1220818115354923009" label="1220818115354923009" />
+      <node id="1250188917430784004" label="1250188917430784004" />
+      <node id="1250126171812933632" label="1250126171812933632" />
+      <node id="1250228376469716992" label="1250228376469716992">
+        <attvalues>
+          <attvalue for="0" value="15" />
+        </attvalues>
+      </node>
+      <node id="1250488816382750722" label="1250488816382750722" />
+      <node id="1250491399172210688" label="1250491399172210688" />
+      <node id="1250498559071436802" label="1250498559071436802">
+        <attvalues>
+          <attvalue for="1" value="CCP" />
+          <attvalue for="2" value="@AmbLiuXiaoMing https://t.co/Z4zoOsNmFN STFU! World stands with other nations! @prdthailand China/CCP has alot to answer for no matter what! Everything said here 100% true! https://t.co/85svLXJpAg And my tweet for more UNCENSORED opinions about CN. World just need to know more than EVER! @ThaiEmbDC @ChineseEmbinUS @ChinaEUMission @rashtrapatibhvn #CCP #CCPVirus #China" />
+        </attvalues>
+      </node>
+      <node id="1250498279504314371" label="1250498279504314371">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="@prdthailand China/CCP has alot to answer for no matter what! Everything said here 100% true!… https://t.co/kAS8vmRpn7" />
+        </attvalues>
+      </node>
+      <node id="1250498625895124993" label="1250498625895124993">
+        <attvalues>
+          <attvalue for="1" value="HealthcareWorkers" />
+          <attvalue for="2" value="Heros and Fallen Heros....who says this isn't a war! Over 9,000 US #HealthcareWorkers have tested positive for the #CCPVirus in the space of 2 months, and 27 have died, according to a report released April 14 by @CDCgov. https://t.co/Z1W0zgpf3o" />
+        </attvalues>
+      </node>
+      <node id="1220178004191506432" label="1220178004191506432" />
+      <node id="1250199240774692870" label="1250199240774692870" />
+      <node id="1250498790441857026" label="1250498790441857026">
+        <attvalues>
+          <attvalue for="1" value="TrudeauLiedPeopleDied" />
+          <attvalue for="2" value="I see the evil in his eyes just like Justin! Theyre NEVER to be trusted! Their intent is far more sinister than the… https://t.co/Gu1kuoVGCh" />
+        </attvalues>
+      </node>
+      <node id="1250497300226433026" label="1250497300226433026">
+        <attvalues>
+          <attvalue for="1" value="TrudeauLiedPeopleDied" />
+          <attvalue for="2" value="Justin Trudeau’s Brother Alexandre: Canada A “Confused Nation, China Can Help”&#10;&#10;#TrudeauLiedPeopleDied… https://t.co/Jq9J8a2zxc" />
+          <attvalue for="0" value="0" />
+        </attvalues>
+      </node>
+      <node id="1250498831957057537" label="1250498831957057537">
+        <attvalues>
+          <attvalue for="1" value="COVID19" />
+          <attvalue for="2" value="But I was assured by Trump that it would raise people from the dead A controlled, randomized clinical study (the way it's supposed to be done) of 150 #COVID19 patients in China finds ZERO benefit from #Hydroxychloroquine -- the drug touted by @POTUS #Trump. Paper is pre-review. https://t.co/NmYa7NqHS4" />
+        </attvalues>
+      </node>
+      <node id="1250498890496786432" label="1250498890496786432">
+        <attvalues>
+          <attvalue for="1" value="hydroxychloroquine" />
+          <attvalue for="2" value="Heart ❤️toxicity = MORE ☠️☠️☠️☠️☠️ HYDROXYCHLOROQUINE DOES NOT WORK French study finds #hydroxychloroquine doesn't help patients with coronavirus &quot;Even worse, there were side effects caused by the drug -- heart toxicities that required it be discontinued” #MOG https://t.co/1YKz0OWPNc" />
+        </attvalues>
+      </node>
+      <node id="1250498233585094658" label="1250498233585094658">
+        <attvalues>
+          <attvalue for="1" value="hydroxychloroquine" />
+          <attvalue for="2" value="HYDROXYCHLOROQUINE DOES NOT WORK&#10;&#10;French study finds #hydroxychloroquine doesn't help patients with coronavirus&#10;&#10; &quot;… https://t.co/Bi63M9lMQa" />
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </node>
+      <node id="1250499093136396289" label="1250499093136396289">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="And Kier won t tell us his plan????? What I’ve learned since this crisis started: - China are innocent and its racist to suggest otherwise - Media are still upset over Brexit and the election result - Labour will politicise anything, especially if peoples lives are at stake - Trump still bad #ChineseVirus" />
+        </attvalues>
+      </node>
+      <node id="1250496767931699201" label="1250496767931699201">
+        <attvalues>
+          <attvalue for="1" value="" />
+          <attvalue for="2" value="What I’ve learned since this crisis started: &#10; &#10;- China are innocent and its racist to suggest otherwise  &#10;- Media… https://t.co/PNhpBCdCI3" />
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </node>
+      <node id="1250037275397939202" label="1250037275397939202" />
+      <node id="1250436166626627587" label="1250436166626627587" />
+      <node id="1249120956553072640" label="1249120956553072640" />
+      <node id="1250430546271809543" label="1250430546271809543" />
+      <node id="1250333836883316739" label="1250333836883316739" />
+      <node id="1250340453230063620" label="1250340453230063620" />
+      <node id="1243168592247414785" label="1243168592247414785" />
+      <node id="1243841913561575425" label="1243841913561575425" />
+      <node id="1250131618288881669" label="1250131618288881669" />
+      <node id="1250419114683727874" label="1250419114683727874" />
+      <node id="1247364801707335680" label="1247364801707335680" />
+      <node id="1247696807372693506" label="1247696807372693506">
+        <attvalues>
+          <attvalue for="0" value="0" />
+        </attvalues>
+      </node>
+      <node id="1250187041989591048" label="1250187041989591048" />
+      <node id="1250225608069545985" label="1250225608069545985" />
+      <node id="1250120735437307905" label="1250120735437307905" />
+      <node id="1249423622478925830" label="1249423622478925830">
+        <attvalues>
+          <attvalue for="0" value="26" />
+        </attvalues>
+      </node>
+      <node id="1249748309885046787" label="1249748309885046787">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </node>
+      <node id="1249852739842080769" label="1249852739842080769" />
+      <node id="1249860586545926145" label="1249860586545926145" />
+      <node id="1249320490776367109" label="1249320490776367109" />
+      <node id="1249342913110212611" label="1249342913110212611" />
+      <node id="1250385980571308033" label="1250385980571308033" />
+      <node id="1250414197655117825" label="1250414197655117825">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </node>
+      <node id="1248216735238377473" label="1248216735238377473" />
+      <node id="1248249293707702272" label="1248249293707702272" />
+      <node id="1247326326585012228" label="1247326326585012228" />
+      <node id="1249237661002403840" label="1249237661002403840">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </node>
+      <node id="1250466549514764293" label="1250466549514764293">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up" />
+        </attvalues>
+      </node>
+      <node id="1250466589041983489" label="1250466589041983489">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up https://t.co/vIJXmxX8Iv" />
+        </attvalues>
+      </node>
+      <node id="1250466642825490432" label="1250466642825490432">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up" />
+        </attvalues>
+      </node>
+      <node id="1250466754909753344" label="1250466754909753344">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up https://t.co/vIJXmxX8Iv" />
+        </attvalues>
+      </node>
+      <node id="1250466910791180290" label="1250466910791180290">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up" />
+        </attvalues>
+      </node>
+      <node id="1250466991015464960" label="1250466991015464960">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up" />
+        </attvalues>
+      </node>
+      <node id="1250467021453737985" label="1250467021453737985">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up" />
+        </attvalues>
+      </node>
+      <node id="1250467053837922307" label="1250467053837922307">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up" />
+        </attvalues>
+      </node>
+      <node id="1250467496156684292" label="1250467496156684292">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up" />
+        </attvalues>
+      </node>
+      <node id="1250467563114385409" label="1250467563114385409">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up https://t.co/vIJXmxX8Iv" />
+        </attvalues>
+      </node>
+      <node id="1250467565916356615" label="1250467565916356615">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up https://t.co/vIJXmxX8Iv" />
+        </attvalues>
+      </node>
+      <node id="1250468077701128193" label="1250468077701128193">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up" />
+        </attvalues>
+      </node>
+      <node id="1250468615414894594" label="1250468615414894594">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up https://t.co/vIJXmxX8Iv" />
+        </attvalues>
+      </node>
+      <node id="1250468740220588033" label="1250468740220588033">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up" />
+        </attvalues>
+      </node>
+      <node id="1250468872576253953" label="1250468872576253953">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up https://t.co/vIJXmxX8Iv" />
+        </attvalues>
+      </node>
+      <node id="1250469300164530178" label="1250469300164530178">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up" />
+        </attvalues>
+      </node>
+      <node id="1250469399347118082" label="1250469399347118082">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up https://t.co/vIJXmxX8Iv" />
+        </attvalues>
+      </node>
+      <node id="1250469519056723970" label="1250469519056723970">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up" />
+        </attvalues>
+      </node>
+      <node id="1250470354947993600" label="1250470354947993600">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up" />
+        </attvalues>
+      </node>
+      <node id="1250470448275443712" label="1250470448275443712">
+        <attvalues>
+          <attvalue for="1" value="Hydroxychloroquine" />
+          <attvalue for="2" value="RT @twiish_: Is it fake news?" />
+        </attvalues>
+      </node>
+      <node id="1250470727288946688" label="1250470727288946688">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up https://t.co/vIJXmxX8Iv" />
+        </attvalues>
+      </node>
+      <node id="1250470740773580800" label="1250470740773580800">
+        <attvalues>
+          <attvalue for="1" value="Hydroxychloroquine" />
+          <attvalue for="2" value="RT @twiish_: Is it fake news?" />
+        </attvalues>
+      </node>
+      <node id="1250471417486835712" label="1250471417486835712">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="RT @hkbhagwa: He is a underrated stalwart, many hijdas call him corrupt, but he was framed in it" />
+        </attvalues>
+      </node>
+      <node id="1250231608319324160" label="1250231608319324160" />
+      <node id="1250471826125230081" label="1250471826125230081">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up https://t.co/vIJXmxX8Iv" />
+        </attvalues>
+      </node>
+      <node id="1248211613498462208" label="1248211613498462208" />
+      <node id="1248215492042444808" label="1248215492042444808" />
+      <node id="1250472497318899713" label="1250472497318899713">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up https://t.co/vIJXmxX8Iv" />
+        </attvalues>
+      </node>
+      <node id="1250474391651188736" label="1250474391651188736">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up" />
+        </attvalues>
+      </node>
+      <node id="1250474423393583106" label="1250474423393583106">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="RT @PeoneDahlia: Oh, for military tribunals to sweep these subversives away!" />
+        </attvalues>
+      </node>
+      <node id="1250475094306181125" label="1250475094306181125">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up https://t.co/vIJXmxX8Iv" />
+        </attvalues>
+      </node>
+      <node id="1250475629042110464" label="1250475629042110464">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up" />
+        </attvalues>
+      </node>
+      <node id="1250475817592709121" label="1250475817592709121">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up" />
+        </attvalues>
+      </node>
+      <node id="1239967233972961283" label="1239967233972961283" />
+      <node id="1239995515787509761" label="1239995515787509761" />
+      <node id="1250255044538257411" label="1250255044538257411" />
+      <node id="1250478157226016770" label="1250478157226016770">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up" />
+        </attvalues>
+      </node>
+      <node id="1250479315449335808" label="1250479315449335808">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up" />
+        </attvalues>
+      </node>
+      <node id="1250480043156926464" label="1250480043156926464">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up" />
+        </attvalues>
+      </node>
+      <node id="1250480244441575424" label="1250480244441575424">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up" />
+        </attvalues>
+      </node>
+      <node id="1250225128069201921" label="1250225128069201921" />
+      <node id="1250233940100526082" label="1250233940100526082">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </node>
+      <node id="1250480499136638983" label="1250480499136638983">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up https://t.co/vIJXmxX8Iv" />
+        </attvalues>
+      </node>
+      <node id="1247562804871168002" label="1247562804871168002" />
+      <node id="1247563206480011266" label="1247563206480011266" />
+      <node id="1250480640606134274" label="1250480640606134274">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up" />
+        </attvalues>
+      </node>
+      <node id="1250042307979522050" label="1250042307979522050" />
+      <node id="1250068744589717505" label="1250068744589717505" />
+      <node id="1250481546265575425" label="1250481546265575425">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up https://t.co/vIJXmxX8Iv" />
+        </attvalues>
+      </node>
+      <node id="1250481636669452288" label="1250481636669452288">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up" />
+        </attvalues>
+      </node>
+      <node id="1250481960398569472" label="1250481960398569472">
+        <attvalues>
+          <attvalue for="1" value="HealthcareWorkers" />
+          <attvalue for="2" value="RT @PaulPhaneuf: THAT'S A MORTALITY RATE (AMONG KNOWN INFECTIONS) OF .003%&#10;&#10;Wonder how many died of natural (or other) causes?&#10;&#10;For this we…" />
+        </attvalues>
+      </node>
+      <node id="1250482016111427585" label="1250482016111427585">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up https://t.co/vIJXmxX8Iv" />
+        </attvalues>
+      </node>
+      <node id="1249169094609448962" label="1249169094609448962" />
+      <node id="1249277918007529473" label="1249277918007529473" />
+      <node id="1250485063759921152" label="1250485063759921152">
+        <attvalues>
+          <attvalue for="1" value="Hydroxychloroquine" />
+          <attvalue for="2" value="RT @politicalham: Reader: OMG! Did you see new ___ tech breakthrough?&#10;Me: Hang on, I'll talk to an expert about it.&#10;Expert: Interesting adv…" />
+        </attvalues>
+      </node>
+      <node id="1250485083246432256" label="1250485083246432256">
+        <attvalues>
+          <attvalue for="1" value="Hydroxychloroquine" />
+          <attvalue for="2" value="RT @atypicalalbertn: There is nothing wrong with taking a little extra time and ensuring drug testing standards remain rigorous. Health Can…" />
+        </attvalues>
+      </node>
+      <node id="1250485362683547648" label="1250485362683547648">
+        <attvalues>
+          <attvalue for="1" value="ChinaLiedPeopleDied" />
+          <attvalue for="2" value="RT @DonaldNSmith5: Right on" />
+        </attvalues>
+      </node>
+      <node id="1250485934899904512" label="1250485934899904512">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="RT @AlChadir: @SpeakerPelosi SHOW AMERICA the statute that commands the USA to pay tribute to @WHO . To hell with WHO. To hell with @UN the…" />
+        </attvalues>
+      </node>
+      <node id="1250486000981118976" label="1250486000981118976">
+        <attvalues>
+          <attvalue for="1" value="Hydroxychloroquine" />
+          <attvalue for="2" value="RT @politicalham: Reader: OMG! Did you see new ___ tech breakthrough?&#10;Me: Hang on, I'll talk to an expert about it.&#10;Expert: Interesting adv…" />
+        </attvalues>
+      </node>
+      <node id="1250486687265783808" label="1250486687265783808">
+        <attvalues>
+          <attvalue for="1" value="COVID19" />
+          <attvalue for="2" value="RT @miaculpepper2: I love our president. He took Karen to the WH doctors to see if they could help her with her Lyme disease." />
+        </attvalues>
+      </node>
+      <node id="1250487147896995844" label="1250487147896995844">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up https://t.co/vIJXmxX8Iv" />
+        </attvalues>
+      </node>
+      <node id="1250487255489273857" label="1250487255489273857">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up" />
+        </attvalues>
+      </node>
+      <node id="1250487621115162627" label="1250487621115162627">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="RT @mikeschaf: Anything and everything to go against President Trump. If it is good for Americans, if it is bad for Americans. Anything and…" />
+        </attvalues>
+      </node>
+      <node id="1250222943554207745" label="1250222943554207745" />
+      <node id="1250250362147258374" label="1250250362147258374" />
+      <node id="1250488169008705536" label="1250488169008705536">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up https://t.co/vIJXmxX8Iv" />
+        </attvalues>
+      </node>
+      <node id="1250341014084018179" label="1250341014084018179" />
+      <node id="1250360278308577280" label="1250360278308577280" />
+      <node id="1250488603416752128" label="1250488603416752128">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up https://t.co/vIJXmxX8Iv" />
+        </attvalues>
+      </node>
+      <node id="1250489204355801090" label="1250489204355801090">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="RT @mikeschaf: Anything and everything to go against President Trump. If it is good for Americans, if it is bad for Americans. Anything and…" />
+        </attvalues>
+      </node>
+      <node id="1250489226988105728" label="1250489226988105728">
+        <attvalues>
+          <attvalue for="1" value="Hydroxychloroquine" />
+          <attvalue for="2" value="RT @RickJSportPlays: It is a red line when they start killing Americans with their propaganda." />
+        </attvalues>
+      </node>
+      <node id="1250489734230618113" label="1250489734230618113">
+        <attvalues>
+          <attvalue for="1" value="ChinaLiedPeopleDied" />
+          <attvalue for="2" value="RT @TribeforFreedom: If Comcast, NYT's, WAPO, AT&amp;amp;T were not getting money from China they would be telling Americans the truth about that c…" />
+        </attvalues>
+      </node>
+      <node id="1250489758716854272" label="1250489758716854272">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up" />
+        </attvalues>
+      </node>
+      <node id="1250489843018326016" label="1250489843018326016">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up" />
+        </attvalues>
+      </node>
+      <node id="1250490473296224256" label="1250490473296224256">
+        <attvalues>
+          <attvalue for="1" value="HealthcareWorkers" />
+          <attvalue for="2" value="RT @Manning4USCong: This would put the case fatality rate at 0.3% for the highest risk workers. This is in line with the study out of Germa…" />
+        </attvalues>
+      </node>
+      <node id="1250490484201586693" label="1250490484201586693">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up" />
+        </attvalues>
+      </node>
+      <node id="1250490638677577731" label="1250490638677577731">
+        <attvalues>
+          <attvalue for="1" value="Hydroxychloroquine" />
+          <attvalue for="2" value="RT @atypicalalbertn: There is nothing wrong with taking a little extra time and ensuring drug testing standards remain rigorous. Health Can…" />
+        </attvalues>
+      </node>
+      <node id="1250490979204939777" label="1250490979204939777">
+        <attvalues>
+          <attvalue for="1" value="VoteRedToSaveAmerica2020" />
+          <attvalue for="2" value="RT @buckleupbudacup: Ding Ding Ding! Bingo! https://t.co/BxdOuiJ084" />
+        </attvalues>
+      </node>
+      <node id="1250492384720220161" label="1250492384720220161">
+        <attvalues>
+          <attvalue for="1" value="Hydroxychloroquine" />
+          <attvalue for="2" value="RT @politicalham: Reader: OMG! Did you see new ___ tech breakthrough?&#10;Me: Hang on, I'll talk to an expert about it.&#10;Expert: Interesting adv…" />
+        </attvalues>
+      </node>
+      <node id="1250493565752545285" label="1250493565752545285">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up https://t.co/vIJXmxX8Iv" />
+        </attvalues>
+      </node>
+      <node id="1250493956053442560" label="1250493956053442560">
+        <attvalues>
+          <attvalue for="1" value="Whitmer" />
+          <attvalue for="2" value="RT @AnnTweetsToo: Michigan deserves a better Governor!" />
+        </attvalues>
+      </node>
+      <node id="1250494035317293056" label="1250494035317293056">
+        <attvalues>
+          <attvalue for="1" value="Hydroxychloroquine" />
+          <attvalue for="2" value="RT @BrianHassine: Ventilator is the last thing you need when your blood is desaturated of o2. COVID is a blood issue, not lung mechanics.…" />
+        </attvalues>
+      </node>
+      <node id="1250494446879207424" label="1250494446879207424">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up" />
+        </attvalues>
+      </node>
+      <node id="1250494956235419648" label="1250494956235419648">
+        <attvalues>
+          <attvalue for="1" value="SouthDakota" />
+          <attvalue for="2" value="RT @joy69703447: This is good news. Let’s watch it and see the miracle play out. https://t.co/GoNNswiGU6" />
+        </attvalues>
+      </node>
+      <node id="1248344271612030976" label="1248344271612030976" />
+      <node id="1249886931376156673" label="1249886931376156673" />
+      <node id="1250495312344440832" label="1250495312344440832">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up" />
+        </attvalues>
+      </node>
+      <node id="1250496012533338112" label="1250496012533338112">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="RT @Lewpeace: As soon as she get done with the ice cream in the freezer. https://t.co/OIWGIfGCS3" />
+        </attvalues>
+      </node>
+      <node id="1250496315412353030" label="1250496315412353030">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="RT @Luisper25684877: That’s another dirty money haven for the Demz they have a strong holds  in lots of dark places https://t.co/xkpqFwfbpu" />
+        </attvalues>
+      </node>
+      <node id="1250496745378918401" label="1250496745378918401">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="RT @bushmillsvassar: Now THAT's delusions of grandeur. https://t.co/sIKh1UZzAS" />
+        </attvalues>
+      </node>
+      <node id="1250497001671864323" label="1250497001671864323">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="RT @AlChadir: @SpeakerPelosi SHOW AMERICA the statute that commands the USA to pay tribute to @WHO . To hell with WHO. To hell with @UN the…" />
+        </attvalues>
+      </node>
+      <node id="1250497198401318912" label="1250497198401318912">
+        <attvalues>
+          <attvalue for="1" value="Hydroxychloroquine" />
+          <attvalue for="2" value="RT @NathanRaySollis: If Your Governor Says, No! &#10;The Question Is Why Not?&#10;@91Psalms123 @IIIDeaton @Cathyrkay @DebKates @racheljill66 @Kyong…" />
+        </attvalues>
+      </node>
+      <node id="1250497621120053248" label="1250497621120053248">
+        <attvalues>
+          <attvalue for="1" value="Hydroxychloroquine" />
+          <attvalue for="2" value="RT @BrianHassine: Ventilator is the last thing you need when your blood is desaturated of o2. COVID is a blood issue, not lung mechanics.…" />
+        </attvalues>
+      </node>
+      <node id="1250497668981243904" label="1250497668981243904">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up" />
+        </attvalues>
+      </node>
+      <node id="1250497728758648833" label="1250497728758648833">
+        <attvalues>
+          <attvalue for="1" value="ChineseVirus" />
+          <attvalue for="2" value="RT @bushmillsvassar: Now THAT's delusions of grandeur." />
+        </attvalues>
+      </node>
+      <node id="1250497895192616960" label="1250497895192616960">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up https://t.co/vIJXmxX8Iv" />
+        </attvalues>
+      </node>
+      <node id="1250497935508455425" label="1250497935508455425">
+        <attvalues>
+          <attvalue for="1" value="CCPvirus" />
+          <attvalue for="2" value="RT @BillGertz: My in-depth interview on the CCP’s virus cover up" />
+        </attvalues>
+      </node>
+      <node id="1250498166392270848" label="1250498166392270848">
+        <attvalues>
+          <attvalue for="1" value="Covid19" />
+          <attvalue for="2" value="RT @patrick_layton: We have to talk. We have to get real. Data, and reality collide this week on @HighWireTalk" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="1250292126643941376" target="1250452003051929603" id="0" />
+      <edge source="1250292126643941376" target="1250448014742712321" id="1" />
+      <edge source="1250292126643941376" target="1250454401921269761" id="2" />
+      <edge source="1250292126643941376" target="1250432496317034497" id="3" />
+      <edge source="1250292126643941376" target="1250430817009983490" id="4" />
+      <edge source="1250292126643941376" target="1250490791258177541" id="5" />
+      <edge source="1250057509135671297" target="1250060182484389889" id="6" />
+      <edge source="1250179208262717440" target="1250221834903027712" id="7" />
+      <edge source="1250242482765352960" target="1250248713814945793" id="8" />
+      <edge source="1250242482765352960" target="1250454441938960384" id="9" />
+      <edge source="1249852400531386371" target="1249853630196432899" id="10" />
+      <edge source="1217043229427761152" target="1250190535115116548" id="11" />
+      <edge source="1250438521866739712" target="1250445855527583744" id="12" />
+      <edge source="1250420481166995457" target="1250443375024771073" id="13" />
+      <edge source="1250455392674447360" target="1250458019625926656" id="14" />
+      <edge source="1250456354826813440" target="1250458194830295048" id="15" />
+      <edge source="1250451158293975040" target="1250452297819267072" id="16" />
+      <edge source="1250145955501854720" target="1250201292850343936" id="17" />
+      <edge source="1250449589305520128" target="1250449943074144261" id="18" />
+      <edge source="1250434216736641032" target="1250457398218637312" id="19" />
+      <edge source="1250434216736641032" target="1250435211994624000" id="20" />
+      <edge source="1250434216736641032" target="1250442782075912192" id="21" />
+      <edge source="1250434216736641032" target="1250467113376104450" id="22" />
+      <edge source="1250432223641128962" target="1250434273686908935" id="23" />
+      <edge source="1250459763629932545" target="1250461524423933952" id="24" />
+      <edge source="1240802365021831170" target="1250423440709844993" id="25" />
+      <edge source="1250459656494788609" target="1250461732071301128" id="26" />
+      <edge source="1250258049945739265" target="1250459656494788609" id="27" />
+      <edge source="1250456828166787074" target="1250461855543365633" id="28" />
+      <edge source="1250229681263128576" target="1250441485083787268" id="29" />
+      <edge source="1250461730624491522" target="1250463216779567106" id="30" />
+      <edge source="1250461730624491522" target="1250465497222692875" id="31" />
+      <edge source="1250461730624491522" target="1250466312842665984" id="32" />
+      <edge source="1250461730624491522" target="1250466510398722058" id="33" />
+      <edge source="1250461730624491522" target="1250466549514764293" id="34" />
+      <edge source="1250461730624491522" target="1250466589041983489" id="35" />
+      <edge source="1250461730624491522" target="1250466642825490432" id="36" />
+      <edge source="1250461730624491522" target="1250466754909753344" id="37" />
+      <edge source="1250461730624491522" target="1250466910791180290" id="38" />
+      <edge source="1250461730624491522" target="1250466991015464960" id="39" />
+      <edge source="1250461730624491522" target="1250467021453737985" id="40" />
+      <edge source="1250461730624491522" target="1250467053837922307" id="41" />
+      <edge source="1250461730624491522" target="1250467496156684292" id="42" />
+      <edge source="1250461730624491522" target="1250467563114385409" id="43" />
+      <edge source="1250461730624491522" target="1250467565916356615" id="44" />
+      <edge source="1250461730624491522" target="1250468077701128193" id="45" />
+      <edge source="1250461730624491522" target="1250468615414894594" id="46" />
+      <edge source="1250461730624491522" target="1250468740220588033" id="47" />
+      <edge source="1250461730624491522" target="1250468872576253953" id="48" />
+      <edge source="1250461730624491522" target="1250469300164530178" id="49" />
+      <edge source="1250461730624491522" target="1250469399347118082" id="50" />
+      <edge source="1250461730624491522" target="1250469519056723970" id="51" />
+      <edge source="1250461730624491522" target="1250470354947993600" id="52" />
+      <edge source="1250461730624491522" target="1250470727288946688" id="53" />
+      <edge source="1250461730624491522" target="1250471826125230081" id="54" />
+      <edge source="1250461730624491522" target="1250472497318899713" id="55" />
+      <edge source="1250461730624491522" target="1250474391651188736" id="56" />
+      <edge source="1250461730624491522" target="1250475094306181125" id="57" />
+      <edge source="1250461730624491522" target="1250475629042110464" id="58" />
+      <edge source="1250461730624491522" target="1250475817592709121" id="59" />
+      <edge source="1250461730624491522" target="1250478157226016770" id="60" />
+      <edge source="1250461730624491522" target="1250479315449335808" id="61" />
+      <edge source="1250461730624491522" target="1250480043156926464" id="62" />
+      <edge source="1250461730624491522" target="1250480244441575424" id="63" />
+      <edge source="1250461730624491522" target="1250480499136638983" id="64" />
+      <edge source="1250461730624491522" target="1250480640606134274" id="65" />
+      <edge source="1250461730624491522" target="1250481546265575425" id="66" />
+      <edge source="1250461730624491522" target="1250481636669452288" id="67" />
+      <edge source="1250461730624491522" target="1250482016111427585" id="68" />
+      <edge source="1250461730624491522" target="1250487147896995844" id="69" />
+      <edge source="1250461730624491522" target="1250487255489273857" id="70" />
+      <edge source="1250461730624491522" target="1250488169008705536" id="71" />
+      <edge source="1250461730624491522" target="1250488603416752128" id="72" />
+      <edge source="1250461730624491522" target="1250489758716854272" id="73" />
+      <edge source="1250461730624491522" target="1250489843018326016" id="74" />
+      <edge source="1250461730624491522" target="1250490484201586693" id="75" />
+      <edge source="1250461730624491522" target="1250493565752545285" id="76" />
+      <edge source="1250461730624491522" target="1250494446879207424" id="77" />
+      <edge source="1250461730624491522" target="1250495312344440832" id="78" />
+      <edge source="1250461730624491522" target="1250497668981243904" id="79" />
+      <edge source="1250461730624491522" target="1250497895192616960" id="80" />
+      <edge source="1250461730624491522" target="1250497935508455425" id="81" />
+      <edge source="1250459147163693059" target="1250463272907624448" id="82" />
+      <edge source="1250461381469417472" target="1250463383306067968" id="83" />
+      <edge source="1250461381469417472" target="1250468315597684737" id="84" />
+      <edge source="1249978269446950912" target="1250031008461860865" id="85" />
+      <edge source="1249840522186948615" target="1250151218829070336" id="86" />
+      <edge source="1250464428652285952" target="1250465978732945408" id="87" />
+      <edge source="1250465466901884929" target="1250466126447820801" id="88" />
+      <edge source="1250465466901884929" target="1250474937774510080" id="89" />
+      <edge source="1250439032317739013" target="1250447003189940225" id="90" />
+      <edge source="1250439032317739013" target="1250482438041669633" id="91" />
+      <edge source="1250465616621903881" target="1250466243024306177" id="92" />
+      <edge source="1250186417134809090" target="1250463459126411265" id="93" />
+      <edge source="1250464122065408000" target="1250466585682292736" id="94" />
+      <edge source="1250463864078163970" target="1250466911239974914" id="95" />
+      <edge source="1250463864078163970" target="1250467381064990727" id="96" />
+      <edge source="1250463864078163970" target="1250467507938435073" id="97" />
+      <edge source="1250463864078163970" target="1250469261140791297" id="98" />
+      <edge source="1250463864078163970" target="1250471354119438336" id="99" />
+      <edge source="1250463864078163970" target="1250472201993752579" id="100" />
+      <edge source="1250463864078163970" target="1250472694669168640" id="101" />
+      <edge source="1250463864078163970" target="1250473441624330240" id="102" />
+      <edge source="1250463864078163970" target="1250477066937458688" id="103" />
+      <edge source="1250463864078163970" target="1250480187424325636" id="104" />
+      <edge source="1250463864078163970" target="1250481488375672832" id="105" />
+      <edge source="1250463864078163970" target="1250481627530059777" id="106" />
+      <edge source="1250463864078163970" target="1250485317255049222" id="107" />
+      <edge source="1250463864078163970" target="1250485320975626240" id="108" />
+      <edge source="1250463864078163970" target="1250486125182976006" id="109" />
+      <edge source="1250463864078163970" target="1250486717439553536" id="110" />
+      <edge source="1250463864078163970" target="1250486764881547265" id="111" />
+      <edge source="1250463864078163970" target="1250487426763706368" id="112" />
+      <edge source="1250463864078163970" target="1250487694318276608" id="113" />
+      <edge source="1250463864078163970" target="1250488217595285505" id="114" />
+      <edge source="1250463864078163970" target="1250488395551383555" id="115" />
+      <edge source="1250463864078163970" target="1250490007879471104" id="116" />
+      <edge source="1250463864078163970" target="1250490868877815811" id="117" />
+      <edge source="1250463864078163970" target="1250491572967309314" id="118" />
+      <edge source="1250463864078163970" target="1250491694811951105" id="119" />
+      <edge source="1250463864078163970" target="1250485362683547648" id="120" />
+      <edge source="1250463864078163970" target="1250489734230618113" id="121" />
+      <edge source="1250465492692881411" target="1250467518520520707" id="122" />
+      <edge source="1250457657586089987" target="1250467602159276032" id="123" />
+      <edge source="1250457657586089987" target="1250480718867726337" id="124" />
+      <edge source="1239358108415254529" target="1250457657586089987" id="125" />
+      <edge source="1250456373629943809" target="1250468136039546880" id="126" />
+      <edge source="1250458646116470786" target="1250468440705466369" id="127" />
+      <edge source="1250464036514344963" target="1250468745362862081" id="128" />
+      <edge source="1250463203521331206" target="1250469347757150208" id="129" />
+      <edge source="1250166768112410625" target="1250183148081561602" id="130" />
+      <edge source="1250468863923216385" target="1250469539273474048" id="131" />
+      <edge source="1250467674217480192" target="1250469840470585344" id="132" />
+      <edge source="1250467674217480192" target="1250472472874569728" id="133" />
+      <edge source="1250467674217480192" target="1250475114560278533" id="134" />
+      <edge source="1250467674217480192" target="1250476465361244162" id="135" />
+      <edge source="1250467674217480192" target="1250491322949083143" id="136" />
+      <edge source="1250467674217480192" target="1250498625895124993" id="137" />
+      <edge source="1250467674217480192" target="1250481960398569472" id="138" />
+      <edge source="1250467674217480192" target="1250490473296224256" id="139" />
+      <edge source="1250469795407048706" target="1250470211351982081" id="140" />
+      <edge source="1250469795407048706" target="1250470448275443712" id="141" />
+      <edge source="1250469795407048706" target="1250470740773580800" id="142" />
+      <edge source="1250393362227699713" target="1250415990636195840" id="143" />
+      <edge source="1250188133490180096" target="1250202690568818689" id="144" />
+      <edge source="1250469894140747778" target="1250471001604812801" id="145" />
+      <edge source="1250194523487186950" target="1250416512898342914" id="146" />
+      <edge source="1250467303705083904" target="1250471128537030657" id="147" />
+      <edge source="1250467303705083904" target="1250479554310758400" id="148" />
+      <edge source="1250467303705083904" target="1250484462632091648" id="149" />
+      <edge source="1250467303705083904" target="1250471417486835712" id="150" />
+      <edge source="1250466900183666690" target="1250467303705083904" id="151" />
+      <edge source="1250464699088592896" target="1250466334661476352" id="152" />
+      <edge source="1250470567964106752" target="1250472237292900352" id="153" />
+      <edge source="1250466488416419840" target="1250470567964106752" id="154" />
+      <edge source="1250465886063878145" target="1250472363075997697" id="155" />
+      <edge source="1250465886063878145" target="1250472570853392384" id="156" />
+      <edge source="1250465886063878145" target="1250472825854533632" id="157" />
+      <edge source="1250465886063878145" target="1250476753446776832" id="158" />
+      <edge source="1250465886063878145" target="1250481096443248641" id="159" />
+      <edge source="1250465886063878145" target="1250483318157717510" id="160" />
+      <edge source="1250465886063878145" target="1250486254845612033" id="161" />
+      <edge source="1250465886063878145" target="1250498001971425283" id="162" />
+      <edge source="1250465886063878145" target="1250486687265783808" id="163" />
+      <edge source="1250473419633618945" target="1250473734189637632" id="164" />
+      <edge source="1250473419633618945" target="1250474121588166656" id="165" />
+      <edge source="1250473419633618945" target="1250474270230056961" id="166" />
+      <edge source="1250473419633618945" target="1250475882952744960" id="167" />
+      <edge source="1250473419633618945" target="1250489140937756679" id="168" />
+      <edge source="1249705248618352640" target="1249715571400355843" id="169" />
+      <edge source="1250472611793928195" target="1250473890981261312" id="170" />
+      <edge source="1250472611793928195" target="1250474423393583106" id="171" />
+      <edge source="1250447215669239808" target="1250464103900098563" id="172" />
+      <edge source="1250447215669239808" target="1250478528539299845" id="173" />
+      <edge source="1250447215669239808" target="1250484654643326976" id="174" />
+      <edge source="1250456592140701704" target="1250461102430916610" id="175" />
+      <edge source="859028464636235776" target="859114690374512640" id="176" />
+      <edge source="792066007120556033" target="792068262494285825" id="177" />
+      <edge source="859030135202295808" target="859032100053409792" id="178" />
+      <edge source="1250461835393929216" target="1250475218197454849" id="179" />
+      <edge source="1250463584666243074" target="1250477912937115649" id="180" />
+      <edge source="1250453557574336513" target="1250463584666243074" id="181" />
+      <edge source="1250471971420278786" target="1250478022613962753" id="182" />
+      <edge source="1250454321889775619" target="1250478462822952960" id="183" />
+      <edge source="1250159339781922816" target="1250476603009892354" id="184" />
+      <edge source="1250478897914884096" target="1250479308092649477" id="185" />
+      <edge source="1250478897914884096" target="1250483754910416896" id="186" />
+      <edge source="1250478897914884096" target="1250489226988105728" id="187" />
+      <edge source="1250479018467524609" target="1250479623080685568" id="188" />
+      <edge source="1250479018467524609" target="1250480018800758786" id="189" />
+      <edge source="1250479018467524609" target="1250482298157281280" id="190" />
+      <edge source="1250479018467524609" target="1250483391822213120" id="191" />
+      <edge source="1250479018467524609" target="1250491479165812743" id="192" />
+      <edge source="1250479018467524609" target="1250492331909877761" id="193" />
+      <edge source="1250438578565337096" target="1250478369935781888" id="194" />
+      <edge source="1250479329882112000" target="1250479708229324801" id="195" />
+      <edge source="1250448715082534913" target="1250479329882112000" id="196" />
+      <edge source="1250468561702748162" target="1250480280885956608" id="197" />
+      <edge source="1250480069639839749" target="1250480396527173634" id="198" />
+      <edge source="1250105297366024193" target="1250243270866882560" id="199" />
+      <edge source="1250105297366024193" target="1250120735437307905" id="200" />
+      <edge source="1247589759444279296" target="1250331142437232641" id="201" />
+      <edge source="1249308917558960131" target="1249319050557050880" id="202" />
+      <edge source="1250477534740746240" target="1250481305516638208" id="203" />
+      <edge source="1250479329277952000" target="1250481365092458498" id="204" />
+      <edge source="1250479329277952000" target="1250481379424395265" id="205" />
+      <edge source="1250479329277952000" target="1250481737169166341" id="206" />
+      <edge source="1250479329277952000" target="1250482210773168130" id="207" />
+      <edge source="1250479329277952000" target="1250482804212760577" id="208" />
+      <edge source="1250479329277952000" target="1250485283327377408" id="209" />
+      <edge source="1250479329277952000" target="1250485467264331776" id="210" />
+      <edge source="1250479329277952000" target="1250486751942053889" id="211" />
+      <edge source="1250479329277952000" target="1250487904675041280" id="212" />
+      <edge source="1250479329277952000" target="1250491990007058433" id="213" />
+      <edge source="1250479329277952000" target="1250494405326200833" id="214" />
+      <edge source="1250479329277952000" target="1250496900102410240" id="215" />
+      <edge source="1250479329277952000" target="1250497684378546176" id="216" />
+      <edge source="1246457232792768512" target="1246483186504421382" id="217" />
+      <edge source="1250458997855072256" target="1250481782765449216" id="218" />
+      <edge source="1245371791209619457" target="1250398904165826560" id="219" />
+      <edge source="1250482776933109761" target="1250483092860686337" id="220" />
+      <edge source="1250482776933109761" target="1250483184023695360" id="221" />
+      <edge source="1250482776933109761" target="1250483864147054595" id="222" />
+      <edge source="1250482776933109761" target="1250487280608870401" id="223" />
+      <edge source="1228044500334993411" target="1236499579912089601" id="224" />
+      <edge source="1250480817685454849" target="1250483279217651712" id="225" />
+      <edge source="1250480817685454849" target="1250484397947539456" id="226" />
+      <edge source="1250480817685454849" target="1250484482097856512" id="227" />
+      <edge source="1250480817685454849" target="1250485021573410816" id="228" />
+      <edge source="1250480817685454849" target="1250485063759921152" id="229" />
+      <edge source="1250480817685454849" target="1250485083246432256" id="230" />
+      <edge source="1250480817685454849" target="1250486000981118976" id="231" />
+      <edge source="1250480817685454849" target="1250490638677577731" id="232" />
+      <edge source="1250480817685454849" target="1250492384720220161" id="233" />
+      <edge source="1250478422398304262" target="1250483306975682562" id="234" />
+      <edge source="1250306344462114819" target="1250438760489091079" id="235" />
+      <edge source="1250411167996162056" target="1250432682233716736" id="236" />
+      <edge source="1250187496350236673" target="1250264910937739270" id="237" />
+      <edge source="1250200054402433024" target="1250370231215652865" id="238" />
+      <edge source="1250482438041669633" target="1250484682287955969" id="239" />
+      <edge source="1250482438041669633" target="1250489956759461891" id="240" />
+      <edge source="1250483625335889920" target="1250485911088857088" id="241" />
+      <edge source="1250483625335889920" target="1250486187883671552" id="242" />
+      <edge source="1250483625335889920" target="1250487139046998019" id="243" />
+      <edge source="1250483625335889920" target="1250489302817091591" id="244" />
+      <edge source="1250483625335889920" target="1250491220536758273" id="245" />
+      <edge source="1250483625335889920" target="1250497704012034051" id="246" />
+      <edge source="1250483625335889920" target="1250485934899904512" id="247" />
+      <edge source="1250483625335889920" target="1250487621115162627" id="248" />
+      <edge source="1250483625335889920" target="1250489204355801090" id="249" />
+      <edge source="1250483625335889920" target="1250496012533338112" id="250" />
+      <edge source="1250483625335889920" target="1250496315412353030" id="251" />
+      <edge source="1250483625335889920" target="1250496745378918401" id="252" />
+      <edge source="1250483625335889920" target="1250497001671864323" id="253" />
+      <edge source="1250483625335889920" target="1250497728758648833" id="254" />
+      <edge source="1250485288440397824" target="1250486240404598784" id="255" />
+      <edge source="1250485288440397824" target="1250486797311721472" id="256" />
+      <edge source="1250478612593217536" target="1250486279067717632" id="257" />
+      <edge source="1250469610673049603" target="1250478612593217536" id="258" />
+      <edge source="1250484118586089477" target="1250486361590763522" id="259" />
+      <edge source="1250482028316934144" target="1250486669180121090" id="260" />
+      <edge source="1250358174059655168" target="1250364881661911044" id="261" />
+      <edge source="1250486578474074112" target="1250486816375005184" id="262" />
+      <edge source="1250486578474074112" target="1250486924235673601" id="263" />
+      <edge source="1250486578474074112" target="1250487318307385347" id="264" />
+      <edge source="1250486578474074112" target="1250487577792196608" id="265" />
+      <edge source="1250486578474074112" target="1250487975336689665" id="266" />
+      <edge source="1250486578474074112" target="1250489319703351296" id="267" />
+      <edge source="1250486578474074112" target="1250490475443826689" id="268" />
+      <edge source="1250486578474074112" target="1250494956235419648" id="269" />
+      <edge source="1250485267674390529" target="1250486848666963968" id="270" />
+      <edge source="1250485267674390529" target="1250488370817613824" id="271" />
+      <edge source="1250486227096055808" target="1250487094020943872" id="272" />
+      <edge source="1250415546023047169" target="1250486227096055808" id="273" />
+      <edge source="1250482989420683270" target="1250487124266229766" id="274" />
+      <edge source="1250482989420683270" target="1250493956053442560" id="275" />
+      <edge source="1250461513799745536" target="1250482989420683270" id="276" />
+      <edge source="1085559977597636609" target="1250430450310328320" id="277" />
+      <edge source="1250485075562639361" target="1250487276972371968" id="278" />
+      <edge source="1250196021612875776" target="1250318463047856129" id="279" />
+      <edge source="1250279006345154561" target="1250293538908024838" id="280" />
+      <edge source="1250488899207659520" target="1250489385209872384" id="281" />
+      <edge source="1250488899207659520" target="1250490022198943744" id="282" />
+      <edge source="1250488899207659520" target="1250490067589705729" id="283" />
+      <edge source="1250488899207659520" target="1250490548714119168" id="284" />
+      <edge source="1250488899207659520" target="1250493862465937408" id="285" />
+      <edge source="1250488899207659520" target="1250498831957057537" id="286" />
+      <edge source="1250481624984227840" target="1250490264734613505" id="287" />
+      <edge source="1250484738072207361" target="1250490361736073216" id="288" />
+      <edge source="1250484738072207361" target="1250490979204939777" id="289" />
+      <edge source="1250467251767181312" target="1250484738072207361" id="290" />
+      <edge source="1250486636581773313" target="1250490449409671168" id="291" />
+      <edge source="1250486636581773313" target="1250494035317293056" id="292" />
+      <edge source="1250486636581773313" target="1250497621120053248" id="293" />
+      <edge source="1243725717356990464" target="1250486636581773313" id="294" />
+      <edge source="1250485880604614656" target="1250491343371153415" id="295" />
+      <edge source="1250490258749304838" target="1250491402615570433" id="296" />
+      <edge source="1250458884260671499" target="1250483764179996672" id="297" />
+      <edge source="1250489105085091842" target="1250492196358443011" id="298" />
+      <edge source="1250489874290900992" target="1250492198694473729" id="299" />
+      <edge source="1250487499434217472" target="1250489874290900992" id="300" />
+      <edge source="1250430997306331143" target="1250484963423764480" id="301" />
+      <edge source="1250488552963670016" target="1250492715168485376" id="302" />
+      <edge source="1238305053397504000" target="1250488552963670016" id="303" />
+      <edge source="1250489150194831362" target="1250493038771744768" id="304" />
+      <edge source="1250489150194831362" target="1250498166392270848" id="305" />
+      <edge source="1250484922105634820" target="1250493971807309826" id="306" />
+      <edge source="1250484922105634820" target="1250494955258331144" id="307" />
+      <edge source="1250296257840467969" target="1250492213940965378" id="308" />
+      <edge source="1250485348603506694" target="1250486707406897152" id="309" />
+      <edge source="1250491242191994880" target="1250494377056710656" id="310" />
+      <edge source="1250431810330193920" target="1250482879353638912" id="311" />
+      <edge source="1250431810330193920" target="1250457253309812736" id="312" />
+      <edge source="1250494207841538048" target="1250495291913994240" id="313" />
+      <edge source="1250491647760228357" target="1250494173356097537" id="314" />
+      <edge source="1250024201911762945" target="1250358526347804673" id="315" />
+      <edge source="1250493879541026817" target="1250496162290900992" id="316" />
+      <edge source="1250493879541026817" target="1250496390951821316" id="317" />
+      <edge source="1250468425308217344" target="1250473649452109825" id="318" />
+      <edge source="1250494626491965440" target="1250496703607734276" id="319" />
+      <edge source="1250494626491965440" target="1250497198401318912" id="320" />
+      <edge source="1250496426569805825" target="1250497290000896000" id="321" />
+      <edge source="1250261447856099328" target="1250265916316643328" id="322" />
+      <edge source="1250496493343002626" target="1250498052781211650" id="323" />
+      <edge source="1250495174620311555" target="1250498076420083712" id="324" />
+      <edge source="1250495756554899459" target="1250498277583265792" id="325" />
+      <edge source="1220818115354923009" target="1250188917430784004" id="326" />
+      <edge source="1250126171812933632" target="1250228376469716992" id="327" />
+      <edge source="1250488816382750722" target="1250491399172210688" id="328" />
+      <edge source="1250498279504314371" target="1250498559071436802" id="329" />
+      <edge source="1220178004191506432" target="1250199240774692870" id="330" />
+      <edge source="1250497300226433026" target="1250498790441857026" id="331" />
+      <edge source="1250498233585094658" target="1250498890496786432" id="332" />
+      <edge source="1250496767931699201" target="1250499093136396289" id="333" />
+      <edge source="1250037275397939202" target="1250436166626627587" id="334" />
+      <edge source="1249120956553072640" target="1250430546271809543" id="335" />
+      <edge source="1250333836883316739" target="1250340453230063620" id="336" />
+      <edge source="1243168592247414785" target="1243841913561575425" id="337" />
+      <edge source="1250131618288881669" target="1250419114683727874" id="338" />
+      <edge source="1250131618288881669" target="1250231608319324160" id="339" />
+      <edge source="1247364801707335680" target="1247696807372693506" id="340" />
+      <edge source="1250187041989591048" target="1250225608069545985" id="341" />
+      <edge source="1249423622478925830" target="1249748309885046787" id="342" />
+      <edge source="1249852739842080769" target="1249860586545926145" id="343" />
+      <edge source="1249320490776367109" target="1249342913110212611" id="344" />
+      <edge source="1250385980571308033" target="1250414197655117825" id="345" />
+      <edge source="1248216735238377473" target="1248249293707702272" id="346" />
+      <edge source="1247326326585012228" target="1249237661002403840" id="347" />
+      <edge source="1248211613498462208" target="1248215492042444808" id="348" />
+      <edge source="1239967233972961283" target="1239995515787509761" id="349" />
+      <edge source="1250255044538257411" target="1250261447856099328" id="350" />
+      <edge source="1250225128069201921" target="1250233940100526082" id="351" />
+      <edge source="1247562804871168002" target="1247563206480011266" id="352" />
+      <edge source="1250042307979522050" target="1250068744589717505" id="353" />
+      <edge source="1249169094609448962" target="1249277918007529473" id="354" />
+      <edge source="1250222943554207745" target="1250250362147258374" id="355" />
+      <edge source="1250341014084018179" target="1250360278308577280" id="356" />
+      <edge source="1248344271612030976" target="1249886931376156673" id="357" />
+    </edges>
+  </graph>
+</gexf>
