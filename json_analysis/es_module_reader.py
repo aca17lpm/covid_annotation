@@ -211,6 +211,6 @@ def test_quotes(query_size, start_date, end_date):
         print(section, ' -> ', quote['_source']['entities']['Tweet'][0]['quoted_status'][section])
 
 #count_rts(10000, "Wed Apr 15 16:00:00 +0000 2020", "Wed Apr 15 19:00:00 +0000 2020")
-test_quotes(10000, "Thu Apr 16 00:00:00 +0000 2020", "Thu Apr 16 19:00:00 +0000 2020")
+#test_quotes(10000, "Thu Apr 16 00:00:00 +0000 2020", "Thu Apr 16 19:00:00 +0000 2020")
 #print_quoted_status_body(1250466585682292736)
-#print_tweet_body(1250420481166995457)
+print_tweet_body(1250461381469417472)

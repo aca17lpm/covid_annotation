@@ -1,6 +1,7 @@
 import os
 from re import X
 import requests
+import asyncio
 import networkx as nx
 
 from elasticsearch import Elasticsearch
@@ -141,7 +142,11 @@ class StoreRetweets:
         if 'entities' in body:
           text = body['entities']['text']
         else:
-          text = 'no_text'
+          try:
+            full_body = self.pull_tweet_body(body)
+            text = get_text(full_body)
+          except:
+            text = 'no_text'
       return text
 
 
@@ -156,25 +161,6 @@ class StoreRetweets:
 
       # then get original body and id
       original_body = quote_body['quoted_status']
-<<<<<<< HEAD
-      original_id = original_body['id_str']    
-
-      if self.is_tweet_present(original_id):
-        #print(original_body)
-        # and (original_body['hashtags'] != [])
-        
-        if 'hashtags' in original_body['extended_tweet']:
-          if original_body['extended_tweet']['hashtags'] != []:
-            print(original_body['extended_tweet']['hashtags'][0]['text'])
-            #original_hashtag = original_body['entities']['hashtags'][0]['text']['keyword']
-            original_hashtag = ''
-          else:
-            original_hashtag = ''
-        else:
-          original_hashtag = ''
-        self.quoteG.add_node(quote_id, hashtag = quote_hashtag)
-        self.quoteG.add_node(original_id, hashtag = original_hashtag)
-=======
       original_id = original_body['id_str']
 
       # checking original tweet is in the time range of the search before adding connection
@@ -212,7 +198,6 @@ class StoreRetweets:
         # adding nodes into the networkx graph, with hashtags as attributes
         self.quoteG.add_node(quote_id, hashtag = quote_hashtag, text = quote_text, misinfo_class = quote_class)
         self.quoteG.add_node(original_id, hashtag = original_hashtag, text = original_text, misinfo_class = original_class)
->>>>>>> 485416704e29200c4088b304951a3a6bcb16b9d9
         self.quoteG.add_edge(original_id, quote_id)
 
       # if a further quote object found, continue linking (represented through quoted_status_id_str)

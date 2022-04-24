@@ -1,7 +1,7 @@
 #url = https://cloud-api.gate.ac.uk/process/covid19-misinfo
 
 import json
-import pandas as pd
+import asyncio
 import requests
 import os
 
@@ -20,6 +20,7 @@ class Classifier:
         response = requests.post(url, json=data, auth=(key,password), timeout=1280)
 
         if response.status_code == 200:
+            print(response.json()['entities']['MisinfoClass'][0]['class'])
             return response.json()['entities']['MisinfoClass'][0]['class']
         else:
             return 0
