@@ -13,8 +13,6 @@ auth_token = os.environ.get('ELASTIC_TOKEN')
 esuser_passw = auth_token.split(':')[0]
 esuser, espassw = esuser_passw[0], esuser_passw[1]
 
-
-INDEX = 'covid19misinfo-2020-04'
 TIMEOUT = 360
 
 es = Elasticsearch(
@@ -133,21 +131,50 @@ class StoreRetweets:
   # improved function to query quote tweet orginal id's further
   def pull_quote_chain(self):
 
+    # def get_text(body):
+    #   if 'text' in body:
+    #     text = body['text']
+    #     if text == '':
+    #       text = 'no_text'
+    #   elif 'string' in body:
+    #     text = body['string']
+    #     if text == '':
+    #       text = 'no_text'
+    #   else:
+    #     if 'entities' in body:
+    #       text = body['entities']['text']
+    #       if text == '':
+    #         text = 'no_text'
+    #     else:
+    #       try:
+    #         full_body = self.pull_tweet_body(body)
+    #         text = get_text(full_body)
+    #       except:
+    #         text = 'no_text'
+    #   return text
+
     def get_text(body):
+      text_arr = []
+
       if 'text' in body:
-        text = body['text']
+        text_arr.append(body['text'])
       elif 'string' in body:
-        text = body['string']
+        text_arr.append(body['string'])
+      elif 'entities' in body:
+        text_arr.append(body['entities']['text'])
       else:
-        if 'entities' in body:
-          text = body['entities']['text']
-        else:
-          try:
-            full_body = self.pull_tweet_body(body)
-            text = get_text(full_body)
-          except:
-            text = 'no_text'
-      return text
+        try:
+          full_body = self.pull_tweet_body(body)
+          text = get_text(full_body)
+          return text
+        except:
+          return 'no_text'
+      
+      for sample in text_arr:
+        if sample != '':
+          return sample
+      
+      return 'no_text'
 
 
     result = es.search(index= self.index, body = self.quoted_only, size = self.query_size)
@@ -167,6 +194,7 @@ class StoreRetweets:
       # (limiting range of network)
 
       if self.is_tweet_present(original_id):
+
         # getting top hashtag for original tweets
         if 'entities' in original_body:
           if ('hashtags' in original_body['entities']) and (original_body['entities']['hashtags'] != []):
@@ -174,7 +202,7 @@ class StoreRetweets:
             if isinstance(original_hashtag, list):
               original_hashtag = original_hashtag[0]
           else:
-            original_hashtag = ''
+            original_hashtag = 'None'
 
         # gexf can't take non string/integer attributes : for now, just get first hashtag
         quote_hashtag = quote['_source']['entities']['Hashtag'][0]['text']
@@ -203,8 +231,26 @@ class StoreRetweets:
       # if a further quote object found, continue linking (represented through quoted_status_id_str)
       if 'quoted_status_id_str' in original_body.keys():
         further_id = original_body['quoted_status_id_str']
-        self.quoteG.add_node(further_id)
-        self.quoteG.add_edge(further_id, original_id)
+
+        if self.is_tweet_present(further_id):
+          further_body = self.pull_tweet_body(further_id)
+
+          if 'entities' in further_body:
+            if ('hashtags' in further_body['entities']) and (further_body['entities']['hashtags'] != []):
+              further_hashtag = further_body['entities']['hashtags'][0]['text']
+            else:
+              further_hashtag = 'None'
+          else:
+            further_hashtag = 'None'
+
+          further_text = get_text(further_body)
+          if further_text == 'no_text':
+            further_class = 'None'
+          else:
+            further_class = Classifier.get_classification_category(further_text)
+
+          self.quoteG.add_node(further_id, hashtag = further_hashtag, text = further_text, misinfo_class = further_class)
+          self.quoteG.add_edge(further_id, original_id)
 
 
   def calculate_retweets(self):
@@ -228,7 +274,7 @@ class StoreRetweets:
       }
     }
 
-    result = es.search(index = INDEX, body = query_body, size = self.query_size)
+    result = es.search(index = self.index, body = query_body, size = self.query_size)
 
     retweets = result['hits']['hits']
     for tweet in retweets :
