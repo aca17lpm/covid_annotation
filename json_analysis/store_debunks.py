@@ -6,8 +6,6 @@ import json
 import networkx as nx
 import tweepy
 
-from classifier import Classifier
-
 bearer_token = os.environ.get("BEARER_TOKEN")
 client = tweepy.Client(bearer_token)
 
@@ -28,6 +26,8 @@ class StoreDebunks:
           debunk_id = tweet['tweet_id']
           print(f'Finding quotes of tweet with id: {debunk_id}')
           print(client.get_quote_tweets(debunk_id))
+
+print(client.get_tweet(1519781958578016256))
           
 
 

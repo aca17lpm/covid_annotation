@@ -19,7 +19,7 @@ def connect_to_twitter():
 headers = connect_to_twitter()
 
 def make_request(headers):
-    url = "https://api.twitter.com/2/tweets/1491217291669049344"
+    url = "https://api.twitter.com/2/tweets/1519781958578016256"
     return requests.request("GET", url, headers=headers).json()
 response = make_request(headers)
 print(response)

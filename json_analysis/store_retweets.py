@@ -1,11 +1,12 @@
 import os
-from re import X
+import csv
 import requests
-import asyncio
+import pandas as pd
 import networkx as nx
 
 from elasticsearch import Elasticsearch
-from classifier import Classifier
+from class_classifier import Classifier
+from misinfo_classifier.misinfo_classifier import MisinfoClassifier
 
 auth_token = os.environ.get('ELASTIC_TOKEN')
 
@@ -23,7 +24,7 @@ es = Elasticsearch(
 # twitter connecting stuff if needed
 
 # need to form twitter authorization headers
-def connect_to_twitter():
+def connect_to_twitter(): 
     # secure version to get bearer token from environment variable
     bearer_token = os.environ.get("BEARER_TOKEN")
     return {"Authorization": "Bearer {}".format(bearer_token)}
@@ -40,7 +41,33 @@ class StoreRetweets:
     self.index = index
     self.query_size = query_size
     self.quoteG = nx.DiGraph()
+
     self.unique_id_store = dict()
+
+    self.classification_store = {
+      'id' : [],
+      'tweet_text' : [],
+
+      # blank fields for classifier
+      'tweet_label' : [] ,
+      'claim' : [] ,
+      'tweet_date' : [] ,
+      'num_hashtags' : [] ,
+      'hashtag_text' : [] ,
+      'has_link' : [] ,
+      'polarity' : [] ,
+      'subjective' : [] ,
+      'pos_words' : [] ,
+      'neg_words' : [] ,
+      'misinfo_words' : [] ,
+      'debunk_words' : [] ,
+      'misinfo_hashtags' : [] ,
+      'debunk_hashtags' : [] ,
+      'hyperpartisan' : [] ,
+      'followers' : [],
+      'verified': []
+    }
+
     self.start_date = start_date
     self.end_date = end_date
 
@@ -60,8 +87,50 @@ class StoreRetweets:
       }
     }
 
-  # function to check if tweet ID is present in the ES database (within time range)
+  # function to add a tweet to be classified as misinfo/debunk,
+  # uses null values for irrelevant fields that still need to be included
+  def add_to_classification_store(self, id, text):
+    self.classification_store['id'].append(id)
+    self.classification_store['tweet_text'].append(text)
+    self.classification_store['tweet_label'].append(' ')
+    self.classification_store['claim'].append(' ')
+    self.classification_store['tweet_date'].append(' ')
+    self.classification_store['num_hashtags'].append(0)
+    self.classification_store['hashtag_text'].append(' ')
+    self.classification_store['has_link'].append(False)
+    self.classification_store['polarity'].append(' ')
+    self.classification_store['subjective'].append(False)
+    self.classification_store['pos_words'].append(0)
+    self.classification_store['neg_words'].append(0)
+    self.classification_store['misinfo_words'].append(0)
+    self.classification_store['debunk_words'].append(0) 
+    self.classification_store['misinfo_hashtags'].append(0)
+    self.classification_store['debunk_hashtags'].append(0)
+    self.classification_store['hyperpartisan'].append(0)
+    self.classification_store['followers'].append(100)
+    self.classification_store['verified'].append(False)
+
+
+  # function to check if tweet ID is present in the ES database
   def is_tweet_present(self, tweet_id):
+    query_body = { 
+      "query": {
+        "bool" : {
+          "must" : {
+            "term": {"entities.Tweet.id" : tweet_id }
+          }
+        }
+      }
+    }
+
+    result = es.search(index= self.index, body = query_body, size = 1)
+
+    if len(result['hits']['hits']) > 0:
+      return True
+    else:
+      return False
+
+  def is_tweet_present_range(self, tweet_id):
     query_body = { 
       "query": {
         "bool" : {
@@ -82,16 +151,13 @@ class StoreRetweets:
     else:
       return False
 
-  # function to collect tweet body from db (within time range)
+  # function to collect tweet body from db
   def pull_tweet_body(self, tweet_id):
     query_body = { 
       "query": {
         "bool" : {
           "must" : {
             "term": {"entities.Tweet.id" : tweet_id }
-          },
-          "filter": {
-            "range": {"entities.Tweet.created_at": {"gte": self.start_date,"lte": self.end_date} }
           }
         }
       }
@@ -100,58 +166,8 @@ class StoreRetweets:
     result = es.search(index= self.index, body = query_body, size = 1)
     return result['hits']['hits'][0]
 
-  # function will get quote tweets from the elasticsearch dataset and link them back to their top original tweet, building network along way
-  def pull_quotes(self):
-
-    result = es.search(index= self.index, body = self.quoted_only, size = self.query_size)
-    quotes = result['hits']['hits']
-    for quote in quotes:
-      quote_body = quote['_source']['entities']['Tweet'][0]
-      quote_id = quote_body['id_str']
-
-      #add quote tweet as node into graph - networkx ignores double entry
-
-      #checking to see whether to add the edge between original and quoted tweet : 
-      #     1- check whether original ID is in the elasticsearch database to start with
-      #     2- then can add an edge between the original and quoted tweet
-      #     3- check whether original tweet itself is in the elasticsearch database
-      #     4- return to step 1, until step 3 not satisfied
-      
-      original_body = quote_body['quoted_status']
-      original_id = original_body['id_str']
-      
-      if self.is_tweet_present(original_id):
-        self.quoteG.add_node(quote_id)
-        self.quoteG.add_node(original_id)
-        self.quoteG.add_edge(quote_id, original_id)
-        #print('original id present in DB')
-
-      #if original_body['is_quote_status']:
-
-  # improved function to query quote tweet orginal id's further
+  # main function that fills out quoteG with nodes and edges, depending on 
   def pull_quote_chain(self):
-
-    # def get_text(body):
-    #   if 'text' in body:
-    #     text = body['text']
-    #     if text == '':
-    #       text = 'no_text'
-    #   elif 'string' in body:
-    #     text = body['string']
-    #     if text == '':
-    #       text = 'no_text'
-    #   else:
-    #     if 'entities' in body:
-    #       text = body['entities']['text']
-    #       if text == '':
-    #         text = 'no_text'
-    #     else:
-    #       try:
-    #         full_body = self.pull_tweet_body(body)
-    #         text = get_text(full_body)
-    #       except:
-    #         text = 'no_text'
-    #   return text
 
     def get_text(body):
       text_arr = []
@@ -176,12 +192,43 @@ class StoreRetweets:
       
       return 'no_text'
 
+    # Print iterations progress
+    # progress bar from https://stackoverflow.com/questions/3173320/text-progress-bar-in-terminal-with-block-characters
+    def printProgressBar (iteration, total, prefix = '', suffix = '', decimals = 1, length = 100, fill = '█', printEnd = "\r"):
+      """
+      Call in a loop to create terminal progress bar
+      @params:
+          iteration   - Required  : current iteration (Int)
+          total       - Required  : total iterations (Int)
+          prefix      - Optional  : prefix string (Str)
+          suffix      - Optional  : suffix string (Str)
+          decimals    - Optional  : positive number of decimals in percent complete (Int)
+          length      - Optional  : character length of bar (Int)
+          fill        - Optional  : bar fill character (Str)
+          printEnd    - Optional  : end character (e.g. "\r", "\r\n") (Str)
+      """
+      percent = ("{0:." + str(decimals) + "f}").format(100 * (iteration / float(total)))
+      filledLength = int(length * iteration // total)
+      bar = fill * filledLength + '-' * (length - filledLength)
+      print(f'\r{prefix} |{bar}| {percent}% {suffix}', end = printEnd)
+      # Print New Line on Complete
+      if iteration == total: 
+          print()
+
 
     result = es.search(index= self.index, body = self.quoted_only, size = self.query_size)
     quotes = result['hits']['hits']
 
+    i = 0
+    length = len(quotes)
+    printProgressBar(0, length, prefix = 'Progress:', suffix = 'Complete', length = 50)
+
     for quote in quotes:
 
+      i += 1
+      #print(f'Number {i} of {length} quotes processed:')
+      printProgressBar(i, length, prefix = 'Progress:', suffix = 'Complete', length = 50)
+      
       # first get quote body and id for tracking quotes through db
       quote_body = quote['_source']['entities']['Tweet'][0]
       quote_id = quote_body['id_str']
@@ -190,11 +237,10 @@ class StoreRetweets:
       original_body = quote_body['quoted_status']
       original_id = original_body['id_str']
 
-      # checking original tweet is in the time range of the search before adding connection
+      # checking original tweet is present in the elasticsearch database before adding connection
       # (limiting range of network)
 
       if self.is_tweet_present(original_id):
-
         # getting top hashtag for original tweets
         if 'entities' in original_body:
           if ('hashtags' in original_body['entities']) and (original_body['entities']['hashtags'] != []):
@@ -213,6 +259,7 @@ class StoreRetweets:
           quote_class = 'None'
         else:
           quote_class = Classifier.get_classification_category(quote_text)
+          self.add_to_classification_store(quote_id, quote_text)
 
         # get text for use by classifier from original and classify
         original_text = get_text(original_body)
@@ -220,6 +267,7 @@ class StoreRetweets:
           original_class = 'None'
         else:
           original_class = Classifier.get_classification_category(original_text)
+          self.add_to_classification_store(original_id, original_text)
 
         
 
@@ -233,6 +281,7 @@ class StoreRetweets:
         further_id = original_body['quoted_status_id_str']
 
         if self.is_tweet_present(further_id):
+          print('further found within db')
           further_body = self.pull_tweet_body(further_id)
 
           if 'entities' in further_body:
@@ -248,10 +297,13 @@ class StoreRetweets:
             further_class = 'None'
           else:
             further_class = Classifier.get_classification_category(further_text)
+            self.add_to_classification_store(further_id, further_text)
 
           self.quoteG.add_node(further_id, hashtag = further_hashtag, text = further_text, misinfo_class = further_class)
           self.quoteG.add_edge(further_id, original_id)
-
+        else:
+          self.quoteG.add_node(further_id, hashtag = 'Outside DB', text = 'Outside DB', misinfo_class = 'Outside DB')
+          self.quoteG.add_edge(further_id, original_id)
 
   def calculate_retweets(self):
 
@@ -285,6 +337,25 @@ class StoreRetweets:
         unique_id_store[original_id] = 0
     
     nx.set_node_attributes(self.quoteG, unique_id_store, name = 'calculated_retweets')
+
+  def classify_misinfo(self):
+
+    for key in self.classification_store:
+      print(f"Len of {key} is {len(self.classification_store[key])}" )
+
+    test_df = pd.DataFrame.from_dict(self.classification_store)
+    test_df.to_csv('my_example.csv')
+
+    misinfo_classifier = MisinfoClassifier()
+    misinfo_dictionary = misinfo_classifier.run_classifier(test_df)
+    print(misinfo_dictionary)
+
+    nx.set_node_attributes(self.quoteG, misinfo_dictionary, name = 'tweet_label')
+
+
+    
+
+
 
     
 
