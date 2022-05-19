@@ -218,6 +218,7 @@ class StoreRetweets:
 
     result = es.search(index= self.index, body = self.quoted_only, size = self.query_size)
     quotes = result['hits']['hits']
+    print(f'total query hits: {len(quotes)}')
 
     i = 0
     length = len(quotes)
@@ -245,13 +246,16 @@ class StoreRetweets:
         if 'entities' in original_body:
           if ('hashtags' in original_body['entities']) and (original_body['entities']['hashtags'] != []):
             original_hashtag = original_body['entities']['hashtags'][0]['text']
-            if isinstance(original_hashtag, list):
-              original_hashtag = original_hashtag[0]
           else:
             original_hashtag = 'None'
+        else:
+          original_hashtag = 'None'
 
         # gexf can't take non string/integer attributes : for now, just get first hashtag
-        quote_hashtag = quote['_source']['entities']['Hashtag'][0]['text']
+        try:
+          quote_hashtag = quote['_source']['entities']['Hashtag'][0]['text']
+        except:
+          quote_hashtag = 'None'
 
         # get text for use by classifier from quote and classify
         quote_text = get_text(quote_body)
@@ -281,7 +285,7 @@ class StoreRetweets:
         further_id = original_body['quoted_status_id_str']
 
         if self.is_tweet_present(further_id):
-          print('further found within db')
+          #print('further found within db')
           further_body = self.pull_tweet_body(further_id)
 
           if 'entities' in further_body:
