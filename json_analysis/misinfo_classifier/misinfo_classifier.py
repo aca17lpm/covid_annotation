@@ -284,6 +284,8 @@ class MisinfoClassifier:
       return data['word'].values
 
   def run_classifier(self, test_df):
+
+      # get training data
       train_data = pd.read_csv('C:\codeyr3\dissertation\covid_annotation\json_analysis\misinfo_classifier\elastic-tweets-train-processed.csv')
       feats = train_data[['num_hashtags','has_link','subjective','pos_words','neg_words','misinfo_words','debunk_words','misinfo_hashtags','debunk_hashtags']]
       labels = train_data['tweet_label']

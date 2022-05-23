@@ -1,10 +1,14 @@
+# store_retweets.py
+# python file to pull down tweets and create Gephi networks
+
 import os
 import csv
 import requests
 import pandas as pd
 import networkx as nx
-
 from elasticsearch import Elasticsearch
+
+# importing the two classifiers
 from class_classifier import Classifier
 from misinfo_classifier.misinfo_classifier import MisinfoClassifier
 
@@ -13,7 +17,7 @@ auth_token = os.environ.get('ELASTIC_TOKEN')
 # split auth token from form user:pass into list
 esuser_passw = auth_token.split(':')[0]
 esuser, espassw = esuser_passw[0], esuser_passw[1]
-
+                  
 TIMEOUT = 360
 
 es = Elasticsearch(
@@ -31,9 +35,11 @@ def connect_to_twitter():
 headers = connect_to_twitter()
 
 def make_request(headers, url):
-    #url = "https://api.twitter.com/2/tweets/1491217291669049344"
+    url = "https://api.twitter.com/2/tweets/1491217291669049344"
     return requests.request("GET", url, headers=headers).json()
 
+
+# main class to pull retweets with elasticsearch and store within NetworkX 
 class StoreRetweets:
 
   def __init__(self, start_date, end_date, index, query_size):
@@ -69,7 +75,7 @@ class StoreRetweets:
     }
 
     self.start_date = start_date
-    self.end_date = end_date
+    self.endpip_date = end_date
 
     # query body to find quote tweets within dataset
     self.quoted_only = { 
@@ -130,6 +136,7 @@ class StoreRetweets:
     else:
       return False
 
+  # function to check tweet present in specified range on class definition
   def is_tweet_present_range(self, tweet_id):
     query_body = { 
       "query": {
@@ -166,9 +173,10 @@ class StoreRetweets:
     result = es.search(index= self.index, body = query_body, size = 1)
     return result['hits']['hits'][0]
 
-  # main function that fills out quoteG with nodes and edges, depending on 
+  # main function that fills out quoteG with nodes and edges, depending on tweet relations
   def pull_quote_chain(self):
 
+    # pull out text from various possible fields: some tweets have text present, some do not
     def get_text(body):
       text_arr = []
 
@@ -215,19 +223,21 @@ class StoreRetweets:
       if iteration == total: 
           print()
 
-
+    # query the database
     result = es.search(index= self.index, body = self.quoted_only, size = self.query_size)
     quotes = result['hits']['hits']
+
+    # log query hits
     print(f'total query hits: {len(quotes)}')
 
     i = 0
     length = len(quotes)
     printProgressBar(0, length, prefix = 'Progress:', suffix = 'Complete', length = 50)
 
+    # iterate through all query results
     for quote in quotes:
 
       i += 1
-      #print(f'Number {i} of {length} quotes processed:')
       printProgressBar(i, length, prefix = 'Progress:', suffix = 'Complete', length = 50)
       
       # first get quote body and id for tracking quotes through db
@@ -251,7 +261,7 @@ class StoreRetweets:
         else:
           original_hashtag = 'None'
 
-        # gexf can't take non string/integer attributes : for now, just get first hashtag
+        # get hashtags
         try:
           quote_hashtag = quote['_source']['entities']['Hashtag'][0]['text']
         except:
@@ -309,12 +319,14 @@ class StoreRetweets:
           self.quoteG.add_node(further_id, hashtag = 'Outside DB', text = 'Outside DB', misinfo_class = 'Outside DB')
           self.quoteG.add_edge(further_id, original_id)
 
+  # function to calculate retweets for each original tweet in the time range
   def calculate_retweets(self):
 
     unique_id_store = self.unique_id_store
     start_date = self.start_date
     end_date = self.end_date
 
+    # query body for retrieving all retweets
     query_body = { 
       "query": {
         "bool" : {
@@ -342,18 +354,18 @@ class StoreRetweets:
     
     nx.set_node_attributes(self.quoteG, unique_id_store, name = 'calculated_retweets')
 
+  # function to connect with misinfo/debunk classifier
   def classify_misinfo(self):
 
-    for key in self.classification_store:
-      print(f"Len of {key} is {len(self.classification_store[key])}" )
-
+    # feeding in test data
     test_df = pd.DataFrame.from_dict(self.classification_store)
-    test_df.to_csv('my_example.csv')
 
+    # new definition of classifier object
     misinfo_classifier = MisinfoClassifier()
+    # run classifier on gathered tweets
     misinfo_dictionary = misinfo_classifier.run_classifier(test_df)
-    print(misinfo_dictionary)
 
+    # set node misinfo attributes with results from classifier
     nx.set_node_attributes(self.quoteG, misinfo_dictionary, name = 'tweet_label')
 
 
