@@ -1,0 +1,2 @@
+# covid_annotation
+project for analysing covid data
