@@ -1,2 +1,34 @@
-# covid_annotation
-project for analysing covid data
+# Visualising COVID-19 Misinformation Networks
+## Lucian Murdin 24/05/2022
+
+Welcome to my dissertation project.
+
+See below the abstract from the project: the ![full report](Final_Dissertation_Lucian_Murdin.pdf) is also provided in this repository.
+
+## Abstract
+
+Misinformation on social media causes mistrust in public authorities and the media, appre-
+hension for public health programs, and other negative societal effects, with far reaching
+consequences beyond its social network domain. COVID-19 has highlighted this, and study
+of misinformation spread through social networks is important. This project created Twit-
+ter diffusion networks on two COVID-19 Twitter datastreams split into misinformation on
+COVID-19 and general COVID-19 conversation from March to October 2020. It visualises
+these on Gephi, an open source visualisation tool. The visualisations group nodes into com-
+munities, and novel network structures are revealed. Classifiers were ran on the tweets to
+delineate claim topics and debunks vs. misinfo, exposing conclusions on the homogeneity
+of twitter communities. Network properties are calculated on these networks to quantify
+their characteristics. This project finds visualising these networks is possible, informative
+and novel, and opens questions for further COVID-19 network analysis.
+
+# My code
+
+This project consists of mostly python code designed to use Elasticsearch querying on an Elasticsearch server.
+
+There are samples of all the graphs mentioned in the report under /graphs, all are in GEXF format.
+
+Download Gephi 0.9.5 here https://gephi.org/users/download/ in order to visualise the data.
+
+To build new graphs, the StoreRetweets object in store_retweets.py should be constructed with a start date, end date, query size, and index.
+
+An example is provided in store_retweets_runner.py : note that tokens are required for the WeVerify classifier and the Sheffield repository access.
+These can be stored under environment variables CLASSIFIER_TOKEN and ELASTIC_TOKEN.
