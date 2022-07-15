@@ -7,18 +7,7 @@ See below the abstract from the project: the ![full report](Final_Dissertation_L
 
 ## Abstract
 
-Misinformation on social media causes mistrust in public authorities and the media, appre-
-hension for public health programs, and other negative societal effects, with far reaching
-consequences beyond its social network domain. COVID-19 has highlighted this, and study
-of misinformation spread through social networks is important. This project created Twit-
-ter diffusion networks on two COVID-19 Twitter datastreams split into misinformation on
-COVID-19 and general COVID-19 conversation from March to October 2020. It visualises
-these on Gephi, an open source visualisation tool. The visualisations group nodes into com-
-munities, and novel network structures are revealed. Classifiers were ran on the tweets to
-delineate claim topics and debunks vs. misinfo, exposing conclusions on the homogeneity
-of twitter communities. Network properties are calculated on these networks to quantify
-their characteristics. This project finds visualising these networks is possible, informative
-and novel, and opens questions for further COVID-19 network analysis.
+Misinformation on social media causes mistrust in public authorities and the media, apprehension for public health programs, and other negative societal effects, with far reaching consequences beyond its social network domain. COVID-19 has highlighted this, and studyof misinformation spread through social networks is important. This project created Twitter diffusion networks on two COVID-19 Twitter datastreams split into misinformation on COVID-19 and general COVID-19 conversation from March to October 2020. It visualises these on Gephi, an open source visualisation tool. The visualisations group nodes into communities, and novel network structures are revealed. Classifiers were ran on the tweets to delineate claim topics and debunks vs. misinfo, exposing conclusions on the homogeneity of twitter communities. Network properties are calculated on these networks to quantify their characteristics. This project finds visualising these networks is possible, informative and novel, and opens questions for further COVID-19 network analysis.
 
 # My code
 
